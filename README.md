@@ -8,10 +8,11 @@
 ## Group-PX-XX
 
 ## Members
-* Student Name 1 (sXXXXX)
-* Student Name 2 (sXXXXX)
-* Student Name 3 (sXXXXX)
-* Student Name 4 (sXXXXX)
+* Ethan Herpich (s3935413)
+* Issa Chanzi (s3783615)
+* Charles Earnshaw (s3943382)
+* Vladislava Simakov (s3910159)
+* Vincent Daniele (s3780417)
 
 ## Records
 
