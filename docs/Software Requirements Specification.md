@@ -2,80 +2,17 @@
 
 **20 August 2023**
 
-**Table of Contents**
-
-[**1. Introduction 1**](#introduction)
-
-> [1.1 Purpose 1](#purpose)
->
-> [**1.2 Document Conventions 1**](#_heading=)
->
-> [**1.3 Intended Audience and Reading Suggestions 1**](#_heading=)
->
-> [**1.4 Product Scope 2**](#_heading=)
->
-> [**1.5 References 2**](#_heading=)
-
-[**2. Overall Description 2**](#_heading=)
-
-> [2.1 Product Perspective 2](#product-perspective)
->
-> [**2.2 Product Functions 5**](#_heading=)
->
-> [**2.3 User Classes and Characteristics 6**](#_heading=)
->
-> [**2.4 Operating Environment 8**](#_heading=)
->
-> [**2.5 Design and Implementation Constraints 8**](#_heading=)
->
-> [**2.6 User Documentation 9**](#_heading=)
->
-> [**2.7 Assumptions and Dependencies 9**](#_heading=)
-
-[**3. External Interface Requirements 9**](#_heading=)
-
-> [3.1 User Interfaces 9](#user-interfaces-tbd)
->
-> [**3.2 Hardware Interfaces 9**](#_heading=)
->
-> [**3.3 Software Interfaces 10**](#_heading=)
->
-> [**3.4 Communications Interfaces 10**](#_heading=)
-
-[**4. System Features 10**](#_heading=)
-
-> [**4.1 System Feature 1 10**](#_heading=)
->
-> [**4.2 System Feature 2 (and so on) 11**](#_heading=)
-
-[**5. Other Nonfunctional Requirements
-11**](#other-nonfunctional-requirements)
-
-> [5.1 Performance Requirements 11](#performance-requirements)
->
-> [**5.2 Safety Requirements 11**](#_heading=)
->
-> [**5.3 Security Requirements 11**](#_heading=)
->
-> [**5.4 Software Quality Attributes 11**](#_heading=)
->
-> [**5.5 Business Rules 12**](#_heading=)
-
-[**6. Other Requirements 12**](#_heading=)
-
 **Revision History**
 
-  ----------------------------------------------------------------------------
-  **Name**        **Date**   **Reason For Changes**              **Version**
-  --------------- ---------- ----------------------------------- -------------
-                                                                 
+|                                                      |
+|:-----------------------------------------------------|
+| **Name** **Date** **Reason For Changes** **Version** |
 
-                                                                 
-  ----------------------------------------------------------------------------
+------------------------------------------------------------------------
 
 # **Introduction**
 
-## **Purpose** 
+## **Purpose**
 
 The purpose of this document is to specify the software requirements of
 the SuperPrice application. The SRS will cover aspects such as the home
@@ -96,41 +33,13 @@ priority.\>*
 
 ## **Intended Audience and Reading Suggestions**
 
-  -----------------------------------------------------------------------
-  **Developers**                      The document will provide detailed
-                                      functional and nonfunctional
-                                      requirements as well as wireframes,
-                                      class diagrams and architectural
-                                      diagrams of which developers can
-                                      use as a reference during
-                                      development.
-  ----------------------------------- -----------------------------------
-  **Clients**                         Clients are expected to use this
-                                      document inorder to ensure that the
-                                      system properly aligns with their
-                                      business goal and requirements
-
-  **Testers**                         Testers will use this document to
-                                      design test cases and to ensure
-                                      that the functional requirements
-                                      have been met.
-
-  **Project Managers**                Project managers will use this
-                                      document to monitor the development
-                                      progress and ensure that
-                                      development aligns with the
-                                      client's goals
-
-  **Marketing staff**                 Marketing staff can use the
-                                      document to gain an end-user's
-                                      understanding of system which will
-                                      help them convey the product's
-                                      capabilities
-
-  **Document writers**                Document writers will use the
-                                      document to create user
-                                      documentation
-  -----------------------------------------------------------------------
+| **Developers**       | The document will provide detailed functional and nonfunctional requirements as well as wireframes, class diagrams and architectural diagrams of which developers can use as a reference during development. |
+|:---------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Clients**          | Clients are expected to use this document inorder to ensure that the system properly aligns with their business goal and requirements                                                                        |
+| **Testers**          | Testers will use this document to design test cases and to ensure that the functional requirements have been met.                                                                                            |
+| **Project Managers** | Project managers will use this document to monitor the development progress and ensure that development aligns with the client’s goals                                                                       |
+| **Marketing staff**  | Marketing staff can use the document to gain an end-user’s understanding of system which will help them convey the product’s capabilities                                                                    |
+| **Document writers** | Document writers will use the document to create user documentation                                                                                                                                          |
 
 ## **Product Scope**
 
@@ -159,7 +68,7 @@ number, date, and source or location.\>*
 
 As a part of our payment procedure, we plan on using the Stripe
 financial infrastructure. More information on this service can be found
-at: [[https://stripe.com/au]{.underline}](https://stripe.com/au)
+at: [<u>https://stripe.com/au</u>](https://stripe.com/au)
 
 # **Overall Description**
 
@@ -183,71 +92,71 @@ Relevant services will communicate with each other via HHTP calls.
 
 React was chosen because
 
--   Have to write less javascript
+- Have to write less javascript
 
--   Widely used framework
+- Widely used framework
 
--   Simple to use
+- Simple to use
 
--   Easy to find engineers with skills in React
+- Easy to find engineers with skills in React
 
 ### Bootstrap
 
 Bootstrap was chosen because
 
--   Ease of use compared to writing CSS by hand
+- Ease of use compared to writing CSS by hand
 
--   Faster development time because less code needs to be written
+- Faster development time because less code needs to be written
 
--   Lower development costs
+- Lower development costs
 
--   Consistency across different platforms
+- Consistency across different platforms
 
 ### Backend - Spring Boot
 
 Spring Boot was chosen because
 
--   It was recommended by the product owner
+- It was recommended by the product owner
 
--   Extremely widely used
+- Extremely widely used
 
--   Easy to find engineers with knowledge of Spring Boot
+- Easy to find engineers with knowledge of Spring Boot
 
 ### Relational database - MariaDB
 
 MariaDB was chosen because
 
--   Need to implement search functionality - relational database has
-    > much better performance for search operations than alternatives
+- Need to implement search functionality - relational database has \>
+  much better performance for search operations than alternatives
 
--   SQL is standard and has the most amount of resources
+- SQL is standard and has the most amount of resources
 
--   Open source
+- Open source
 
 ### Payment processing - Stripe
 
 Stripe was chosen because
 
--   Industry standard payment product
+- Industry standard payment product
 
--   Provides consistent user interface
+- Provides consistent user interface
 
--   Don't have to deal with regulatory requirements for handling credit
-    > card data
+- Don’t have to deal with regulatory requirements for handling credit \>
+  card data
 
--   Can be integrated with very little code/effort
+- Can be integrated with very little code/effort
 
 ## **Product Functions**
 
 The product will perform the following main functions.
 
--   Searchable database of supermarket products
+- Searchable database of supermarket products
 
--   Price comparison between different sellers of equivalent products
+- Price comparison between different sellers of equivalent products
 
--   Ability to choose between alternative products based on price
+- Ability to choose between alternative products based on price
 
--   Order and delivery
+- Order and delivery
 
 ## **User Classes and Characteristics**
 
@@ -256,7 +165,7 @@ The product will perform the following main functions.
 The casual shopper uses the SuperPrice application to check the price of
 availability of a product in one or more supermarkets. They might
 otherwise check directly on the website of a nearby supermarket, but
-it's more convenient to have one site that aggregates price information
+it’s more convenient to have one site that aggregates price information
 from multiple supermarkets.
 
 The casual shopper is likely to use the application only occasionally,
@@ -266,7 +175,7 @@ any level of technical expertise.
 
 To best serve the casual shopper, the application should make specific
 products as easy to find as possible using the search feature. The
-search should accurately identify products relevant to the user's query
+search should accurately identify products relevant to the user’s query
 and be as fast as possible, both in the UI and in the processing of the
 search.
 
@@ -277,7 +186,7 @@ function will create a much better experience for all users.
 **Bargain hunter**
 
 The bargain hunter uses the SuperPrice application to save as much money
-as possible on groceries. If they didn't use SuperPrice, they would make
+as possible on groceries. If they didn’t use SuperPrice, they would make
 multiple search queries on the websites of multiple supermarkets to try
 and find the lowest prices. Using SuperPrice would instead allow them to
 make one search on one website to find the lowest price.
@@ -304,13 +213,13 @@ of the product.
 
 The Working Parent uses SuperPrice to order their weekly groceries and
 book deliveries. They are busy with work or family responsibilities and
-they don't want to have to visit the supermarket in person. If they
-didn't use SuperPrice, they would book a delivery directly on a
+they don’t want to have to visit the supermarket in person. If they
+didn’t use SuperPrice, they would book a delivery directly on a
 supermarket website, or use apps like UberEats and Doordash to have
 their groceries delivered. SuperPrice can offer a more convenient
 experience because it is tailored for grocery shopping unlike UberEats
 and Doordash, and it allows users to order from multiple different
-supermarkets on the same website, unlike supermarkets' own websites.
+supermarkets on the same website, unlike supermarkets’ own websites.
 
 The Working Parent cares about saving time more than saving money.
 Convenience is key for this user class. The Working Parent includes not
@@ -345,9 +254,9 @@ coexist.\>*
 ## **Design and Implementation Constraints**
 
 The design is constrained to be in a web application format due to the
-client specifications. It's also constrained by elicited functional
+client specifications. It’s also constrained by elicited functional
 requirements such as having a search feature, and categorisation
-features. Due to unfamiliarity working with each other\'s code, the
+features. Due to unfamiliarity working with each other's code, the
 development team together, may face inconsistency in implementation and
 design. There may be a reduction of complexity so as to better improve
 integration and understandability of code and design features amongst
@@ -388,8 +297,8 @@ integrated into the system if necessary.
 It is assumed that the functionality of the checkout will be created by
 the team and stripe will be used only for the processing of payments. It
 is assumed checkout behavior can be coded in the front end, and the
-database does not need to include entities such as 'cart item' or
-'session'.
+database does not need to include entities such as ‘cart item’ or
+‘session’.
 
 The project is dependent on many external systems. MySQL will be used to
 implement the database. Apache server will be used to take the website
@@ -455,24 +364,24 @@ synchronization mechanisms.\>*
 
 ## ID Conventions
 
--   HOM ← Home page
+- HOM ← Home page
 
--   PRO ← Product page
+- PRO ← Product page
 
--   SEA ← Search results
+- SEA ← Search results
 
--   CHE ← Checkout
+- CHE ← Checkout
 
--   SHO ← Shopping cart
+- SHO ← Shopping cart
 
--   LOG ← log in (sign in and sign up)
+- LOG ← log in (sign in and sign up)
 
-## Priority conventions 
+## Priority conventions
 
--   Should/would/could are three categories used to describe a feature's
-    > priority
+- Should/would/could are three categories used to describe a feature’s
+  \> priority
 
-## Requirement conventions 
+## Requirement conventions
 
 ### Description and Priority
 
@@ -483,841 +392,841 @@ Brief description of the feature and the priority of the feature
 A use case for the feature and how an example of the feature responding
 to user input
 
-### Function Requirements 
+### Function Requirements
 
--   The specific functional requirements for the feature and the
-    > acceptance criteria
+- The specific functional requirements for the feature and the \>
+  acceptance criteria
 
-## 4.1 Search for products using keyword (HOM-1)
 
-+---------------+------------------------------------------------------+
-| Description   | Priority: Must                                       |
-| and Priority  |                                                      |
-|               | Users can search for products on the home page using |
-|               | a search box                                         |
-+===============+======================================================+
-| Stim          | 1.  User enters name of a product into the search    |
-| ulus/Response |     > box from the home page                         |
-| Sequences     |                                                      |
-|               | 2.  The system displays a list of matching products  |
-|               |     > is displayed                                   |
-+---------------+------------------------------------------------------+
-| Functional    | **HOM-1.1:** A list of matching products is shown    |
-| Requirements  |                                                      |
-|               | Given I've entered the name of a product into the    |
-|               | search box                                           |
-|               |                                                      |
-|               | When I hit enter                                     |
-|               |                                                      |
-|               | Then a list of matching products is displayed        |
-+---------------+------------------------------------------------------+
+#### 4.1 Search for products using keyword (HOM-1)
+<table style="width:99%;">
+    <col style="width: 22%" />
+    <col style="width: 76%" />
+    <tr class="header">
+        <th>Description and Priority</th>
+        <th>Priority: Must
+            Users can search for products on the home page using a search
+            box
+        </th>
+    </tr>
+    <tr class="odd">
+        <td>Stim ulus/Response Sequences</td>
+        <td>
+            <ol type="1">
+                <li>User enters name of a product into the search &gt; box from the
+                    home page
+                </li>
+                <li>The system displays a list of matching products &gt; is
+                    displayed
+                </li>
+            </ol>
+        </td>
+    </tr>
+    <tr class="even">
+        <td>Functional Requirements</td>
+        <td><strong>HOM-1.1:</strong> A list of matching products is
+            shown
+            Given I’ve entered the name of a product into the search box
+            When I hit enter
+            Then a list of matching products is displayed
+        </td>
+    </tr>
+</table>
 
-##  
 
-## 4.2 Browse by categories (HOM-2)
 
-+---------------+------------------------------------------------------+
-| Description   | Priority: Must                                       |
-| and Priority  |                                                      |
-|               | Users can select the category to browse from the     |
-|               | home page.                                           |
-+===============+======================================================+
-| Stim          | 1.  From the home page user selects the browse       |
-| ulus/Response |     > categories button                              |
-| Sequences     |                                                      |
-|               | 2.  The system displays a list of categories         |
-|               |                                                      |
-|               | 3.  User clicks the name of a category               |
-|               |                                                      |
-|               | 4.  The system shows a list of all products under    |
-|               |     > that category                                  |
-+---------------+------------------------------------------------------+
-| Functional    | **HOM-2.1:** UI element on home page to open         |
-| Requirements  | categories page or menu                              |
-|               |                                                      |
-|               | Given I'm on the home page                           |
-|               |                                                      |
-|               | When I click on the button or other UI element to    |
-|               | browse categories                                    |
-|               |                                                      |
-|               | Then A categories page or menu opens                 |
-|               |                                                      |
-|               | And I see a list of all categories                   |
-|               |                                                      |
-|               | **HOM-2.2**: Clicking on a category on the           |
-|               | categories page opens a product list page for that   |
-|               | category                                             |
-|               |                                                      |
-|               | Given I have the categories page or menu open        |
-|               |                                                      |
-|               | When I click on the name of a category               |
-|               |                                                      |
-|               | Then A product list page opens for that category     |
-|               |                                                      |
-|               | And I see a list of all products in that category    |
-+---------------+------------------------------------------------------+
+#### 4.2 Browse by categories (HOM-2)
+<table style="width:99%;">
+    <col style="width: 22%" />
+    <col style="width: 76%" />
+    <tr class="header">
+        <th>Description and Priority</th>
+        <th>Priority: Must
+            Users can select the category to browse from the home page.
+        </th>
+    </tr>
+    <tr class="odd">
+        <td>Stim ulus/Response Sequences</td>
+        <td>
+            <ol type="1">
+                <li>From the home page user selects the browse &gt; categories
+                    button
+                </li>
+                <li>The system displays a list of categories</li>
+                <li>User clicks the name of a category</li>
+                <li>The system shows a list of all products under &gt; that
+                    category
+                </li>
+            </ol>
+        </td>
+    </tr>
+    <tr class="even">
+        <td>Functional Requirements</td>
+        <td><strong>HOM-2.1:</strong> UI element on home page to open
+            categories page or menu
+            Given I’m on the home page
+            When I click on the button or other UI element to browse
+            categories
+            Then A categories page or menu opens
+            And I see a list of all categories
+            <strong>HOM-2.2</strong>: Clicking on a category on the categories
+            page opens a product list page for that category
+            Given I have the categories page or menu open
+            When I click on the name of a category
+            Then A product list page opens for that category
+            And I see a list of all products in that category
+        </td>
+    </tr>
+</table>
 
-## 
 
-##  
 
-## 4.3 prices shown on product page (PRO -1)
 
-+---------------+------------------------------------------------------+
-| Description   | Priority: Must                                       |
-| and Priority  |                                                      |
-|               | Prices from the different supermarkets are shown on  |
-|               | the product page                                     |
-+===============+======================================================+
-| Stim          | 1.  User Clicks on a product                         |
-| ulus/Response |                                                      |
-| Sequences     | 2.  System shows the product page                    |
-|               |                                                      |
-|               | 3.  System shows the price of that product across    |
-|               |     > multiple different super markets               |
-+---------------+------------------------------------------------------+
-| Functional    | **PRO-1.1:** List of all super markets containing    |
-| Requirements  | that product is shows                                |
-|               |                                                      |
-|               | Given I\'m looking for a particular product          |
-|               |                                                      |
-|               | When I go to the product page for that given product |
-|               |                                                      |
-|               | Then I should see a list containing all the          |
-|               | supermarkets that sell the given product             |
-|               |                                                      |
-|               | And the list should be sorted by price, lowest to    |
-|               | highest                                              |
-|               |                                                      |
-|               | And I should see a price associated with each        |
-|               | supermarket                                          |
-|               |                                                      |
-|               | **PRO-1.2**: Products that don't exist display N/A   |
-|               | instead of a price                                   |
-|               |                                                      |
-|               | Given there exists a product that is not available   |
-|               | from a supermarket                                   |
-|               |                                                      |
-|               | When I\'m on the product page for that product       |
-|               |                                                      |
-|               | Then it should display \"N/a\" instead of a price    |
-+---------------+------------------------------------------------------+
 
-##  
+#### 4.3 prices shown on product page (PRO -1)
+<table style="width:99%;">
+    <col style="width: 22%" />
+    <col style="width: 76%" />
+    <tr class="header">
+        <th>Description and Priority</th>
+        <th>Priority: Must
+            Prices from the different supermarkets are shown on the product
+            page
+        </th>
+    </tr>
+    <tr class="odd">
+        <td>Stim ulus/Response Sequences</td>
+        <td>
+            <ol type="1">
+                <li>User Clicks on a product</li>
+                <li>System shows the product page</li>
+                <li>System shows the price of that product across &gt; multiple
+                    different super markets
+                </li>
+            </ol>
+        </td>
+    </tr>
+    <tr class="even">
+        <td>Functional Requirements</td>
+        <td><strong>PRO-1.1:</strong> List of all super markets containing
+            that product is shows
+            Given I'm looking for a particular product
+            When I go to the product page for that given product
+            Then I should see a list containing all the supermarkets that sell
+            the given product
+            And the list should be sorted by price, lowest to highest
+            And I should see a price associated with each supermarket
+            <strong>PRO-1.2</strong>: Products that don’t exist display N/A
+            instead of a price
+            Given there exists a product that is not available from a
+            supermarket
+            When I'm on the product page for that product
+            Then it should display "N/a" instead of a price
+        </td>
+    </tr>
+</table>
 
-## 4.4 Prices shown in search results (SEA-1)
 
-+---------------+------------------------------------------------------+
-| Description   | Priority: Could                                      |
-| and Priority  |                                                      |
-|               | The prices of a product is shown in the search       |
-|               | results                                              |
-+===============+======================================================+
-| Stim          | 1.  User searches for a product                      |
-| ulus/Response |                                                      |
-| Sequences     | 2.  System shows that product's price and the        |
-|               |     > corresponding supermarket                      |
-+---------------+------------------------------------------------------+
-| Functional    | **SEA-1.1:** Icons in search with price for stocked  |
-| Requirements  | items                                                |
-|               |                                                      |
-|               | Given I'm on the search results page                 |
-|               |                                                      |
-|               | When A product is available at a major supermarket   |
-|               |                                                      |
-|               | Then The search result should feature in the UI an   |
-|               | icon for that supermarket                            |
-|               |                                                      |
-|               | And The price at that supermarket should be shown    |
-|               | next to it                                           |
-|               |                                                      |
-|               | **SEA-1.2:** No price listed for unstocked items     |
-|               |                                                      |
-|               | Given I'm on the search results page                 |
-|               |                                                      |
-|               | When A product is not available at a particular      |
-|               | major supermarket                                    |
-|               |                                                      |
-|               | Then The search result should not show an icon for   |
-|               | that supermarket                                     |
-|               |                                                      |
-|               | And The search result should not show a price for    |
-|               | that item at that supermarket                        |
-|               |                                                      |
-|               | **SEA-1.3:** Lowest price bolded                     |
-|               |                                                      |
-|               | Given I'm on the search results page                 |
-|               |                                                      |
-|               | When A product is available at a major supermarket   |
-|               |                                                      |
-|               | And: That supermarket offers the cheapest price      |
-|               | available                                            |
-|               |                                                      |
-|               | Then That price should be highlighted in the UI      |
-|               | (such as with bold text)                             |
-+---------------+------------------------------------------------------+
 
-##  
+#### 4.4 Prices shown in search results (SEA-1)
+<table style="width:99%;">
+    <col style="width: 22%" />
+    <col style="width: 76%" />
+    <tr class="header">
+        <th>Description and Priority</th>
+        <th>Priority: Could
+            The prices of a product is shown in the search results
+        </th>
+    </tr>
+    <tr class="odd">
+        <td>Stim ulus/Response Sequences</td>
+        <td>
+            <ol type="1">
+                <li>User searches for a product</li>
+                <li>System shows that product’s price and the &gt; corresponding
+                    supermarket
+                </li>
+            </ol>
+        </td>
+    </tr>
+    <tr class="even">
+        <td>Functional Requirements</td>
+        <td><strong>SEA-1.1:</strong> Icons in search with price for stocked
+            items
+            Given I’m on the search results page
+            When A product is available at a major supermarket
+            Then The search result should feature in the UI an icon for that
+            supermarket
+            And The price at that supermarket should be shown next to it
+            <strong>SEA-1.2:</strong> No price listed for unstocked items
+            Given I’m on the search results page
+            When A product is not available at a particular major supermarket
+            Then The search result should not show an icon for that
+            supermarket
+            And The search result should not show a price for that item at that
+            supermarket
+            <strong>SEA-1.3:</strong> Lowest price bolded
+            Given I’m on the search results page
+            When A product is available at a major supermarket
+            And: That supermarket offers the cheapest price available
+            Then That price should be highlighted in the UI (such as with bold
+            text)
+        </td>
+    </tr>
+</table>
 
-## 4.5 Alternative products shown on product page (PRO-2)
 
-+---------------+------------------------------------------------------+
-| Description   | Priority: Could                                      |
-| and Priority  |                                                      |
-|               | Similar products to the product the user is current  |
-|               | viewing are shown on the product page                |
-+===============+======================================================+
-| Stim          | 1.  User clicks on a product                         |
-| ulus/Response |                                                      |
-| Sequences     | 2.  System takes user to the product page            |
-|               |                                                      |
-|               | 3.  System shows user alternative products           |
-|               |                                                      |
-|               | 4.  User clicks on one of the alternative products   |
-|               |     > shown                                          |
-|               |                                                      |
-|               | 5.  System takes the user to that product's product  |
-|               |     > page.                                          |
-+---------------+------------------------------------------------------+
-| Functional    | **PRO-2.1:** Alternative brands shown where          |
-| Requirements  | available                                            |
-|               |                                                      |
-|               | Given There are multiple brands that produce a       |
-|               | particular type of product                           |
-|               |                                                      |
-|               | When I view the product page for that product        |
-|               |                                                      |
-|               | Then I see a list of alternatives                    |
-|               |                                                      |
-|               | And The price is displayed by each one               |
-|               |                                                      |
-|               | **PRO-2.2:** All suitable alternatives should be     |
-|               | shown                                                |
-|               |                                                      |
-|               | Given I\'m on the product page for a product         |
-|               |                                                      |
-|               | When another product could be purchased as an        |
-|               | alternative to the current product                   |
-|               |                                                      |
-|               | Then that product is shown in the list of            |
-|               | alternatives                                         |
-|               |                                                      |
-|               | **PRO-2.3:** No alternative brands shown, where not  |
-|               | available                                            |
-|               |                                                      |
-|               | Given There is only one brand that produces a        |
-|               | particular type of product                           |
-|               |                                                      |
-|               | When I view the product page for that product        |
-|               |                                                      |
-|               | Then I do not see a list of alternatives             |
-|               |                                                      |
-|               | **PRO 2.4:** Can click on alternative products to    |
-|               | browse to their product page                         |
-|               |                                                      |
-|               | Given I'm on the product page for a product          |
-|               |                                                      |
-|               | And There are alternative products displayed         |
-|               |                                                      |
-|               | When I click on one of the alternatives in the list  |
-|               |                                                      |
-|               | Then The product page for the selected alternative   |
-|               | is shown                                             |
-+---------------+------------------------------------------------------+
 
-## 4.6 Choosing time slot for delivery (CHE-1)
+#### 4.5 Alternative products shown on product page (PRO-2)
+<table style="width:99%;">
+    <col style="width: 22%" />
+    <col style="width: 76%" />
+    <tr class="header">
+        <th>Description and Priority</th>
+        <th>Priority: Could
+            Similar products to the product the user is current viewing are shown
+            on the product page
+        </th>
+    </tr>
+    <tr class="odd">
+        <td>Stim ulus/Response Sequences</td>
+        <td>
+            <ol type="1">
+                <li>User clicks on a product</li>
+                <li>System takes user to the product page</li>
+                <li>System shows user alternative products</li>
+                <li>User clicks on one of the alternative products &gt;
+                    shown
+                </li>
+                <li>System takes the user to that product’s product &gt;
+                    page.
+                </li>
+            </ol>
+        </td>
+    </tr>
+    <tr class="even">
+        <td>Functional Requirements</td>
+        <td><strong>PRO-2.1:</strong> Alternative brands shown where
+            available
+            Given There are multiple brands that produce a particular type of
+            product
+            When I view the product page for that product
+            Then I see a list of alternatives
+            And The price is displayed by each one
+            <strong>PRO-2.2:</strong> All suitable alternatives should be
+            shown
+            Given I'm on the product page for a product
+            When another product could be purchased as an alternative to the
+            current product
+            Then that product is shown in the list of alternatives
+            <strong>PRO-2.3:</strong> No alternative brands shown, where not
+            available
+            Given There is only one brand that produces a particular type of
+            product
+            When I view the product page for that product
+            Then I do not see a list of alternatives
+            <strong>PRO 2.4:</strong> Can click on alternative products to browse
+            to their product page
+            Given I’m on the product page for a product
+            And There are alternative products displayed
+            When I click on one of the alternatives in the list
+            Then The product page for the selected alternative is shown
+        </td>
+    </tr>
+</table>
 
-+---------------+------------------------------------------------------+
-| Description   | Priority: Should                                     |
-| and Priority  |                                                      |
-|               | Users are able to choose a specific time slot for    |
-|               | delivery of their groceries                          |
-+===============+======================================================+
-| Stim          | 1.  User clicks a time for the groceries to be       |
-| ulus/Response |     > delivered                                      |
-| Sequences     |                                                      |
-|               | 2.  System notifies the confirmation of the delivery |
-|               |     > time to the user                               |
-+---------------+------------------------------------------------------+
-| Functional    | **CHE-1.1:** Users should be able to choose a        |
-| Requirements  | specific time slot from a list of available times.   |
-|               |                                                      |
-|               | Given I\'m on the time select page,                  |
-|               |                                                      |
-|               | When I click the specific time I want my groceries   |
-|               | to be delivered,                                     |
-|               |                                                      |
-|               | I am informed my time has been confirmed.            |
-|               |                                                      |
-|               | **CHE-1.2:** Users should be able to edit the time   |
-|               | slot chosen.                                         |
-|               |                                                      |
-|               | Given I\'m on the time select page,                  |
-|               |                                                      |
-|               | And I have already selected a time for my groceries  |
-|               | to be delivered,                                     |
-|               |                                                      |
-|               | When I click a different specific time,              |
-|               |                                                      |
-|               | I am informed my new time has been confirmed.        |
-|               |                                                      |
-|               | **CHE-1.3:** User should not be able to select an    |
-|               | unavailable time.                                    |
-|               |                                                      |
-|               | Given I\'m on the time select page,                  |
-|               |                                                      |
-|               | When I select a time that is unavailable,            |
-|               |                                                      |
-|               | I am informed that I must choose a different time.   |
-+---------------+------------------------------------------------------+
+#### 4.6 Choosing time slot for delivery (CHE-1)
+<table style="width:99%;">
+    <col style="width: 22%" />
+    <col style="width: 76%" />
+    <tr class="header">
+        <th>Description and Priority</th>
+        <th>Priority: Should
+            Users are able to choose a specific time slot for delivery of their
+            groceries
+        </th>
+    </tr>
+    <tr class="odd">
+        <td>Stim ulus/Response Sequences</td>
+        <td>
+            <ol type="1">
+                <li>User clicks a time for the groceries to be &gt;
+                    delivered
+                </li>
+                <li>System notifies the confirmation of the delivery &gt; time to the
+                    user
+                </li>
+            </ol>
+        </td>
+    </tr>
+    <tr class="even">
+        <td>Functional Requirements</td>
+        <td><strong>CHE-1.1:</strong> Users should be able to choose a
+            specific time slot from a list of available times.
+            Given I'm on the time select page,
+            When I click the specific time I want my groceries to be
+            delivered,
+            I am informed my time has been confirmed.
+            <strong>CHE-1.2:</strong> Users should be able to edit the time slot
+            chosen.
+            Given I'm on the time select page,
+            And I have already selected a time for my groceries to be
+            delivered,
+            When I click a different specific time,
+            I am informed my new time has been confirmed.
+            <strong>CHE-1.3:</strong> User should not be able to select an
+            unavailable time.
+            Given I'm on the time select page,
+            When I select a time that is unavailable,
+            I am informed that I must choose a different time.
+        </td>
+    </tr>
+</table>
 
-##  
 
-## 4.7 Viewing Shopping Cart (SHO-1)
 
-+---------------+------------------------------------------------------+
-| Description   | Priority: Must                                       |
-| and Priority  |                                                      |
-|               | Users can view their shopping cart                   |
-+===============+======================================================+
-| Stim          | 1.  User clicks on button to open shopping cart      |
-| ulus/Response |                                                      |
-| Sequences     | 2.  System displays the shopping cart showing the    |
-|               |     > user of of their added items                   |
-+---------------+------------------------------------------------------+
-| Functional    | **SHO-1.2**: User can open checkout page if they     |
-| Requirements  | have items in their cart                             |
-|               |                                                      |
-|               | Given a I am on the shopping cart page               |
-|               |                                                      |
-|               | And there are items in the cart                      |
-|               |                                                      |
-|               | When I click the check out button                    |
-|               |                                                      |
-|               | Then I am taken to the checkout page                 |
-|               |                                                      |
-|               | **SHO-1.2:** Shopping cart page shows all items      |
-|               | added to the cart                                    |
-|               |                                                      |
-|               | Given I have added an item to the cart,              |
-|               |                                                      |
-|               | When I open the shopping cart page,                  |
-|               |                                                      |
-|               | Then the item is listed on the screen.               |
-|               |                                                      |
-|               | **SHO-1.3:** User cannot open checkout page if they  |
-|               | have no items in their cart                          |
-|               |                                                      |
-|               | Given a I am on the shopping cart page               |
-|               |                                                      |
-|               | And there are items in the cart                      |
-|               |                                                      |
-|               | When I click the check out button                    |
-|               |                                                      |
-|               | Then I am not taken to the checkout page             |
-+---------------+------------------------------------------------------+
+#### 4.7 Viewing Shopping Cart (SHO-1)
+<table style="width:99%;">
+    <col style="width: 22%" />
+    <col style="width: 76%" />
+    <tr class="header">
+        <th>Description and Priority</th>
+        <th>Priority: Must
+            Users can view their shopping cart
+        </th>
+    </tr>
+    <tr class="odd">
+        <td>Stim ulus/Response Sequences</td>
+        <td>
+            <ol type="1">
+                <li>User clicks on button to open shopping cart</li>
+                <li>System displays the shopping cart showing the &gt; user of of
+                    their added items
+                </li>
+            </ol>
+        </td>
+    </tr>
+    <tr class="even">
+        <td>Functional Requirements</td>
+        <td><strong>SHO-1.2</strong>: User can open checkout page if they
+            have items in their cart
+            Given a I am on the shopping cart page
+            And there are items in the cart
+            When I click the check out button
+            Then I am taken to the checkout page
+            <strong>SHO-1.2:</strong> Shopping cart page shows all items added to
+            the cart
+            Given I have added an item to the cart,
+            When I open the shopping cart page,
+            Then the item is listed on the screen.
+            <strong>SHO-1.3:</strong> User cannot open checkout page if they have
+            no items in their cart
+            Given a I am on the shopping cart page
+            And there are items in the cart
+            When I click the check out button
+            Then I am not taken to the checkout page
+        </td>
+    </tr>
+</table>
 
-##  
 
-## 4.8 Notifications and alerts (HOM-3)
 
-+---------------+------------------------------------------------------+
-| Description   | Priority: Could                                      |
-| and Priority  |                                                      |
-|               | Users upon consent can receive notification or       |
-|               | alerts price drops or special offers                 |
-+===============+======================================================+
-| Stim          | 1.  User signs up for notifications                  |
-| ulus/Response |                                                      |
-| Sequences     | 2.  System see that there is a price drop or special |
-|               |                                                      |
-|               | 3.  System notifies user with the price drop         |
-+---------------+------------------------------------------------------+
-| Functional    | **HOM-3.1:** Notifications for temporary price drops |
-| Requirements  |                                                      |
-|               | Given I'm signed up for notifications                |
-|               |                                                      |
-|               | When There is a temporary price drop of any kind     |
-|               |                                                      |
-|               | Then I get a notification                            |
-|               |                                                      |
-|               | **HOM-3.2A:** User should be able to enable          |
-|               | notifications.                                       |
-|               |                                                      |
-|               | Given I\'m not signed up for notifications,          |
-|               |                                                      |
-|               | And I want to be notified of price drops and special |
-|               | offers,                                              |
-|               |                                                      |
-|               | When I select the \"Get Notified\" button,           |
-|               |                                                      |
-|               | Then I am subscribed for all notifications.          |
-|               |                                                      |
-|               | **HOM-3.2B:** User should be able to disable         |
-|               | notifications                                        |
-|               |                                                      |
-|               | Given I\'m signed up for notifications,              |
-|               |                                                      |
-|               | And I do not want to be notified of price drops and  |
-|               | special offers,                                      |
-|               |                                                      |
-|               | When I select the \"Unsubscribe\" button,            |
-|               |                                                      |
-|               | Then I am unsubscribed from receiving notifications. |
-|               |                                                      |
-|               | **HOM-3.3:** User should be able to select           |
-|               | specifically the notifications they want.            |
-|               |                                                      |
-|               | Given I\'m signed up for notifications,              |
-|               |                                                      |
-|               | And I only want to be notified of specific items,    |
-|               |                                                      |
-|               | When I select the items I want to be notified for,   |
-|               |                                                      |
-|               | Then I am subscribed to only receiving notifications |
-|               | for those items.                                     |
-+---------------+------------------------------------------------------+
+#### 4.8 Notifications and alerts (HOM-3)
+<table style="width:99%;">
+    <col style="width: 22%" />
+    <col style="width: 76%" />
+    <tr class="header">
+        <th>Description and Priority</th>
+        <th>Priority: Could
+            Users upon consent can receive notification or alerts price drops or
+            special offers
+        </th>
+    </tr>
+    <tr class="odd">
+        <td>Stim ulus/Response Sequences</td>
+        <td>
+            <ol type="1">
+                <li>User signs up for notifications</li>
+                <li>System see that there is a price drop or special</li>
+                <li>System notifies user with the price drop</li>
+            </ol>
+        </td>
+    </tr>
+    <tr class="even">
+        <td>Functional Requirements</td>
+        <td><strong>HOM-3.1:</strong> Notifications for temporary price
+            drops
+            Given I’m signed up for notifications
+            When There is a temporary price drop of any kind
+            Then I get a notification
+            <strong>HOM-3.2A:</strong> User should be able to enable
+            notifications.
+            Given I'm not signed up for notifications,
+            And I want to be notified of price drops and special offers,
+            When I select the "Get Notified" button,
+            Then I am subscribed for all notifications.
+            <strong>HOM-3.2B:</strong> User should be able to disable
+            notifications
+            Given I'm signed up for notifications,
+            And I do not want to be notified of price drops and special
+            offers,
+            When I select the "Unsubscribe" button,
+            Then I am unsubscribed from receiving notifications.
+            <strong>HOM-3.3:</strong> User should be able to select specifically
+            the notifications they want.
+            Given I'm signed up for notifications,
+            And I only want to be notified of specific items,
+            When I select the items I want to be notified for,
+            Then I am subscribed to only receiving notifications for those
+            items.
+        </td>
+    </tr>
+</table>
 
-##  
 
-## 4.9 Filter search results by category (SEA-4)
 
-+---------------+------------------------------------------------------+
-| Description   | Priority: Should                                     |
-| and Priority  |                                                      |
-|               | Users can filter their search results by category    |
-+===============+======================================================+
-| Stim          | 1.  User selects to filter search results by         |
-| ulus/Response |     > category                                       |
-| Sequences     |                                                      |
-|               | 2.  System only shows search results that correspond |
-|               |     > to the chosen category                         |
-+---------------+------------------------------------------------------+
-| Functional    | **CAT 4.1** UI element on search results page to     |
-| Requirements  | filter by category                                   |
-|               |                                                      |
-|               | Given I'm viewing search results                     |
-|               |                                                      |
-|               | When I click a UI element, such as a checkbox menu,  |
-|               | to filter by category                                |
-|               |                                                      |
-|               | Then the search results are updated                  |
-|               |                                                      |
-|               | And I see a products within given categories         |
-|               | relevant to search query                             |
-+---------------+------------------------------------------------------+
+#### 4.9 Filter search results by category (SEA-4)
+<table style="width:99%;">
+    <col style="width: 22%" />
+    <col style="width: 76%" />
+    <tr class="header">
+        <th>Description and Priority</th>
+        <th>Priority: Should
+            Users can filter their search results by category
+        </th>
+    </tr>
+    <tr class="odd">
+        <td>Stim ulus/Response Sequences</td>
+        <td>
+            <ol type="1">
+                <li>User selects to filter search results by &gt; category</li>
+                <li>System only shows search results that correspond &gt; to the
+                    chosen category
+                </li>
+            </ol>
+        </td>
+    </tr>
+    <tr class="even">
+        <td>Functional Requirements</td>
+        <td><strong>CAT 4.1</strong> UI element on search results page to
+            filter by category
+            Given I’m viewing search results
+            When I click a UI element, such as a checkbox menu, to filter by
+            category
+            Then the search results are updated
+            And I see a products within given categories relevant to search
+            query
+        </td>
+    </tr>
+</table>
 
-##  
 
-## 4.10 Sign in (LOG-1)
 
-+----------------+-----------------------------------------------------+
-| Description    | Priority: Could                                     |
-| and Priority   |                                                     |
-|                | User are able to sign in to the website if they     |
-|                | have a valid account                                |
-+================+=====================================================+
-| Sti            | 1.  User puts their login information               |
-| mulus/Response |                                                     |
-| Sequences      | 2.  System grants them access to their account      |
-+----------------+-----------------------------------------------------+
-| Functional     | **LOG-1.1:** Successful login upon entering correct |
-| Requirements   | details                                             |
-|                |                                                     |
-|                | Given I'm on the login page                         |
-|                |                                                     |
-|                | And I have filled my username and password details  |
-|                | correctly into the form                             |
-|                |                                                     |
-|                | When I click the sign in button                     |
-|                |                                                     |
-|                | Then I will be redirected to the home page          |
-|                |                                                     |
-|                | And I will infer confirmation that I am signed in   |
-|                |                                                     |
-|                | **LOG-1.2:** Rejected login upon entering false     |
-|                | details                                             |
-|                |                                                     |
-|                | Given I'm on the login page                         |
-|                |                                                     |
-|                | And I have filled my username and password details  |
-|                | incorrectly into the form                           |
-|                |                                                     |
-|                | When I click the sign in button                     |
-|                |                                                     |
-|                | Then the login page will be refreshed               |
-|                |                                                     |
-|                | And I will not be logged in                         |
-|                |                                                     |
-|                | And an error message will provide visual            |
-|                | confirmation of failure                             |
-+----------------+-----------------------------------------------------+
+#### 4.10 Sign in (LOG-1)
+<table style="width:99%;">
+    <col style="width: 23%" />
+    <col style="width: 75%" />
+    <tr class="header">
+        <th>Description and Priority</th>
+        <th>Priority: Could
+            User are able to sign in to the website if they have a valid
+            account
+        </th>
+    </tr>
+    <tr class="odd">
+        <td>Sti mulus/Response Sequences</td>
+        <td>
+            <ol type="1">
+                <li>User puts their login information</li>
+                <li>System grants them access to their account</li>
+            </ol>
+        </td>
+    </tr>
+    <tr class="even">
+        <td>Functional Requirements</td>
+        <td><strong>LOG-1.1:</strong> Successful login upon entering correct
+            details
+            Given I’m on the login page
+            And I have filled my username and password details correctly into the
+            form
+            When I click the sign in button
+            Then I will be redirected to the home page
+            And I will infer confirmation that I am signed in
+            <strong>LOG-1.2:</strong> Rejected login upon entering false
+            details
+            Given I’m on the login page
+            And I have filled my username and password details incorrectly into
+            the form
+            When I click the sign in button
+            Then the login page will be refreshed
+            And I will not be logged in
+            And an error message will provide visual confirmation of
+            failure
+        </td>
+    </tr>
+</table>
 
-##  
 
-## 4.11 Sign up (LOG-2)
 
-+---------------+------------------------------------------------------+
-| Description   | Priority: Could                                      |
-| and Priority  |                                                      |
-|               | Users are able to sign up to create an account       |
-+===============+======================================================+
-| Stim          | 1.  User puts in their information                   |
-| ulus/Response |                                                      |
-| Sequences     | 2.  If valid, system creates an account using the    |
-|               |     > user's information                             |
-+---------------+------------------------------------------------------+
-| Functional    | **LOG-2.1:** Successful login upon entering correct  |
-| Requirements  | details                                              |
-|               |                                                      |
-|               | Given I'm on the sign up page                        |
-|               |                                                      |
-|               | And I have entered my username, password, password   |
-|               | again details correctly into the form                |
-|               |                                                      |
-|               | When I click the sign in button                      |
-|               |                                                      |
-|               | Then I will be redirected to the home page           |
-|               |                                                      |
-|               | And I will infer confirmation that I now have an     |
-|               | account                                              |
-|               |                                                      |
-|               | **LOG-2.2:** Rejected login upon both passwords      |
-|               | being different                                      |
-|               |                                                      |
-|               | Given I'm on the sign up page                        |
-|               |                                                      |
-|               | And I have entered my username correctly,            |
-|               |                                                      |
-|               | And I have entered my password and password again    |
-|               | details incorrectly into the form                    |
-|               |                                                      |
-|               | When I click the sign up button                      |
-|               |                                                      |
-|               | Then the login page will be refreshed                |
-|               |                                                      |
-|               | And I will not be logged in                          |
-|               |                                                      |
-|               | And an error message will provide visual             |
-|               | confirmation of failure                              |
-|               |                                                      |
-|               | **LOG-2.3:** Rejected login upon entering existing   |
-|               | username                                             |
-|               |                                                      |
-|               | Given I'm on the sign up page                        |
-|               |                                                      |
-|               | And I have entered my username,                      |
-|               |                                                      |
-|               | And my username already exists for another user      |
-|               |                                                      |
-|               | And I have entered my password and password again    |
-|               | details correctly into the form                      |
-|               |                                                      |
-|               | When I click the sign up button                      |
-|               |                                                      |
-|               | Then the login page will be refreshed                |
-|               |                                                      |
-|               | And I will not be logged in                          |
-|               |                                                      |
-|               | And an error message will provide visual             |
-|               | confirmation of failure                              |
-+---------------+------------------------------------------------------+
+#### 4.11 Sign up (LOG-2)
+<table style="width:99%;">
+    <col style="width: 22%" />
+    <col style="width: 76%" />
+    <tr class="header">
+        <th>Description and Priority</th>
+        <th>Priority: Could
+            Users are able to sign up to create an account
+        </th>
+    </tr>
+    <tr class="odd">
+        <td>Stim ulus/Response Sequences</td>
+        <td>
+            <ol type="1">
+                <li>User puts in their information</li>
+                <li>If valid, system creates an account using the &gt; user’s
+                    information
+                </li>
+            </ol>
+        </td>
+    </tr>
+    <tr class="even">
+        <td>Functional Requirements</td>
+        <td><strong>LOG-2.1:</strong> Successful login upon entering correct
+            details
+            Given I’m on the sign up page
+            And I have entered my username, password, password again details
+            correctly into the form
+            When I click the sign in button
+            Then I will be redirected to the home page
+            And I will infer confirmation that I now have an account
+            <strong>LOG-2.2:</strong> Rejected login upon both passwords being
+            different
+            Given I’m on the sign up page
+            And I have entered my username correctly,
+            And I have entered my password and password again details incorrectly
+            into the form
+            When I click the sign up button
+            Then the login page will be refreshed
+            And I will not be logged in
+            And an error message will provide visual confirmation of failure
+            <strong>LOG-2.3:</strong> Rejected login upon entering existing
+            username
+            Given I’m on the sign up page
+            And I have entered my username,
+            And my username already exists for another user
+            And I have entered my password and password again details correctly
+            into the form
+            When I click the sign up button
+            Then the login page will be refreshed
+            And I will not be logged in
+            And an error message will provide visual confirmation of
+            failure
+        </td>
+    </tr>
+</table>
 
-## 4.12 Sort results by price (SEA-2)
+#### 4.12 Sort results by price (SEA-2)
+<table style="width:99%;">
+    <col style="width: 20%" />
+    <col style="width: 77%" />
+    <tr class="header">
+        <th>Description and Priority</th>
+        <th>Priority: should
+            Users are able to filter their search results by price
+        </th>
+    </tr>
+    <tr class="odd">
+        <td>Stimu lus/Response Sequences</td>
+        <td>
+            <ol type="1">
+                <li>User searches for a product</li>
+                <li>System shows them a list of corresponding &gt; products</li>
+                <li>User selects to sort prices from low to high</li>
+                <li>System organizes list of products from low to &gt; high</li>
+            </ol>
+        </td>
+    </tr>
+    <tr class="even">
+        <td>Functional Requirements</td>
+        <td><strong>SEA-2.1</strong>: UI element on search page to sorting
+            options
+            Given I’m on the search results page
+            And I click the sort options drop down box
+            When I click to sort by price low to high
+            Then the search results page will refresh
+            And I see items in order of the price property, low to high
+        </td>
+    </tr>
+</table>
 
-+--------------+-------------------------------------------------------+
-| Description  | Priority: should                                      |
-| and Priority |                                                       |
-|              | Users are able to filter their search results by      |
-|              | price                                                 |
-+==============+=======================================================+
-| Stimu        | 1.  User searches for a product                       |
-| lus/Response |                                                       |
-| Sequences    | 2.  System shows them a list of corresponding         |
-|              |     > products                                        |
-|              |                                                       |
-|              | 3.  User selects to sort prices from low to high      |
-|              |                                                       |
-|              | 4.  System organizes list of products from low to     |
-|              |     > high                                            |
-+--------------+-------------------------------------------------------+
-| Functional   | **SEA-2.1**: UI element on search page to sorting     |
-| Requirements | options                                               |
-|              |                                                       |
-|              | Given I'm on the search results page                  |
-|              |                                                       |
-|              | And I click the sort options drop down box            |
-|              |                                                       |
-|              | When I click to sort by price low to high             |
-|              |                                                       |
-|              | Then the search results page will refresh             |
-|              |                                                       |
-|              | And I see items in order of the price property, low   |
-|              | to high                                               |
-+--------------+-------------------------------------------------------+
+#### 4.13 Filter search results using minimum and maximum price filters (SEA-3)
+<table style="width:99%;">
+    <col style="width: 20%" />
+    <col style="width: 77%" />
+    <tr class="header">
+        <th>Description and Priority</th>
+        <th>Priority: Could
+            Users are able to filter their search results by price by adding
+            minimum and maximum prices.
+        </th>
+    </tr>
+    <tr class="odd">
+        <td>Stimu lus/Response Sequences</td>
+        <td>
+            <ol type="1">
+                <li>User searches for a product</li>
+                <li>System shows them a list of corresponding &gt; products</li>
+                <li>User inputs a minimum price of $5 and maximum &gt; price of
+                    $10
+                </li>
+                <li>System adjusts the list of products shown to be &gt; only
+                    products that correspond to that list
+                </li>
+            </ol>
+        </td>
+    </tr>
+    <tr class="even">
+        <td>Functional Requirements</td>
+        <td><strong>SEA-3.1:</strong> Minimum and maximum inputs on search
+            page
+            Given I’m on the search results page
+            When I input a price minimum
+            And when I input a price maximum
+            Then the search results page will refresh
+            And I'll see items within this price range
+        </td>
+    </tr>
+</table>
 
-## 4.13 Filter search results using minimum and maximum price filters (SEA-3)
+#### 4.14 Placing an order (CHE-2)
+<table style="width:99%;">
+    <col style="width: 22%" />
+    <col style="width: 76%" />
+    <tr class="header">
+        <th>Description and Priority</th>
+        <th>Priority: Must
+            Users can place an order for their groceries so that they can be
+            delivered for them
+        </th>
+    </tr>
+    <tr class="odd">
+        <td>Stim ulus/Response Sequences</td>
+        <td>
+            <ol type="1">
+                <li>User is on the checkout page and enters their &gt; delivery
+                    information
+                </li>
+                <li>User hit place order button</li>
+                <li>System handles the order</li>
+                <li>System stores the order information in a &gt; database</li>
+            </ol>
+        </td>
+    </tr>
+    <tr class="even">
+        <td>Functional Requirements</td>
+        <td><strong>CHE-2.1:</strong> User can place order if all details
+            filled out in checkout page
+            Given I am on the checkout page
+            And all my details are filled in including full name, shipping
+            address, city, state / province, company and zip code
+            And I've selected a preferred delivery time slot.
+            When I click the place order button
+            Then my order is submitted
+            <strong>CHE-2.2:</strong> User cannot place order if details missing
+            in checkout page
+            Given I am on the checkout page
+            And not all details are filled in
+            When I click the place order button
+            Then I see an error message
+            And no order is submitted
+        </td>
+    </tr>
+</table>
 
-+--------------+-------------------------------------------------------+
-| Description  | Priority: Could                                       |
-| and Priority |                                                       |
-|              | Users are able to filter their search results by      |
-|              | price by adding minimum and maximum prices.           |
-+==============+=======================================================+
-| Stimu        | 1.  User searches for a product                       |
-| lus/Response |                                                       |
-| Sequences    | 2.  System shows them a list of corresponding         |
-|              |     > products                                        |
-|              |                                                       |
-|              | 3.  User inputs a minimum price of \$5 and maximum    |
-|              |     > price of \$10                                   |
-|              |                                                       |
-|              | 4.  System adjusts the list of products shown to be   |
-|              |     > only products that correspond to that list      |
-+--------------+-------------------------------------------------------+
-| Functional   | **SEA-3.1:** Minimum and maximum inputs on search     |
-| Requirements | page                                                  |
-|              |                                                       |
-|              | Given I'm on the search results page                  |
-|              |                                                       |
-|              | When I input a price minimum                          |
-|              |                                                       |
-|              | And when I input a price maximum                      |
-|              |                                                       |
-|              | Then the search results page will refresh             |
-|              |                                                       |
-|              | And I\'ll see items within this price range           |
-+--------------+-------------------------------------------------------+
 
-## 4.14 Placing an order (CHE-2)
 
-+---------------+------------------------------------------------------+
-| Description   | Priority: Must                                       |
-| and Priority  |                                                      |
-|               | Users can place an order for their groceries so that |
-|               | they can be delivered for them                       |
-+===============+======================================================+
-| Stim          | 1.  User is on the checkout page and enters their    |
-| ulus/Response |     > delivery information                           |
-| Sequences     |                                                      |
-|               | 2.  User hit place order button                      |
-|               |                                                      |
-|               | 3.  System handles the order                         |
-|               |                                                      |
-|               | 4.  System stores the order information in a         |
-|               |     > database                                       |
-+---------------+------------------------------------------------------+
-| Functional    | **CHE-2.1:** User can place order if all details     |
-| Requirements  | filled out in checkout page                          |
-|               |                                                      |
-|               | Given I am on the checkout page                      |
-|               |                                                      |
-|               | And all my details are filled in including full      |
-|               | name, shipping address, city, state / province,      |
-|               | company and zip code                                 |
-|               |                                                      |
-|               | And I\'ve selected a preferred delivery time slot.   |
-|               |                                                      |
-|               | When I click the place order button                  |
-|               |                                                      |
-|               | Then my order is submitted                           |
-|               |                                                      |
-|               | **CHE-2.2:** User cannot place order if details      |
-|               | missing in checkout page                             |
-|               |                                                      |
-|               | Given I am on the checkout page                      |
-|               |                                                      |
-|               | And not all details are filled in                    |
-|               |                                                      |
-|               | When I click the place order button                  |
-|               |                                                      |
-|               | Then I see an error message                          |
-|               |                                                      |
-|               | And no order is submitted                            |
-+---------------+------------------------------------------------------+
+#### 4.15 Credit Card Payment (CHE-3)
+<table style="width:99%;">
+    <col style="width: 23%" />
+    <col style="width: 75%" />
+    <tr class="header">
+        <th>Description and Priority</th>
+        <th>Priority: Must
+            Users can pay for their groceries using a credit card
+        </th>
+    </tr>
+    <tr class="odd">
+        <td>Sti mulus/Response Sequences</td>
+        <td>
+            <ol type="1">
+                <li>User that is on the checkout page clicks to pay &gt; via credit
+                    card
+                </li>
+                <li>System prompts the user to pay via card</li>
+                <li>User enters their details on the checkout page</li>
+                <li>System accepts the user’s details</li>
+                <li>System records the order information</li>
+            </ol>
+        </td>
+    </tr>
+    <tr class="even">
+        <td>Functional Requirements</td>
+        <td><strong>CHE-3.1:</strong> User should be prompted for payment
+            when placing an order
+            Given I'm on the checkout page,
+            When I click the place order button,
+            I am prompted to pay by credit card.
+            <strong>CHE-3.2:</strong> Order should be submitted if payment is
+            successful
+            Given I am on the payment form,
+            And I have entered my billing and payment details correctly
+            And I have the funds to purchase the item
+            When I submit the credit card payment
+            Then I am charged the price of the purchase
+            And I am issued a billing receipt
+            And my order is recorded
+            <strong>CHE-3.3:</strong> Order should be rejected if credit card
+            payment fails
+            Given I am on the payment form,
+            And I have entered my billing and payment details correctly
+            And I do not have the funds to purchase the item
+            When I submit the credit card payment
+            Then I am not charged
+            And I am not issued a billing receipt
+            And my order is not recorded
+        </td>
+    </tr>
+</table>
 
-##  
 
-## 4.15 Credit Card Payment (CHE-3)
 
-+----------------+-----------------------------------------------------+
-| Description    | Priority: Must                                      |
-| and Priority   |                                                     |
-|                | Users can pay for their groceries using a credit    |
-|                | card                                                |
-+================+=====================================================+
-| Sti            | 1.  User that is on the checkout page clicks to pay |
-| mulus/Response |     > via credit card                               |
-| Sequences      |                                                     |
-|                | 2.  System prompts the user to pay via card         |
-|                |                                                     |
-|                | 3.  User enters their details on the checkout page  |
-|                |                                                     |
-|                | 4.  System accepts the user's details               |
-|                |                                                     |
-|                | 5.  System records the order information            |
-+----------------+-----------------------------------------------------+
-| Functional     | **CHE-3.1:** User should be prompted for payment    |
-| Requirements   | when placing an order                               |
-|                |                                                     |
-|                | Given I\'m on the checkout page,                    |
-|                |                                                     |
-|                | When I click the place order button,                |
-|                |                                                     |
-|                | I am prompted to pay by credit card.                |
-|                |                                                     |
-|                | **CHE-3.2:** Order should be submitted if payment   |
-|                | is successful                                       |
-|                |                                                     |
-|                | Given I am on the payment form,                     |
-|                |                                                     |
-|                | And I have entered my billing and payment details   |
-|                | correctly                                           |
-|                |                                                     |
-|                | And I have the funds to purchase the item           |
-|                |                                                     |
-|                | When I submit the credit card payment               |
-|                |                                                     |
-|                | Then I am charged the price of the purchase         |
-|                |                                                     |
-|                | And I am issued a billing receipt                   |
-|                |                                                     |
-|                | And my order is recorded                            |
-|                |                                                     |
-|                | **CHE-3.3:** Order should be rejected if credit     |
-|                | card payment fails                                  |
-|                |                                                     |
-|                | Given I am on the payment form,                     |
-|                |                                                     |
-|                | And I have entered my billing and payment details   |
-|                | correctly                                           |
-|                |                                                     |
-|                | And I do not have the funds to purchase the item    |
-|                |                                                     |
-|                | When I submit the credit card payment               |
-|                |                                                     |
-|                | Then I am not charged                               |
-|                |                                                     |
-|                | And I am not issued a billing receipt               |
-|                |                                                     |
-|                | And my order is not recorded                        |
-+----------------+-----------------------------------------------------+
+#### 4.15 Cancel Order (CHE-4)
+<table style="width:99%;">
+    <col style="width: 23%" />
+    <col style="width: 75%" />
+    <tr class="header">
+        <th>Description and Priority</th>
+        <th>Priority: Could
+            Users are able to cancel their order anytime during the checkout
+            process
+        </th>
+    </tr>
+    <tr class="odd">
+        <td>Sti mulus/Response Sequences</td>
+        <td>
+            <ol type="1">
+                <li>TBD</li>
+            </ol>
+        </td>
+    </tr>
+    <tr class="even">
+        <td>Functional Requirements</td>
+        <td><strong>TBD</strong></td>
+    </tr>
+</table>
 
-##  
+#### 4.16 Adding items to shopping cart (PRO-3)
+<table style="width:99%;">
+    <col style="width: 23%" />
+    <col style="width: 75%" />
+    <tr class="header">
+        <th>Description and Priority</th>
+        <th>Priority: Must
+            Users are able to add items to the shopping cart from the product
+            page
+        </th>
+    </tr>
+    <tr class="odd">
+        <td>Sti mulus/Response Sequences</td>
+        <td>
+            <ol type="1">
+                <li>User is on the product page and clicks add to &gt; cart for the
+                    item
+                </li>
+                <li>System adds the cart to the shopping cart</li>
+                <li>System provides visual communication to the &gt; user that the
+                    item has been added to the &gt; shopping cart
+                </li>
+            </ol>
+        </td>
+    </tr>
+    <tr class="even">
+        <td>Functional Requirements</td>
+        <td><strong>PRO-3.1:</strong> User can add items to cart
+            Given I am viewing an item and it's prices
+            When I click add to cart
+            Then the item will be added to the shopping cart
+            <strong>PRO-3.2:</strong> Shopping cart icon changes
+            Given I am viewing an item and it's prices
+            When I click add to cart
+            Then a different shopping cart item is displayed, providing visual
+            confirmation that an item was added to cart.
+        </td>
+    </tr>
+</table>
 
-## 4.15 Cancel Order (CHE-4)
-
-+----------------+-----------------------------------------------------+
-| Description    | Priority: Could                                     |
-| and Priority   |                                                     |
-|                | Users are able to cancel their order anytime during |
-|                | the checkout process                                |
-+================+=====================================================+
-| Sti            | 1.  TBD                                             |
-| mulus/Response |                                                     |
-| Sequences      |                                                     |
-+----------------+-----------------------------------------------------+
-| Functional     | **TBD**                                             |
-| Requirements   |                                                     |
-+----------------+-----------------------------------------------------+
-
-## 4.16 Adding items to shopping cart (PRO-3)
-
-+----------------+-----------------------------------------------------+
-| Description    | Priority: Must                                      |
-| and Priority   |                                                     |
-|                | Users are able to add items to the shopping cart    |
-|                | from the product page                               |
-+================+=====================================================+
-| Sti            | 1.  User is on the product page and clicks add to   |
-| mulus/Response |     > cart for the item                             |
-| Sequences      |                                                     |
-|                | 2.  System adds the cart to the shopping cart       |
-|                |                                                     |
-|                | 3.  System provides visual communication to the     |
-|                |     > user that the item has been added to the      |
-|                |     > shopping cart                                 |
-+----------------+-----------------------------------------------------+
-| Functional     | **PRO-3.1:** User can add items to cart             |
-| Requirements   |                                                     |
-|                | Given I am viewing an item and it\'s prices         |
-|                |                                                     |
-|                | When I click add to cart                            |
-|                |                                                     |
-|                | Then the item will be added to the shopping cart    |
-|                |                                                     |
-|                | **PRO-3.2:** Shopping cart icon changes             |
-|                |                                                     |
-|                | Given I am viewing an item and it\'s prices         |
-|                |                                                     |
-|                | When I click add to cart                            |
-|                |                                                     |
-|                | Then a different shopping cart item is displayed,   |
-|                | providing visual confirmation that an item was      |
-|                | added to cart.                                      |
-+----------------+-----------------------------------------------------+
 
 # **Other Nonfunctional Requirements**
 
 ## **Performance Requirements**
 
--   *Each page must load within 2 seconds.*
+- *Each page must load within 2 seconds.*
 
--   *A search result will be available within 2 seconds of the user\'s
-    > request.*
+- *A search result will be available within 2 seconds of the user's \>
+  request.*
 
--   *The database will be able to store all products required to fulfill
-    > the requirements of the program without affecting performance.*
+- *The database will be able to store all products required to fulfill
+  \> the requirements of the program without affecting performance.*
 
 ## **Security Requirements**
 
--   *The system must be secured from unauthorized access.*
+- *The system must be secured from unauthorized access.*
 
--   *A user will be required to create a \"strong\" password when
-    > creating their login.*
+- *A user will be required to create a "strong" password when \>
+  creating their login.*
 
--   *Passwords will be hashed before being stored in the database.*
+- *Passwords will be hashed before being stored in the database.*
 
--   *User information will never be shared to third-parties.*
+- *User information will never be shared to third-parties.*
 
 ## **Software Quality Attributes**
 
 ***Usability:***
 
--   *The user will be able to navigate to their desired page of the
-    > program with an 80% success rate.*
+- *The user will be able to navigate to their desired page of the \>
+  program with an 80% success rate.*
 
--   *If a user makes an error, they will be notified of the error and
-    > how to proceed.*
+- *If a user makes an error, they will be notified of the error and \>
+  how to proceed.*
 
--   *The overall layout of the program will be intuitive and
-    > attractive.*
+- *The overall layout of the program will be intuitive and \>
+  attractive.*
 
 ***Localisation:***
 
--   *The time zone of the program will be suited to the time zone of the
-    > logged in user.*
+- *The time zone of the program will be suited to the time zone of the
+  \> logged in user.*
 
--   *The currency of the program will be suited to the local currency of
-    > the logged in user.*
+- *The currency of the program will be suited to the local currency of
+  \> the logged in user.*
 
--   *Measurements of products will be suited to the local system used by
-    > the logged in user. (Imperial vs Metric)*
+- *Measurements of products will be suited to the local system used by
+  \> the logged in user. (Imperial vs Metric)*
 
--   *The language of the program will be suited to the language
-    > specified by the logged in user.*
+- *The language of the program will be suited to the language \>
+  specified by the logged in user.*
 
 ***Maintainability:***
 
--   *Products will be able to be added and removed from the database
-    > whenever needed.*
+- *Products will be able to be added and removed from the database \>
+  whenever needed.*
 
--   *Individual sections of the program will be testable and modifiable
-    > without affecting other sections of the program.*
+- *Individual sections of the program will be testable and modifiable \>
+  without affecting other sections of the program.*
 
 ***Compatibility:***
 
--   *The program will operate on all web browsers.*
+- *The program will operate on all web browsers.*
 
 # **Other Requirements**
 
@@ -1344,13 +1253,14 @@ diagrams, class diagrams, state-transition diagrams, or
 entity-relationship diagrams*.\>
 
 ## B.1 - Data Model Diagram
+
 ![](media/data-model.svg)
 
 ## B.2 - UI Wireframes
 
 Please see attached file
 
-[[https://github.com/cosc2299-sept-2023/team-project-group-p01-08/blob/main/docs/Appendix%20B.2%20-%20Wireframes.pdf]{.underline}](https://github.com/cosc2299-sept-2023/team-project-group-p01-08/blob/main/docs/Appendix%20B.2%20-%20Wireframes.pdf)
+[<u>https://github.com/cosc2299-sept-2023/team-project-group-p01-08/blob/main/docs/Appendix%20B.2%20-%20Wireframes.pdf</u>](https://github.com/cosc2299-sept-2023/team-project-group-p01-08/blob/main/docs/Appendix%20B.2%20-%20Wireframes.pdf)
 
 **Appendix C: To Be Determined List**
 
