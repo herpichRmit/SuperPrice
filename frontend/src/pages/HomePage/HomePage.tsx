@@ -1,6 +1,6 @@
-import NavBar from './NavBar.tsx';
-import SearchBar from './SearchBar.tsx';
-import CategoriesMenu from './CategoriesMenu.tsx';
+import NavBar from '../../components/NavBar/NavBar.tsx';
+import SearchBar from '../../components/SearchBar/SearchBar.tsx';
+import CategoriesMenu from '../../components/CategoriesMenu/CategoriesMenu.tsx';
 
 export default function HomePage() {
   return (
