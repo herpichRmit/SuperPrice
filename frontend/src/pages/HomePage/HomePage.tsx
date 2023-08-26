@@ -5,7 +5,7 @@ import CategoriesMenu from '../../components/CategoriesMenu/CategoriesMenu.tsx';
 export default function HomePage() {
   return (
     <div className="home-page">
-        <NavBar />
+        <NavBar shouldShowSearchBar={false}/>
         <main>
             <SearchBar />
             <CategoriesMenu />

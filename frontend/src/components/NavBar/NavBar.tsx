@@ -1,10 +1,15 @@
 import './NavBar.css';
 
-export default function SearchBar() {
+import SearchBar from '../SearchBar/SearchBar.tsx';
+
+export default function NavBar({shouldShowSearchBar = true}) {
   return (
-    <nav className="nav-bar">
+    <nav className="nav-bar" >
         <img className="logo" src="/logo.png" />
-        Nav bar goes here
+        {shouldShowSearchBar ? <SearchBar /> : ""}
+        <div>
+            {/* Shopping cart icon */}
+        </div>
     </nav>
   )
 }
