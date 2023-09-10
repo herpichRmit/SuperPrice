@@ -1,4 +1,4 @@
-package superprice.catalog_sync.model;
+package superprice.catalog.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 

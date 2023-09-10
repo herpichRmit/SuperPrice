@@ -1,4 +1,4 @@
-package superprice.catalog_sync.controller;
+package superprice.catalog.controller;
 
 import ch.vorburger.exec.ManagedProcessException;
 import ch.vorburger.mariadb4j.DB;
@@ -12,7 +12,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
-import superprice.catalog_sync.model.*;
+import superprice.catalog.model.*;
 
 import java.io.IOException;
 import java.io.InputStream;

@@ -1,7 +1,6 @@
-package superprice.catalog_sync.util;
+package superprice.catalog.util;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.introspect.DefaultAccessorNamingStrategy;
 
 public class ObjectMapperProvider {
     private static ObjectMapper mapper = null;

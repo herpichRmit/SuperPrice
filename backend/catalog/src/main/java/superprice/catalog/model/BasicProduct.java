@@ -1,8 +1,8 @@
-package superprice.catalog_sync.model;
+package superprice.catalog.model;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import superprice.catalog_sync.util.ObjectMapperProvider;
+import superprice.catalog.util.ObjectMapperProvider;
 
 import java.util.*;
 
