@@ -1,0 +1,10 @@
+/home/issa/IdeaProjects/team-project-group-p01-08/backend/catalog_sync/src/main/java/superprice/catalog_sync/model/Store.java
+/home/issa/IdeaProjects/team-project-group-p01-08/backend/catalog_sync/src/main/java/superprice/catalog_sync/model/Category.java
+/home/issa/IdeaProjects/team-project-group-p01-08/backend/catalog_sync/src/main/java/superprice/catalog_sync/model/BasicStockedProduct.java
+/home/issa/IdeaProjects/team-project-group-p01-08/backend/catalog_sync/src/main/java/superprice/catalog_sync/controller/ColesSync.java
+/home/issa/IdeaProjects/team-project-group-p01-08/backend/catalog_sync/src/main/java/superprice/catalog_sync/model/BasicProduct.java
+/home/issa/IdeaProjects/team-project-group-p01-08/backend/catalog_sync/src/main/java/superprice/catalog_sync/model/BasicCategory.java
+/home/issa/IdeaProjects/team-project-group-p01-08/backend/catalog_sync/src/main/java/superprice/catalog_sync/model/StockedProduct.java
+/home/issa/IdeaProjects/team-project-group-p01-08/backend/catalog_sync/src/main/java/superprice/catalog_sync/model/Image.java
+/home/issa/IdeaProjects/team-project-group-p01-08/backend/catalog_sync/src/main/java/superprice/catalog_sync/util/ObjectMapperProvider.java
+/home/issa/IdeaProjects/team-project-group-p01-08/backend/catalog_sync/src/main/java/superprice/catalog_sync/model/Product.java
