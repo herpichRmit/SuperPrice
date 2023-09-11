@@ -71,7 +71,14 @@ public class ColesSync {
                 .configure() // configures settings from hibernate.cfg.xml
                 .build();
         try {
-            sessionFactory = new MetadataSources( registry ).buildMetadata().buildSessionFactory();
+            sessionFactory = new MetadataSources( registry )
+                    .addAnnotatedClasses(
+                            BasicCategory.class,
+                            BasicProduct.class,
+                            BasicStockedProduct.class
+                    )
+                    .buildMetadata()
+                    .buildSessionFactory();
             Session session = sessionFactory.getCurrentSession();
             session.beginTransaction();
             for (Product product : products) {

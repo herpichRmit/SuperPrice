@@ -1,8 +1,9 @@
 package superprice.catalog.model;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.util.UUID;
 
+@Entity
 public class BasicStockedProduct implements StockedProduct {
 
     @Id
@@ -14,7 +15,7 @@ public class BasicStockedProduct implements StockedProduct {
     private Store store;
     @Column
     private int priceCents;
-    @ManyToOne
+    @ManyToOne (targetEntity = BasicProduct.class)
     private Product product;
 
     BasicStockedProduct () {

@@ -2,20 +2,20 @@ package superprice.catalog.model;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import jakarta.persistence.*;
 import superprice.catalog.util.ObjectMapperProvider;
 
 import java.util.*;
 
-import javax.persistence.*;
 
 @Entity
 public class BasicProduct implements Product{
     private static ObjectMapper jsonMapper = ObjectMapperProvider.mapper();
 
     @Id
-    @GeneratedValue (strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
-    @Column (unique = true)
+    @Column(unique = true)
     private UUID uuid;
     @Column
     private String name;
@@ -25,13 +25,14 @@ public class BasicProduct implements Product{
     private String size; // TODO update data type for size
     @Column
     private String description;
-    @OneToMany
-    private Collection <StockedProduct> prices;
+    @OneToMany (targetEntity = BasicStockedProduct.class)
+    private Collection<StockedProduct> prices;
 
-    @ManyToOne
+    @ManyToOne (targetEntity = BasicCategory.class)
     private Category category;
 
-    private Map <Store, StockedProduct> pricesMap;
+
+    private Map<Store, StockedProduct> pricesMap;
 
     BasicProduct () {
         this.uuid = UUID.randomUUID();
@@ -48,7 +49,7 @@ public class BasicProduct implements Product{
         this.size = size;
         this.description = description;
 
-        this.pricesMap = new HashMap <Store, StockedProduct> ();
+        this.pricesMap = new HashMap<Store, StockedProduct>();
         this.prices = pricesMap.values();
     }
 

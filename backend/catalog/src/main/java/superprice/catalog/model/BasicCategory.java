@@ -1,11 +1,12 @@
 package superprice.catalog.model;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.Set;
 import java.util.UUID;
 
+@Entity
 public class BasicCategory implements Category {
     @Id
     @GeneratedValue (strategy = GenerationType.AUTO)
@@ -14,7 +15,7 @@ public class BasicCategory implements Category {
     private UUID uuid;
     @Column
     private String name;
-    @OneToMany
+    @OneToMany (targetEntity = BasicProduct.class)
     private Set<Product> products;
 
     BasicCategory () {
