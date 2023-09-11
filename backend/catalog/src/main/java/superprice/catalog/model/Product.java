@@ -1,22 +1,25 @@
 package superprice.catalog.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 
 import java.util.Collection;
 import java.util.UUID;
 
 public interface Product {
 
-    public UUID getUuid ();
-    public String getName ();
-    public String getBrand ();
-    public String getSize ();
-    public String getDescription ();
+    UUID getUuid ();
+    String getName ();
+    String getBrand ();
+    String getSize ();
+    String getDescription ();
 
     @JsonIgnoreProperties("product")
-    public Collection<StockedProduct> getPrices ();
-    public void addPrice (StockedProduct price);
+    @Nonnull
+    Collection<StockedProduct> getPrices ();
+    void addPrice (StockedProduct price);
     @JsonIgnoreProperties ("products")
-    public Category getCategory ();
-    public void setCategory (Category category);
+    Category getCategory ();
+    void setCategory (Category category);
 }

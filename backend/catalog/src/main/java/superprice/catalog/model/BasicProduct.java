@@ -2,6 +2,8 @@ package superprice.catalog.model;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import jakarta.persistence.*;
 import superprice.catalog.util.ObjectMapperProvider;
 
@@ -25,14 +27,15 @@ public class BasicProduct implements Product{
     private String size; // TODO update data type for size
     @Column
     private String description;
-    @OneToMany (targetEntity = BasicStockedProduct.class)
-    private Collection<StockedProduct> prices;
+//    @OneToMany (targetEntity = BasicStockedProduct.class)
+//    private Collection<StockedProduct> prices;
 
     @ManyToOne (targetEntity = BasicCategory.class)
     private Category category;
 
-
-    private Map<Store, StockedProduct> pricesMap;
+    @OneToMany (targetEntity = BasicStockedProduct.class)
+    @MapKey (name = "store")
+    private Map<Store, StockedProduct> prices;
 
     BasicProduct () {
         this.uuid = UUID.randomUUID();
@@ -49,8 +52,7 @@ public class BasicProduct implements Product{
         this.size = size;
         this.description = description;
 
-        this.pricesMap = new HashMap<Store, StockedProduct>();
-        this.prices = pricesMap.values();
+        this.prices = new HashMap<Store, StockedProduct>();
     }
 
     @Override
@@ -65,8 +67,7 @@ public class BasicProduct implements Product{
 
     @Override
     public void addPrice(StockedProduct price) {
-        pricesMap.put (price.getStore(), price);
-        prices = pricesMap.values();
+        prices.put (price.getStore(), price);
     }
 
     @Override
@@ -77,7 +78,7 @@ public class BasicProduct implements Product{
 
     @Override
     public Collection <StockedProduct> getPrices() {
-         return Collections.unmodifiableCollection (this.prices);
+         return Collections.unmodifiableCollection (this.prices.values());
     }
 
     @Override
