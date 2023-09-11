@@ -8,8 +8,6 @@ import superprice.catalog.controller.ColesSync;
 public class Application {
 
     public static void main (String [] args) {
-        SpringApplication.run (Application.class, args);
-        ColesSync.main(args);
-    }
+        SpringApplication.run (Application.class, args);    }
 
 }
