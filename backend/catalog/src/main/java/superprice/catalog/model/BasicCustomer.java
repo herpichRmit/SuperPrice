@@ -1,4 +1,4 @@
-package superprice.user.model;
+package superprice.catalog.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -8,7 +8,7 @@ import javax.persistence.Id;
 
 
 @Entity
-public class Customer {
+public class BasicCustomer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -23,24 +23,11 @@ public class Customer {
     private String country;
     private String password;
 
-    public Customer() {
+    public BasicCustomer() {
     }
 
-    public Customer(int id, String firstName, String lastName, String email, int phone, String address, String city, String state, int zipCode, String country, String password) {
+    public BasicCustomer(int id, String firstName, String lastName, String email, int phone, String address, String city, String state, int zipCode, String country, String password) {
         this.id = id;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.email = email;
-        this.phone = phone;
-        this.address = address;
-        this.city = city;
-        this.state = state;
-        this.zipCode = zipCode;
-        this.country = country;
-        this.password = password;
-    }
-
-    public Customer(String firstName, String lastName, String email, int phone, String address, String city, String state, int zipCode, String country, String password) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
