@@ -11,22 +11,22 @@ import javax.persistence.Id;
 public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private int id;
     private String firstName;
     private String lastName;
     private String email;
-    private Long phone;
+    private int phone;
     private String address;
     private String city;
     private String state;
-    private Long zipCode;
+    private int zipCode;
     private String country;
     private String password;
 
     public Customer() {
     }
 
-    public Customer(Long id, String firstName, String lastName, String email, Long phone, String address, String city, String state, Long zipCode, String country, String password) {
+    public Customer(int id, String firstName, String lastName, String email, int phone, String address, String city, String state, int zipCode, String country, String password) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -40,7 +40,7 @@ public class Customer {
         this.password = password;
     }
 
-    public Customer(String firstName, String lastName, String email, Long phone, String address, String city, String state, Long zipCode, String country, String password) {
+    public Customer(String firstName, String lastName, String email, int phone, String address, String city, String state, int zipCode, String country, String password) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
@@ -53,11 +53,11 @@ public class Customer {
         this.password = password;
     }
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -85,11 +85,11 @@ public class Customer {
         this.email = email;
     }
 
-    public Long getPhone() {
+    public int getPhone() {
         return phone;
     }
 
-    public void setPhone(Long phone) {
+    public void setPhone(int phone) {
         this.phone = phone;
     }
 
@@ -117,11 +117,11 @@ public class Customer {
         this.state = state;
     }
 
-    public Long getZipCode() {
+    public int getZipCode() {
         return zipCode;
     }
 
-    public void setZipCode(Long zipCode) {
+    public void setZipCode(int zipCode) {
         this.zipCode = zipCode;
     }
 
