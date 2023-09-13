@@ -1,23 +1,46 @@
-.logo {
-    float:left;
-    width:12%;
+.signUpHeader {
+    font-size:48px;
+    padding: 0px 0px 15px;
+    color: gold;
+
 }
 
-.middle {
-    width:49%;
-    float:left;
-    height:80px;
+.blurbText {
+    color:grey;
+    font-size:16px;
+    padding: 0px 0px 20px 0px;
 }
 
-.graphicimage {
-    float:right;
-    width:39%;
-    height:95vh;
+.privacyText {
+    color:grey;
+    font-size:12px;
+    padding: 20px 0px 20px 0px;
 }
 
-.userArea {
-    float:left;
-    width:61%;
-    padding: 90px 200px 10px 200px;
-    justify-content: center;
+.textField {
+    background-color: #F5F5F5;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.textField input {
+    border-radius: 10px;
+}
+
+.button {
+    background-color: #ef8e61;
+    color: #fff;
+    width: 100%;
+    height: 40px;
+}
+
+.alertSpace {
+    padding-top: 10px;
+    height: 40px;
+    margin-bottom: 30px;
+}
+
+.alert {
+    margin-bottom: 32px; /* equivalent to mb: 2 in MUI spacing */
+    background-color: gold;
 }
