@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import "./SignUp.css";
+import "./SignUpLayout.css";
 
 import { TextField, Button, Alert, Collapse } from '@mui/material';
 import EmailIcon from '@mui/icons-material/Email';

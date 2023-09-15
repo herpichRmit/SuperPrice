@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import HomePage from './HomePage/HomePage';
+import HomePage from '../pages/HomePage/HomePage';
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 
