@@ -10,9 +10,6 @@ export default function HomePage() {
         <main>
             <SearchBar />
             <CategoriesMenu />
-            <Link href="/SignUp/signup">
-              Go to SignUp
-            </Link>
         </main>
     </div>
   )
