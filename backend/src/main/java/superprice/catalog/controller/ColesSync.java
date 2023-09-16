@@ -1,12 +1,8 @@
-/* 
 package superprice.catalog.controller;
 
 import ch.vorburger.exec.ManagedProcessException;
 import ch.vorburger.mariadb4j.DB;
 import ch.vorburger.mariadb4j.DBConfigurationBuilder;
-import superprice.catalog.model_old.*;
-import superprice.catalog.model_old.dao.ProductDao;
-
 import com.fasterxml.jackson.core.JsonFactory;
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.core.JsonParser;
@@ -24,6 +20,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import superprice.catalog.model.*;
+import superprice.catalog.model.dao.ProductDao;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -123,4 +121,3 @@ public class ColesSync {
     }
 
 }
-*/

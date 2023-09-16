@@ -1,8 +1,0 @@
-DROP TABLE IF EXISTS product;
-CREATE TABLE product(
-    id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    title VARCHAR(50) NOT NULL,
-    store VARCHAR(20) NOT NULL,
-    price DOUBLE NOT NULL,
-    item_description VARCHAR(5000) NOT NULL
- );
