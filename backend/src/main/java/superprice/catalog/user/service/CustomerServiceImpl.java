@@ -22,4 +22,11 @@ public class CustomerServiceImpl implements CustomerService {
     public List<Customer> getCustomers() {
         return customerRepository.findAll();
 	}
+
+    public Customer signUp(Customer customer) throws Exception {
+        if (customerRepository.findByEmail(customer.getEmail()) != null) {
+            throw new Exception("Email already exists");
+        }
+        return customerRepository.save(customer);
+    }
 }
