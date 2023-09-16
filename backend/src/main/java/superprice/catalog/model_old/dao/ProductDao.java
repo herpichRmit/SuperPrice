@@ -1,12 +1,13 @@
-package superprice.catalog.model.dao;
+package superprice.catalog.model_old.dao;
 
 import jakarta.annotation.Nullable;
+import superprice.catalog.model_old.BasicProduct;
+import superprice.catalog.model_old.Product;
+import superprice.catalog.model_old.StockedProduct;
+
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
-import superprice.catalog.model.BasicProduct;
-import superprice.catalog.model.Product;
-import superprice.catalog.model.StockedProduct;
 
 import java.util.Collection;
 import java.util.List;

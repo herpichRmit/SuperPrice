@@ -1,4 +1,4 @@
-package superprice.catalog.model;
+package superprice.catalog.model_old;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;

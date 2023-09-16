@@ -1,4 +1,4 @@
-package superprice.catalog.model;
+package superprice.catalog.model_old;
 
 import jakarta.persistence.*;
 import java.util.UUID;

@@ -13,11 +13,15 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>backend</name>
     <description>Service to sync products and prices from major supermarkets with the SuperPrice catalog</description>
+
     <properties>
         <java.version>17</java.version>
         <exec.mainClass>superprice.catalog.Application</exec.mainClass>
     </properties>
+
     <dependencies>
+
+        <!--
         <dependency>
             <groupId>org.hibernate.orm</groupId>
             <artifactId>hibernate-core</artifactId>
@@ -57,7 +61,7 @@
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-annotations</artifactId>
             <version>2.15.2</version>
-        </dependency>
+        </dependency> -->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
@@ -84,10 +88,10 @@
                     <target>1.8</target>
                 </configuration>-->
             </plugin>
-            <!--<plugin>
+            <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>-->
+            </plugin>
         </plugins>
     </build>
 

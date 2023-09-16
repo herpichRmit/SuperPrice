@@ -1,8 +1,13 @@
-package superprice.catalog.model.dao;
+package superprice.catalog.model_old.dao;
 
 import ch.vorburger.exec.ManagedProcessException;
 import ch.vorburger.mariadb4j.DB;
 import ch.vorburger.mariadb4j.DBConfigurationBuilder;
+import superprice.catalog.model_old.BasicCategory;
+import superprice.catalog.model_old.BasicProduct;
+import superprice.catalog.model_old.BasicStockedProduct;
+import superprice.catalog.model_old.Product;
+
 import com.fasterxml.jackson.core.JsonFactory;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.JsonNode;
@@ -12,10 +17,6 @@ import org.hibernate.SessionFactory;
 import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
-import superprice.catalog.model.BasicCategory;
-import superprice.catalog.model.BasicProduct;
-import superprice.catalog.model.BasicStockedProduct;
-import superprice.catalog.model.Product;
 
 import java.io.InputStream;
 import java.util.LinkedList;
