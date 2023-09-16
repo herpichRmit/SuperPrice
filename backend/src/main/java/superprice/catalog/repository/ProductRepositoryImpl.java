@@ -5,9 +5,11 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 import java.sql.Statement;
-
+import java.util.*;
 import javax.sql.DataSource;
 import java.sql.Connection;
+import java.util.Map;
+import java.util.Map.Entry;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -25,7 +27,7 @@ public class ProductRepositoryImpl implements ProductRepository
 
     private Product getProduct(ResultSet rs) throws SQLException {
         return new Product(rs.getLong("id"), rs.getString("title"),
-        		           rs.getString("store"), rs.getDouble("price"),
+        		           rs.getString("store"), rs.getString("category"), rs.getDouble("price"),
         		           rs.getString("item_description"));
     }
 
@@ -134,8 +136,7 @@ public class ProductRepositoryImpl implements ProductRepository
     	    for (int i = 0; i < products.size(); i++)
     	    {
     	    	//change to user input 
-    	    					//change to get category 
-    	    	if (products.get(i).getTitle().equals(sterm))
+    	    	if (products.get(i).getCategory().equals(sterm))
     	    			{
     	    		results.add(products.get(i));
     	    			}    	
@@ -160,28 +161,34 @@ public class ProductRepositoryImpl implements ProductRepository
         }
     }
     
-    public List<Product> searchShowPrice(String sterm) {
+    //return product and prices 
+    public HashMap<Double,String> searchShowPrice(String sterm) {
         Connection conn = null;
         PreparedStatement statement = null;
         ResultSet rs = null;
         try {
             conn = this.dataSource.getConnection();
-            statement = conn.prepareStatement("SELECT * FROM products WHERE title = " + sterm);
+         //   statement = conn.prepareStatement("SELECT * FROM products WHERE title='" + sterm + "'");
+            statement = conn.prepareStatement("SELECT * FROM products");
             List<Product> products = new ArrayList<>();
-            ArrayList<Product> results = new ArrayList<Product>();
+            HashMap<Double,String> results = new HashMap<Double,String>();
             rs = statement.executeQuery();
             while (rs.next()) {
             	products.add(getProduct(rs));
             }
     	    for (int i = 0; i < products.size(); i++)
     	    {
-    	    	//change to user input 
+    	    									//change to user input 
     	    	if (products.get(i).getTitle().equals(sterm))
     	    			{
-    	    		results.add(products.get(i));
+    	    		
+    	    		System.err.println(products.get(i).getTitle());
+    	    		String ttl = products.get(i).getTitle();
+    	    		Double prc = products.get(i).getPrice();
+    	    		results.put(prc, ttl); 
     	    			}    	
     	    }
-            return products;
+            return results;
         } catch (SQLException e) {
             throw new RuntimeException("Error in findAll", e);
         } finally {

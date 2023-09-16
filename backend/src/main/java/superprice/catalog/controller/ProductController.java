@@ -2,6 +2,7 @@ package superprice.catalog.controller;
 
 import java.time.LocalDate;
 import java.time.Month;
+import java.util.HashMap;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,21 +23,34 @@ public class ProductController {
     public ProductController(ProductService productService) {
         this.productService = productService;
     }
+    //several functions in one call 
+    
+   // @GetMapping
+	//public List<Product> getProduct() 
+   // {
+		//return productService.getProduct();
+		//return productService.getResults();
+    	//hard coded for now
+		//return productService.sortByPrice("Milk");
+		
+		//hard coded for now
+	//	return productService.filterByCategory("Cleaning");    	
+//	}
+    
     
     @GetMapping
-	public List<Product> getProduct() {
+	public HashMap<Double,String> getPairs() 
+    	{
 		//return productService.getProduct();
 		//return productService.getResults();
     	
     	//hard coded for now
 		//return productService.sortByPrice("Spray and Wipe");
+    	
+    	//hard coded for now
+    	return productService.searchShowPrice("Milk");
 		
 		//hard coded for now
 		//return productService.filterByCategory("Cleaning");
-    	
-    	return productService.searchShowPrice("Spray and Wipe");
-		
-
-
-	}
+    	}
 }

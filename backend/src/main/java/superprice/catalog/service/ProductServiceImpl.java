@@ -8,6 +8,7 @@ import java.sql.Statement;
 import javax.sql.DataSource;
 import java.sql.Connection;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -41,6 +42,7 @@ public class ProductServiceImpl implements ProductService {
 				1L,
 				"Ajax spray and wipe",
 				"COLES",
+				"Cleaning",
 				15.43,
 				"Kills 99.9% of germs"
 			)
@@ -74,15 +76,15 @@ public class ProductServiceImpl implements ProductService {
 	@Override
 	public List<Product> filterByCategory(String sterm) 
 	    {
-	    	List<Product> my_products = productRepository.sortByPrice(sterm);
+	    	List<Product> my_products = productRepository.filterByCategory(sterm);
 	    	// ...
 	    	return my_products;
 	    }
 	
 	@Override
-	public List<Product> searchShowPrice(String sterm) 
+	public HashMap<Double,String> searchShowPrice(String sterm) 
 	    {
-	    	List<Product> my_products = productRepository.sortByPrice(sterm);
+		HashMap<Double,String> my_products = productRepository.searchShowPrice(sterm);
 	    	// ...
 	    	return my_products;
 	    }

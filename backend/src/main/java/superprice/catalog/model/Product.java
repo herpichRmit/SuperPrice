@@ -24,6 +24,9 @@ public class Product {
 
     @Column(name="store")
     private String store; 
+    
+    @Column(name="category")
+    private String category; 
 
     @Column(name="price")
     private Double price;
@@ -31,18 +34,20 @@ public class Product {
     @Column(name="item_description")
     private String item_description;
 
-    public Product(Long id, String title, String store, 
+    public Product(Long id, String title, String store, String category, 
     		       Double price, String item_description) {
         this.id = id;
         this.title = title;
         this.store = store;
+        this.category = category;
         this.price = price;
         this.item_description = item_description;
     }
     
-    public Product(String title, String store, Double price, String item_description) {
+    public Product(String title, String store, String category, Double price, String item_description) {
         this.title = title;
         this.store = store;
+        this.category = category;	
         this.price = price;
         this.item_description = item_description;
     }
@@ -75,6 +80,16 @@ public class Product {
     // Setter for store
     public void setStore(String store) {
         this.store = store;
+    }
+    
+    // Setter for category
+    public void setCategory(String category) {
+        this.category = category;
+    }
+    
+    // Getter for category
+    public String getCategory() {
+        return category;
     }
 
     // Getter for price
