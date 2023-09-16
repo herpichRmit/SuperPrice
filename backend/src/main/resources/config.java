@@ -15,5 +15,3 @@ public class JpaConfig {
         return dataSourceBuilder.build();
     }
 }
-
-

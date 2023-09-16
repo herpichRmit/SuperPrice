@@ -26,7 +26,7 @@ public class ProductServiceImpl implements ProductService {
 			new Product(
 				1L,
 				"Ajax spray and wipe",
-				Store.COLES,
+				"COLES",
 				15.43,
 				"Kills 99.9% of germs"
 			)
