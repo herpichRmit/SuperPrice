@@ -4,13 +4,18 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.annotation.Nonnull;
 import jakarta.annotation.Nullable;
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import superprice.catalog.util.ObjectMapperProvider;
 
 import java.util.*;
 
-
+@Entity
 public class Product {
+    @Id
+    //@GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String name;
     private Store store; 
