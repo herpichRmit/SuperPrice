@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import superprice.catalog.product.model.Product;
-import superprice.catalog.product.model.Store;
 import superprice.catalog.product.repository.ProductRepository;
 
 
@@ -26,7 +25,7 @@ public class ProductServiceImpl implements ProductService {
 			new Product(
 				1L,
 				"Ajax spray and wipe",
-				"COLES",
+				"COLE",
 				15.43,
 				"Kills 99.9% of germs"
 			)
