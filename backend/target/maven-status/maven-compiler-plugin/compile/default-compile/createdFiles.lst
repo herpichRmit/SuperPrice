@@ -1,0 +1,8 @@
+superprice/catalog/model/Store.class
+superprice/catalog/repository/ProductRepository.class
+superprice/catalog/util/ObjectMapperProvider.class
+superprice/catalog/Application.class
+superprice/catalog/model/Product.class
+superprice/catalog/service/ProductService.class
+superprice/catalog/service/ProductServiceImpl.class
+superprice/catalog/controller/ProductController.class
