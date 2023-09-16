@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import "./SignUpLayout.css";
+import axios from "axios";
 
 import { TextField, Button, Alert, Collapse } from '@mui/material';
 import EmailIcon from '@mui/icons-material/Email';
@@ -9,18 +10,11 @@ import IconButton from '@mui/material/IconButton';
 
 
 const SignUpLayout = () => {
-    const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [passwordConfirm, setPasswordConfirm] = useState("");
     const [email, setEmail] = useState("");
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
-    const [addressLine1, setAddressLine1] = useState("");
-    const [addressLine2, setAddressLine2] = useState("");
-    const [city, setCity] = useState("");
-    const [state, setState] = useState("");
-    const [zipCode, setZipCode] = useState("");
-    const [phoneNumber, setPhoneNumber] = useState("");
     const [isEmailDuplicate, setIsEmailDuplicate] = useState(false);
     const [isEmailValid, setIsEmailValid] = useState(true);
     const [isPasswordStrong, setIsPasswordStrong] = useState(true);
@@ -31,10 +25,18 @@ const SignUpLayout = () => {
     const [empty, setEmpty] = useState(false);
 
     const checkIfEmpty = () => {
-        const fieldsFilled = username && password && passwordConfirm && email && firstName && lastName;
+        const fieldsFilled = password && passwordConfirm && email && firstName && lastName;
         setEmpty(!fieldsFilled);
     };
 
+    const signUpUser = async (user) => {
+        try {
+            const res = await axios.post('http://localhost:5000/api/users', user);
+            console.log(res);
+        } catch (err) {
+            console.error(err);
+        }
+    }
     const post = async () => {
         setError(false);
         setSuccess(false);
@@ -47,23 +49,13 @@ const SignUpLayout = () => {
             setDoPasswordsMatch(false);
         }
 
-        const [dayOfWeek, month, day, year, time, timeZone] = new Date().toString().split(" ");
-        const date = `${dayOfWeek} ${month} ${day} ${year} ${time} ${timeZone}`;
         let users // = await getUsers() - TODO: implement this function
 
         let user = {
-            username,
-            password,
-            email,
             firstName,
             lastName,
-            date,
-            addressLine1,
-            addressLine2,
-            city,
-            state,
-            zipCode,
-            phoneNumber,
+            password,
+            email,
         };
 
         // check if email exists in database - TODO: implement this function
@@ -74,18 +66,10 @@ const SignUpLayout = () => {
             return;
         }
 
-        setUsername('');
         setFirstName('');
         setLastName('');
         setPassword('');
         setEmail('');
-        setCity('');
-        setState('');
-        setZipCode('');
-        setPhoneNumber('');
-        setAddressLine1('');
-        setAddressLine2('');
-        setPhoneNumber('');
         setPasswordConfirm('');
         setEmpty(true);
         setOpen(false);
