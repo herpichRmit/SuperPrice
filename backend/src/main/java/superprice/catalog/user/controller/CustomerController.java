@@ -11,7 +11,7 @@ import superprice.catalog.user.model.Customer;
 import superprice.catalog.user.service.CustomerService;
 
 @RestController
-@RequestMapping(path = "api/v1/product")
+@RequestMapping(path = "api/v1/customers")
 public class CustomerController {
 
     private final CustomerService customerService;

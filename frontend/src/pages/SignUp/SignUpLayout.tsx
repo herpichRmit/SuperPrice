@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import "./SignUpLayout.css";
+import axios from "axios";
 
 import { TextField, Button, Alert, Collapse } from '@mui/material';
 import EmailIcon from '@mui/icons-material/Email';
@@ -28,6 +29,14 @@ const SignUpLayout = () => {
         setEmpty(!fieldsFilled);
     };
 
+    const signUpUser = async (user) => {
+        try {
+            const res = await axios.post('http://localhost:5000/api/users', user);
+            console.log(res);
+        } catch (err) {
+            console.error(err);
+        }
+    }
     const post = async () => {
         setError(false);
         setSuccess(false);
