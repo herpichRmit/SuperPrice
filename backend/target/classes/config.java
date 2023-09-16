@@ -10,8 +10,8 @@ public class JpaConfig {
         DataSourceBuilder dataSourceBuilder = DataSourceBuilder.create();
         dataSourceBuilder.driverClassName("com.mysql.cj.jdbc.Driver");
         dataSourceBuilder.url("jdbc:mysql://localhost:3306/database_superprice");
-        dataSourceBuilder.username("root");
-        dataSourceBuilder.password("KeyboardFish_3");
+        dataSourceBuilder.username("springuser");
+        dataSourceBuilder.password("ThePassword");
         return dataSourceBuilder.build();
     }
 }

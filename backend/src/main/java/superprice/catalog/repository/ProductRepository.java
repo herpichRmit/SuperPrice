@@ -11,10 +11,6 @@ import java.util.List;
 
 @Repository
 public interface ProductRepository extends JpaRepository<Product, Integer> {
-
-// custom query to search to blog post by title or content
-List<Product> findByTitleContainingOrContentContaining(String text, String textAgain);   
-
+    
 }
-
 
