@@ -1,13 +1,13 @@
-package superprice.catalog.service;
+package superprice.catalog.product.service;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import superprice.catalog.model.Product;
-import superprice.catalog.model.Store;
-import superprice.catalog.repository.ProductRepository;
+import superprice.catalog.product.model.Product;
+import superprice.catalog.product.model.Store;
+import superprice.catalog.product.repository.ProductRepository;
 
 
 @Service

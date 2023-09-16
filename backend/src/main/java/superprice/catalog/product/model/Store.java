@@ -1,4 +1,4 @@
-package superprice.catalog.model;
+package superprice.catalog.product.model;
 
 public enum Store {
     COLES,

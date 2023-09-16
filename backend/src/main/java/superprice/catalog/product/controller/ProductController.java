@@ -1,4 +1,4 @@
-package superprice.catalog.controller;
+package superprice.catalog.product.controller;
 
 import java.time.LocalDate;
 import java.time.Month;
@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import superprice.catalog.service.ProductService;
-import superprice.catalog.model.Product;
+import superprice.catalog.product.model.Product;
+import superprice.catalog.product.service.ProductService;
 
 @RestController
 @RequestMapping(path = "api/v1/product")
@@ -27,8 +27,5 @@ public class ProductController {
 	public List<Product> getProduct() {
 		return productService.getProduct();
 	}
-
-
-
 
 }

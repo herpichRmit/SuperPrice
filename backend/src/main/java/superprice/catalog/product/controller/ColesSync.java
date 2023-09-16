@@ -1,3 +1,4 @@
+package superprice.catalog.product.controller;
 /* 
 package superprice.catalog.controller;
 
