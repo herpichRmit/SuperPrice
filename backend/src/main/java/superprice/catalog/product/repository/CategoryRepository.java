@@ -3,10 +3,9 @@ package superprice.catalog.product.repository;
 import jdk.javadoc.internal.doclets.toolkit.taglets.snippet.Style;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-import superprice.catalog.model.Store;
 import superprice.catalog.product.model.Category;
 import superprice.catalog.product.model.Price;
-import superprice.catalog.product.model.Product;
+import superprice.catalog.product.model.Store;
 import superprice.catalog.product.model.StructuredProduct;
 
 import javax.sql.DataSource;

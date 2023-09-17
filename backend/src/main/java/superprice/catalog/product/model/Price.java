@@ -1,7 +1,5 @@
 package superprice.catalog.product.model;
 
-import superprice.catalog.model.Store;
-
 public class Price {
     Store store;
     int priceCents;
