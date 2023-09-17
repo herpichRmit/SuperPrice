@@ -22,3 +22,4 @@ function PageSwitcher () {
 
   return currentPage;
 
+}
