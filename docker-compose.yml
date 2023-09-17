@@ -1,0 +1,15 @@
+version: '3'
+services:
+  frontend:
+    build:
+      context: . # Path to the frontend directory containing Dockerfile
+      dockerfile: frontend.Dockerfile  # Specify the Dockerfile for frontend
+    ports:
+      - "3000:3000"  # Map the container's port 3000 to the host's port 3000
+
+  backend:
+    build:
+      context: .  # Path to the backend directory containing Dockerfile
+      dockerfile: backend.Dockerfile  # Specify the Dockerfile for backend
+    ports:
+      - "8080:8080"  # Map the container's port 8080 to the host's port 8080
