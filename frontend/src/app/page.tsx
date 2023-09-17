@@ -3,9 +3,7 @@
 import React from 'react'
 
 import Image from 'next/image'
-import HomePage from '../pages/HomePage/HomePage';
-import { useRouter } from 'next/router'
-import Link from 'next/link'
+import HomePage from '../pages/HomePage/HomePage.tsx';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -23,5 +21,4 @@ function PageSwitcher () {
   [currentPage, setCurrentPage] = React.useState (<HomePage />)
 
   return currentPage;
-}
 

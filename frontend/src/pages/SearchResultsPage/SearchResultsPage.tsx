@@ -86,8 +86,8 @@ export default function SearchResultsPage({ inputProducts }: SearchResultsPagePr
             </div>
 
             <div className="sr_container">{cards}</div>
-
         </main>
     </div>
   )
 }
+
