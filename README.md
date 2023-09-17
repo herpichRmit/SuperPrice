@@ -6,6 +6,7 @@
 # Group Information
 
 ## Group-P01-08
+Contribution Statements: https://docs.google.com/document/d/1e6imcJZ3dAayqqkhcz1Do22gpvr2Y-zZS7OZPpo99D4/edit?usp=sharing
 
 ## Members
 * Ethan Herpich (s3935413)
@@ -30,7 +31,7 @@ https://rmiteduau-my.sharepoint.com/:v:/g/personal/s3943382_student_rmit_edu_au/
 https://rmiteduau-my.sharepoint.com/:v:/r/personal/s3783615_student_rmit_edu_au/Documents/2023-09-17-230726.webm?csf=1&web=1&e=msGWD8&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZyIsInJlZmVycmFsQXBwUGxhdGZvcm0iOiJXZWIiLCJyZWZlcnJhbE1vZGUiOiJ2aWV3In19
 
 * Vladislava Simakov (s3910159)
-* https://rmiteduau-my.sharepoint.com/personal/s3910159_student_rmit_edu_au/_layouts/15/stream.aspx?id=%2Fpersonal%2Fs3910159%5Fstudent%5Frmit%5Fedu%5Fau%2FDocuments%2Fs3910159%2Emp4&referrer=OfficeHome%2EWeb&referrerScenario=UPLOAD
+https://rmiteduau-my.sharepoint.com/personal/s3910159_student_rmit_edu_au/_layouts/15/stream.aspx?id=%2Fpersonal%2Fs3910159%5Fstudent%5Frmit%5Fedu%5Fau%2FDocuments%2Fs3910159%2Emp4&referrer=OfficeHome%2EWeb&referrerScenario=UPLOAD
 
 ## Records
 
