@@ -55,9 +55,16 @@ public class ProductController {
     }
 
     @GetMapping("/sql/{keyword}")
-	public List<Product> getTestSQL(@PathVariable String keyword) {
+	public List<Product> getTestSQL(@PathVariable String keyword) 
+	{
 		return productService.getProductByKeywordTestSQL(keyword);
+	}
+    @GetMapping("/price/{keyword}")
+	public List<Product> getTest(@PathVariable String keyword) 
+    {
+	return productService.sortbyPrice(keyword);
     }
+    
 
     
 }
