@@ -31,5 +31,4 @@ export default function CategoriesMenu() {
       {categoryCards}
     </div>
   )
-}
 

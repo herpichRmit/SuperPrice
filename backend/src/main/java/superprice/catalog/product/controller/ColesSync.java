@@ -11,6 +11,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
 import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
@@ -23,6 +24,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import superprice.catalog.model.*;
 import superprice.catalog.model.dao.ProductDao;
+import superprice.catalog.model.dao.SessionProvider;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -42,7 +44,8 @@ public class ColesSync {
         try {
             JsonNode jsonRoot = parseJson (request);
             List<Product> products = parseProducts(jsonRoot);
-            ProductDao.deepSave(products);
+
+            saveProducts(products);
 
             return new ResponseEntity(HttpStatus.NO_CONTENT);
         }
@@ -52,6 +55,12 @@ public class ColesSync {
         catch (IOException ex) {
             return new ResponseEntity(HttpStatus.INTERNAL_SERVER_ERROR);
         }
+    }
+
+    private static void saveProducts(List<Product> products) {
+        SessionProvider.getInstance().withSession(session -> {
+            ProductDao.deepSave(products, session);
+        });
     }
 
     private JsonNode parseJson (String jsonStr) throws IOException {
@@ -82,13 +91,13 @@ public class ColesSync {
         return products;
     }
 
-    private static void deepSaveProduct(Session session, Product product) {
-        session.save(product);
-        session.save(product.getCategory());
-        for (StockedProduct price : product.getPrices()) {
-            session.save(price);
-        }
-    }
+//    private static void deepSaveProduct(Session session, Product product) {
+//        session.save(product);
+//        session.save(product.getCategory());
+//        for (StockedProduct price : product.getPrices()) {
+//            session.save(price);
+//        }
+//    }
 
     private static Product readProduct(JsonNode productJ) {
         try {

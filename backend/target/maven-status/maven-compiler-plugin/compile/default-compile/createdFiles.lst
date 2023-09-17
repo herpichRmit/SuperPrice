@@ -16,5 +16,6 @@ superprice/catalog/product/model/Price.class
 superprice/catalog/util/ObjectMapperProvider.class
 superprice/catalog/Application.class
 superprice/catalog/user/controller/CustomerController.class
+superprice/catalog/WebConfig.class
 superprice/catalog/util/CorsConfig.class
 superprice/catalog/user/model/Customer.class
