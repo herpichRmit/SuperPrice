@@ -1,7 +1,7 @@
 import { describe, test, expect } from 'vitest'
 import { render, screen } from '@testing-library/react'
 
-import HomePage from "../../pages/HomePage/HomePage.tsx"
+import HomePage from "../../pages/HomePage/HomePage"
 
 describe('Home page', () => {
   test('HomePage exists', () => {

@@ -1,6 +1,6 @@
 import './NavBar.css';
 
-import SearchBar from '../SearchBar/SearchBar.tsx';
+import SearchBar from '../SearchBar/SearchBar';
 
 export default function NavBar({shouldShowSearchBar = true}) {
   return (

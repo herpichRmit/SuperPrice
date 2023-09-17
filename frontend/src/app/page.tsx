@@ -3,7 +3,7 @@
 import React from 'react'
 
 import Image from 'next/image'
-import HomePage from '../pages/HomePage/HomePage.tsx';
+import HomePage from '../pages/HomePage/HomePage';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 

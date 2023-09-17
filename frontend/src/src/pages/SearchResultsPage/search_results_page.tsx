@@ -1,7 +1,7 @@
-import NavBar from '../../components/NavBar/NavBar.tsx';
-import SearchBar from '../../components/SearchBar/SearchBar.tsx';
-import CategoriesMenu from '../../components/CategoriesMenu/CategoriesMenu.tsx';
-import Head from '../../components/Head/Head.tsx';
+import NavBar from '../../components/NavBar/NavBar';
+import SearchBar from '../../components/SearchBar/SearchBar';
+import CategoriesMenu from '../../components/CategoriesMenu/CategoriesMenu';
+import Head from '../../components/Head/Head';
 import './search_results.css';
 export default function SearchResultsPage() {
   return (

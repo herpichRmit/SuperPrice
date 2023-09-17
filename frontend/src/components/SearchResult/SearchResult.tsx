@@ -1,6 +1,6 @@
 import './SearchResult.css'
 
-import PriceCompare from '../PriceCompare/PriceCompare.tsx'
+import PriceCompare from '../PriceCompare/PriceCompare'
 
 export default function SearchResult ({ product }) {
     return (
