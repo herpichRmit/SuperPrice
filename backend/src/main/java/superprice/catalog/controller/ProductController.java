@@ -2,6 +2,7 @@ package superprice.catalog.controller;
 
 import java.time.LocalDate;
 import java.time.Month;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import superprice.catalog.service.ProductService;
 import superprice.catalog.model.Product;
+import superprice.catalog.model.Result;
 
 @RestController
 @RequestMapping(path = "api/v1/product")
@@ -39,7 +41,7 @@ public class ProductController {
     
     
     @GetMapping
-	public HashMap<Double,String> getPairs() 
+	public ArrayList<Result> getTrips() 
     	{
 		//return productService.getProduct();
 		//return productService.getResults();
@@ -50,7 +52,7 @@ public class ProductController {
     	//hard coded for now
     	return productService.searchShowPrice("Milk");
 		
-		//hard coded for now
+		//hard coded for nowSs
 		//return productService.filterByCategory("Cleaning");
     	}
 }

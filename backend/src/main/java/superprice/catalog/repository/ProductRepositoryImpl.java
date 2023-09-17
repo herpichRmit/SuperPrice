@@ -1,5 +1,7 @@
 package superprice.catalog.repository;
 import superprice.catalog.model.Product;
+import superprice.catalog.model.Result;
+
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -7,6 +9,7 @@ import java.util.List;
 import java.sql.Statement;
 import java.util.*;
 import javax.sql.DataSource;
+
 import java.sql.Connection;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -15,6 +18,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.Optional;
 
+import org.antlr.v4.runtime.misc.Triple;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
@@ -162,7 +166,7 @@ public class ProductRepositoryImpl implements ProductRepository
     }
     
     //return product and prices 
-    public HashMap<Double,String> searchShowPrice(String sterm) {
+    public ArrayList<Result> searchShowPrice(String sterm) {
         Connection conn = null;
         PreparedStatement statement = null;
         ResultSet rs = null;
@@ -171,7 +175,7 @@ public class ProductRepositoryImpl implements ProductRepository
          //   statement = conn.prepareStatement("SELECT * FROM products WHERE title='" + sterm + "'");
             statement = conn.prepareStatement("SELECT * FROM products");
             List<Product> products = new ArrayList<>();
-            HashMap<Double,String> results = new HashMap<Double,String>();
+            ArrayList<Result> ress = new ArrayList<Result>();
             rs = statement.executeQuery();
             while (rs.next()) {
             	products.add(getProduct(rs));
@@ -181,14 +185,22 @@ public class ProductRepositoryImpl implements ProductRepository
     	    									//change to user input 
     	    	if (products.get(i).getTitle().equals(sterm))
     	    			{
-    	    		
-    	    		System.err.println(products.get(i).getTitle());
     	    		String ttl = products.get(i).getTitle();
     	    		Double prc = products.get(i).getPrice();
-    	    		results.put(prc, ttl); 
+    	    		String st = products.get(i).getStore();
+    	    		Result r = new Result(ttl, prc, st);
+    	            ress.add(r);
+    	            System.out.println(r);
     	    			}    	
     	    }
-            return results;
+    	    for (int i = 0; i < ress.size(); i++)
+    	    {
+    	    	System.out.println(ress.get(i).name);
+    	    	System.out.println(ress.get(i).price);
+    	    	System.out.println(ress.get(i).store);
+
+    	    }
+            return ress;
         } catch (SQLException e) {
             throw new RuntimeException("Error in findAll", e);
         } finally {
@@ -309,4 +321,10 @@ public class ProductRepositoryImpl implements ProductRepository
             }
         }
     }
+    
+
+
+    
+    
+    
 }

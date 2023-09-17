@@ -20,8 +20,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import superprice.catalog.model.Product;
+import superprice.catalog.model.Result;
 import superprice.catalog.model.Store;
 import superprice.catalog.repository.ProductRepository;
+
 
 
 @Service
@@ -82,9 +84,9 @@ public class ProductServiceImpl implements ProductService {
 	    }
 	
 	@Override
-	public HashMap<Double,String> searchShowPrice(String sterm) 
+	public ArrayList<Result> searchShowPrice(String sterm) 
 	    {
-		HashMap<Double,String> my_products = productRepository.searchShowPrice(sterm);
+		ArrayList<Result> my_products = productRepository.searchShowPrice(sterm);
 	    	// ...
 	    	return my_products;
 	    }
