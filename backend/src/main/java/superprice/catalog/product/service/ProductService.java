@@ -12,5 +12,6 @@ public interface ProductService {
     public List<Product> getProductsByKeyword(String keyword);
     public List<Product> getProductsByCategory(String category);
     public List<Product> getProductByKeywordTestSQL(String keyword);
+    public List<Product> sortbyPrice(String keyword);
 }
 
