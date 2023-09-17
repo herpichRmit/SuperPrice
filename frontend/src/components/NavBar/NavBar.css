@@ -14,24 +14,30 @@
 }
 
 img.logo {
-    height: 100%;
-    padding: 5px;
+    width: 150px;
+    margin: 5px;
 }
 
 nav.nav-bar div.search-bar {
     height: 100%;
-    width: unset;
-    flex-grow: 1;
+    width: 700px;
+    /* flex-grow: 1; */
 }
 
 nav.nav-bar input.search-bar {
     height: 30px;
 }
 
-nav.custom-nav {
+ul.nav-links {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    padding: 0;
+    list-style-type: none;
+    margin-top: 30px;
+}
+.nav-link {
+    margin-right: 20px;
+    color: black;
+    text-decoration: none;
 }
 

@@ -9,20 +9,14 @@ import SearchBar from '../SearchBar/SearchBar';
 export default function NavBar({shouldShowSearchBar = true}) {
   return (
     <nav className="nav-bar" >
+        <Link href="/">
         <img className="logo" src="/logo.png" />
+        </Link>
         {shouldShowSearchBar ? <SearchBar /> : ""}
-        <div className="flex justify-end">
-          <div> 
-            <Link href="/login">
-              <p>Login</p>
-            </Link>
-          </div>
-          <div>
-            <Link href="/signup">
-              <p>Sign Up</p>
-            </Link>
-          </div>
-        </div>
+        <ul className="nav-links">
+            <li><Link href="/signup" className="nav-link"><p>Sign Up</p></Link></li>
+            <li><Link href="/login" className="nav-link"><p>Log In</p></Link></li>
+        </ul>
     </nav>
   )
 }
