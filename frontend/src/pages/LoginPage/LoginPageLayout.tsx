@@ -1,24 +1,54 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 // import { useNavigate, Link } from 'react-router-dom';
 import './LoginPageLayout.css';
 import { TextField, Button, Alert, Collapse, Snackbar} from '@mui/material';
 import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
+import axios from 'axios';
 
 
 const SignIn = () => {
-    // const navigate = useNavigate();
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [isEmailValid, setEmailValid] = useState(true);
+    const [formData, setFormData] = useState({
+        email: '',
+        password: '',
+      });
+    const [isEmailValid, setIsEmailValid] = useState(true);
+    const [isPasswordValid, setPasswordValid] = useState(true);
     const [userNotFound, setUserNotFound] = useState(false);
     const [incorrectPassword, setIncorrectPassword] = useState(false);
     const [openSnackbar, setOpenSnackbar] = useState(false);
-    // const { logIn } = useContext(UserContext);
+    const [fieldsFilled, setFieldsFilled] = useState(false);
+    const [success, setSuccess] = useState(false);
+    const [error, setError] = useState(false);
+
+    useEffect(() => {
+        const filled =
+          !!(formData.email &&
+          formData.password);
+        setFieldsFilled(filled);
+      }, [formData]);
+
+    const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const newEmail = e.target.value;
+        setFormData({ ...formData, email: newEmail });
+
+        validateEmail(newEmail);
+    };
+
+    const handlePasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const { name, value } = e.target;
+        setFormData({ ...formData, [name]: value });
+
+        let updatedPassword = formData.password;
+    
+        if (name === "password") {
+            updatedPassword = value;
+        }
+    };
 
     const validateEmail = (emailInput: string) => {
         const emailRegex = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        setEmailValid(emailRegex.test(emailInput));
+        setIsEmailValid(emailRegex.test(emailInput));
     };
 
     const resetAlerts = () => {
@@ -26,31 +56,51 @@ const SignIn = () => {
         setIncorrectPassword(false);
     };
 
-    const signIn = () => {
-        let users // = await getUsers() - TODO: implement this function
-        let user // = users.find((user) => user.email === email);
-        if (!user) {
-            setUserNotFound(true);
-            return;
-        }
-        // if (user.password !== password) {
-        //     setIncorrectPassword(true);
-        //     return;
-        // }
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+        console.log("Submitting form data...");
+        e.preventDefault();
+        
+        const userData = {
+            email: formData.email,
+            password: formData.password
+        };
 
-        console.log("Successfully signed in!");
-        // logIn(email);
-        resetAlerts();
-        setOpenSnackbar(true);
-        // setTimeout(() => {
-        // navigate('/profile');
-        // }, 1200);
+        try {
+            const response = await axios.post('http://localhost:8080/api/v1/users/login', userData);
 
-        // localStorage.setItem('currentUserEmail', email);
-        // localStorage.setItem('currentUserId', user.id);
+            console.log(response.data);
 
+            if (response.data === true) {
+                console.log("User Signed In Successfully");
+                setSuccess(true);
+                setError(false);
+                setUserNotFound(false);
+                setFormData({
+                    email: '',
+                    password: ''
+                });
+                resetAlerts();
+
+            } else {
+                // Handle other statuses here, e.g. 401 for unauthorized
+                console.log("Invalid credentials");
+                setError(true);
+            }
+    
+        } catch (error: any) {
+            if ('response' in error) {
+                console.error("There was an error signing in the user:", error.response);
+                if (error.response.status === 404) {
+                    setUserNotFound(true);
+                }
+                else if (error.response.status === 401) {
+                    setIncorrectPassword(true);
+                }
+            setError(true);
+            }
+            
+        } 
     };
-
 
     return (
         <div className='signInContainer'>
@@ -58,37 +108,41 @@ const SignIn = () => {
             <p className='blurbText'>Sign in below for access to your profile </p>
 
             <TextField
+                name="email"
                 label="Email"
                 variant="filled"
                 margin="normal"
                 className="textField"
-                error={!isEmailValid}
-                helperText={!isEmailValid ? 'Please enter a valid email address.' : ''}
-                value={email}
-                onChange={(e) => {
-                    setEmail(e.target.value);
-                    validateEmail(e.target.value);
-                }}
+                error={formData.email ? !isEmailValid : false}
+                helperText={formData.email && !isEmailValid ? 'Please enter a valid email address.' : ''}
+                value={formData.email}
+                onChange={handleEmailChange}
+                required
             />
 
             <TextField
+                name="password"
                 label="Password"
                 type="password"
                 variant="filled"
                 margin="normal"
                 className="textField"
-                error={incorrectPassword}
-                helperText={incorrectPassword ? 'Incorrect password.' : ''}
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
+                error={formData.password ? incorrectPassword : false}
+                helperText={formData.password && incorrectPassword ? 'Incorrect password.' : ''}
+                value={formData.password}
+                onChange={handlePasswordChange}
+                required
             />
 
+            <form onSubmit={handleSubmit}>
             <Button 
+                type="submit"
                 variant="contained" 
                 className="signInButton" 
-                onClick={signIn}>
+                disabled={!(fieldsFilled && isEmailValid && isPasswordValid)}>
                 Sign In
             </Button>
+            </form>
 
             {/* <p className="signupPrompt">Don't have an account? <Link to="/signup" className="signupLink">Sign up now!</Link></p> */}
 

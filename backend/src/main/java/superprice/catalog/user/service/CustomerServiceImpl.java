@@ -29,4 +29,15 @@ public class CustomerServiceImpl implements CustomerService {
         }
         return customerRepository.save(customer);
     }
+
+    public String signIn(Customer customer) {
+        Customer existingCustomer = customerRepository.findByEmail(customer.getEmail());
+        if (existingCustomer != null && existingCustomer.getPassword().equals(customer.getPassword())) {
+            return "Success";
+        }
+        else if (existingCustomer != null && !existingCustomer.getPassword().equals(customer.getPassword())) {
+            return "Incorrect password";
+        }
+        return "Not found";
+    }
 }
