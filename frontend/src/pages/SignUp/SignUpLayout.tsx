@@ -7,8 +7,6 @@ import { TextField, Button, Alert, Collapse } from '@mui/material';
 import EmailIcon from '@mui/icons-material/Email';
 import CloseIcon from '@mui/icons-material/Close';
 import IconButton from '@mui/material/IconButton';
-import { data } from "autoprefixer";
-
 
 const SignUpLayout = () => {
     const [formData, setFormData] = useState({
@@ -207,7 +205,7 @@ const SignUpLayout = () => {
                         }
                         className="alert"
                     >
-                        You've successfully signed up!
+                        You have successfully signed up!
                     </Alert>
                 </Collapse>
                 <Collapse in={error}>
@@ -225,7 +223,7 @@ const SignUpLayout = () => {
                         }
                         className="alert"
                     >
-                        Sorry, your request couldn't be processed. This may be due to a network error, or your email may already be signed up.
+                        Sorry, your request could not be processed. This may be due to a network error, or your email may already be signed up.
                     </Alert>
                 </Collapse>
             </div>
