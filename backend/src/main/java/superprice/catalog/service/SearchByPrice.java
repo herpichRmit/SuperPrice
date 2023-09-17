@@ -1,19 +1,16 @@
 package superprice.catalog.service;
 
 
-import java.time.LocalDate;
-import java.time.Month;
 import java.util.List;
 import java.util.*;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import superprice.catalog.service.ProductService;
-import superprice.catalog.controller.ProductController;
-import superprice.catalog.model.Product;
+import superprice.catalog.product.model.Product;
+import superprice.catalog.product.controller.ProductController;
+
+import superprice.catalog.product.service.ProductServiceImpl;
 
 import java.util.ArrayList;
 

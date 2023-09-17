@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-import superprice.catalog.model.Product;
+import superprice.catalog.product.model.Product;
 import superprice.catalog.model.Result;
 
 

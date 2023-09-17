@@ -1,5 +1,6 @@
 package superprice.catalog.product.service;
 
+import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
 
@@ -7,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import superprice.catalog.product.exception.ProductNotFoundException;
+import superprice.catalog.product.model.Category;
 import superprice.catalog.product.model.Product;
 import superprice.catalog.product.repository.ProductRepository;
 
@@ -36,5 +38,13 @@ public class ProductServiceImpl implements ProductService {
     public List<Product> getProductsByTitle(String title) {
         return productRepository.findByTitle(title);
     }
+
+    @Override
+    public Collection<Category> categories() {
+
+        throw new UnsupportedOperationException();
+    }
+
+
 }
 

@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+--<<<<<<< HEAD
 INSERT INTO products (title, store, brand, category, price, item_description) VALUES
 ('Spray and Wipe', 'COLES', 'Ajax', 'Cleaning' ,15.43, 'Kills 99.9% of germs'),
 ('Spray and Wipe', 'WOOLWORTHS', 'Ajax', 'Cleaning' ,16.00, 'Kills 99.9% of germs'),
@@ -12,7 +12,7 @@ INSERT INTO products (title, store, brand, category, price, item_description) VA
 ('Milk', 'COLES', 'A2 Milk', 'Dairy' ,17.30, 'Milk from dairy cows'),
 ('Milk', 'WOOLWORTHS', 'A2 Milk', 'Dairy' ,4.30, 'Milk from dairy cows'),
 ('Milk', 'ALDI', 'A2 Milk', 'Dairy' ,12.45, 'Milk from dairy cows');
-=======
-INSERT INTO product (title, store, brand, category, price, item_description) VALUES ('Ajax', 'COLES', 'Ajax', 'Cleaning', 15.43, 'Kills 99.9% of germs');
-INSERT INTO product (title, store, brand, category, price, item_description) VALUES ('Ajax', 'WOOLWORTHS', 'Ajax', 'Cleaning', 17.99, 'Kills 99.9% of germs');
->>>>>>> fixing_detached_head_from_aa3eb521
+--=======
+--INSERT INTO product (title, store, brand, category, price, item_description) VALUES ('Ajax', 'COLES', 'Ajax', 'Cleaning', 15.43, 'Kills 99.9% of germs');
+--INSERT INTO product (title, store, brand, category, price, item_description) VALUES ('Ajax', 'WOOLWORTHS', 'Ajax', 'Cleaning', 17.99, 'Kills 99.9% of germs');
+-->>>>>>> fixing_detached_head_from_aa3eb521
