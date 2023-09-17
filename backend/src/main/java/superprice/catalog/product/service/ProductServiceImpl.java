@@ -46,6 +46,12 @@ public class ProductServiceImpl implements ProductService {
     public List<Product> getProductsByCategory(String category) {
         return productRepository.findByCategory(category);
     }
+
+    @Override
+    public List<Product> getProductByKeywordTestSQL(String keyword) {
+        return productRepository.testSQL(keyword);
+    }
+    
     
 }
 
