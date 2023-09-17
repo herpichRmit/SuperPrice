@@ -18,7 +18,7 @@ interface ProductPageProps {
 
 //<img src="" alt="" />
 
-export default function PriceComparison({ comparisonProducts }: ProductPageProps) {
+export default function PriceComparison({ comparisonProducts, showAdd }: ProductPageProps & { showAdd: Boolean }) {
   return (
     <div className="price-comparison">
 
@@ -30,7 +30,7 @@ export default function PriceComparison({ comparisonProducts }: ProductPageProps
               </div>
               <div className="pc_entry-priceandbutton">
                 <p>${product.price}</p>
-                <button>Add to cart</button>
+                {showAdd ? <button>Add to cart</button> : ""}
               </div>
           </div>
           <hr />

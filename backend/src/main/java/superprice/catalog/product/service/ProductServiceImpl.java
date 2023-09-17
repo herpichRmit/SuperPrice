@@ -41,5 +41,11 @@ public class ProductServiceImpl implements ProductService {
     public List<Product> getProductsByKeyword(String keyword) {
         return productRepository.findByTitleContainingIgnoreCase(keyword);
     }
+
+    @Override
+    public List<Product> getProductsByCategory(String category) {
+        return productRepository.findByCategory(category);
+    }
+    
 }
 
