@@ -45,7 +45,6 @@ const SignUpLayout = () => {
             ...formData,
             [name]: value
         });
-
     };
 
     const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -55,7 +54,7 @@ const SignUpLayout = () => {
         const emailIsValid = validateEmail(newEmail);
         setIsEmailValid(emailIsValid);
 
-      };
+    };
 
     const checkIfPasswordValid = (password: string) => {
         const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;

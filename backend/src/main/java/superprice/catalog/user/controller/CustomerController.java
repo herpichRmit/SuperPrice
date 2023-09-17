@@ -42,4 +42,18 @@ public class CustomerController {
             
         }
     }
+
+    @PostMapping("/login")
+    public ResponseEntity<?> signIn(@RequestBody Customer customer) {
+        String existingCustomer = customerService.signIn(customer);
+        if (existingCustomer == "Success") {
+            return new ResponseEntity<>(true, HttpStatus.OK);
+        } 
+        else if (existingCustomer == "Incorrect password") {
+            return new ResponseEntity<>(false, HttpStatus.UNAUTHORIZED);
+        }
+        else {
+            return new ResponseEntity<>(false, HttpStatus.NOT_FOUND);
+        }
+    }
 }
