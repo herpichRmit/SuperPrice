@@ -3,9 +3,11 @@ import './SearchBar.css';
 import Nav from 'react-bootstrap/Form';
 import Container from 'react-bootstrap/Container';
 
+import { useState, useEffect } from "react"
 
 
 export default function SearchBar() {
+
   return (
      <form target="#">
         <div className="search-bar">
