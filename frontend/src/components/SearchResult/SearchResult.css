@@ -1,0 +1,17 @@
+.search-result {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    border: var(--bs-border-width) solid var(--bs-border-color);
+    border-radius: var(--bs-border-radius);
+    background-color: white;
+    margin: 10px;
+    width: 800px;
+    min-height: 100px;
+}
+
+.search-result .name-and-info {
+    margin: 10px;
+}
+

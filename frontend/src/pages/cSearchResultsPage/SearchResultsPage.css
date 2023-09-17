@@ -1,0 +1,23 @@
+
+.search-results-page .back-button-and-heading {
+    position: relative;
+}
+
+.search-results-page .back-button {
+    position: absolute;
+    margin: 5px;
+}
+
+.search-results-page .search-results-heading {
+    text-align: center;
+    color: white;
+    margin: 20px;
+}
+
+.search-results-page main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
