@@ -1,0 +1,11 @@
+
+.category-card {
+    display: inline-block;
+    border: var(--bs-border-width) solid var(--bs-border-color);
+    border-radius: var(--bs-border-radius);
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    background-color: white;
+}
+

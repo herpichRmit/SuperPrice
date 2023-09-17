@@ -1,0 +1,25 @@
+.price-compare {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.price-compare .price {
+    margin-left: 20px;
+    margin-right: 20px;
+    min-height: 2.5em;
+}
+
+.price-compare .price .store-icon{
+    display: inline-block;
+    margin: 5px;
+    width: 2em;
+    height: 2em;
+}
+
+.price-compare .price .price-price {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
