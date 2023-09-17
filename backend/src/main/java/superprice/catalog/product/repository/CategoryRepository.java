@@ -65,6 +65,8 @@ public class CategoryRepository {
                 products.add(new StructuredProduct(title, brand, "", prices));
             }
 
+            conn.close();
+
             return products;
         } catch (SQLException e) {
             throw new RuntimeException(e);
@@ -97,10 +99,12 @@ public class CategoryRepository {
             ResultSet rs = statement.executeQuery();
             while (rs.next()) {
                 Store store = Store.fromString(rs.getString("store"));
-                int priceCents = (int)(rs.getDouble("price"));
+                int priceCents = (int)(rs.getDouble("price") * 100);
 
                 prices.add(new Price(store, priceCents));
             }
+
+            conn.close();
 
             return prices;
         } catch (SQLException e) {
@@ -119,6 +123,8 @@ public class CategoryRepository {
             while (rs.next()) {
                 names.add(rs.getString("category"));
             }
+
+            conn.close();
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
