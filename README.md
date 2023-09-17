@@ -20,6 +20,9 @@
 * Ethan Herpich (s3935413)
 https://rmiteduau-my.sharepoint.com/:v:/g/personal/s3935413_student_rmit_edu_au/EfEclCiUkQhFo2d537S6NvcBEUB8y14Gv37meJWNQPy_qw
 
+* Vincent Daniele (s3780417)
+https://rmiteduau-my.sharepoint.com/:v:/r/personal/s3780417_student_rmit_edu_au/Documents/Recording-20230917_222342.webm?csf=1&web=1&e=iZN9f6&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZyIsInJlZmVycmFsQXBwUGxhdGZvcm0iOiJXZWIiLCJyZWZlcnJhbE1vZGUiOiJ2aWV3In19
+
 ## Records
 
 * Github repository: [https://github.com.cosc2999-sept-2023/team-project-group-po1-08](https://github.com/cosc2299-sept-2023/team-project-group-p01-08)
