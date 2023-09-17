@@ -29,6 +29,9 @@ https://rmiteduau-my.sharepoint.com/:v:/g/personal/s3943382_student_rmit_edu_au/
 * Issa Chanzi (s3783615)
 https://rmiteduau-my.sharepoint.com/:v:/r/personal/s3783615_student_rmit_edu_au/Documents/2023-09-17-230726.webm?csf=1&web=1&e=msGWD8&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZyIsInJlZmVycmFsQXBwUGxhdGZvcm0iOiJXZWIiLCJyZWZlcnJhbE1vZGUiOiJ2aWV3In19
 
+* Vladislava Simakov (s3910159)
+* https://rmiteduau-my.sharepoint.com/personal/s3910159_student_rmit_edu_au/_layouts/15/stream.aspx?id=%2Fpersonal%2Fs3910159%5Fstudent%5Frmit%5Fedu%5Fau%2FDocuments%2Fs3910159%2Emp4&referrer=OfficeHome%2EWeb&referrerScenario=UPLOAD
+
 ## Records
 
 * Github repository: [https://github.com.cosc2999-sept-2023/team-project-group-po1-08](https://github.com/cosc2299-sept-2023/team-project-group-p01-08)
