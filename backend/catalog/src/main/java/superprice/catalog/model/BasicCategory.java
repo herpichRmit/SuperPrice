@@ -15,8 +15,14 @@ public class BasicCategory implements Category {
     private UUID uuid;
     @Column
     private String name;
-    @OneToMany (targetEntity = BasicProduct.class)
+    @OneToMany (
+            mappedBy = "category",
+            targetEntity = BasicProduct.class,
+            fetch = FetchType.EAGER
+    )
     private Set<Product> products;
+//    @ManyToOne (targetEntity = BasicImage.class)
+//    private Image image;
 
     BasicCategory () {
         this.uuid = UUID.randomUUID();
@@ -43,13 +49,13 @@ public class BasicCategory implements Category {
 
     @Override
     public Collection<Product> getProducts() {
-        return Collections.unmodifiableCollection(this.getProducts());
+        return Collections.unmodifiableCollection(this.products);
     }
 
-    @Override
-    public Image getImage() {
-        // TODO
-
-        return null;
-    }
+//    @Override
+//    public Image getImage() {
+//        // TODO
+//
+//        return null;
+//    }
 }

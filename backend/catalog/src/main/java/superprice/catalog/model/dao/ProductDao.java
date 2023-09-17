@@ -2,14 +2,12 @@ package superprice.catalog.model.dao;
 
 import jakarta.annotation.Nullable;
 import org.hibernate.Session;
-import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 import superprice.catalog.model.BasicProduct;
 import superprice.catalog.model.Product;
 import superprice.catalog.model.StockedProduct;
 
 import java.util.Collection;
-import java.util.List;
 import java.util.Locale;
 
 public class ProductDao {
@@ -35,14 +33,17 @@ public class ProductDao {
     }
 
     private static Collection<BasicProduct> findAllByBrand(String brand) {
-        Session session = SessionHolder.getInstance().getSession();
+        Collection<BasicProduct> products
+                = SessionProvider
+                .getInstance()
+                .withSessionR(session -> {
+                    String sql = "from BasicProduct where brand = :brand";
+                    Query<BasicProduct> query
+                            = session.createQuery(sql, BasicProduct.class);
+                    query.setParameter("brand", brand);
 
-
-        String sql = "from BasicProduct where brand = :brand";
-        Query<BasicProduct> query
-                = session.createQuery(sql, BasicProduct.class);
-        query.setParameter("brand", brand);
-        Collection <BasicProduct> products = query.getResultList();
+                    return query.getResultList();
+                });
         return products;
     }
 
@@ -78,15 +79,22 @@ public class ProductDao {
     }
 
     public static void save (Product product) {
-        Session session = SessionHolder.getInstance().getSession();
+        SessionProvider
+                .getInstance()
+                .withSession(session -> save(product, session));
+    }
 
+    private static void save(Product product, Session session) {
         session.save(product);
     }
 
     public static void deepSave (Product product) {
-        Session session = SessionHolder.getInstance().getSession();
-
-        session.save(product);
+        SessionProvider.getInstance().withSession(session -> {
+            deepSave(product, session);
+        });
+    }
+    public static void deepSave (Product product, Session session) {
+        save(product, session);
         session.save(product.getCategory());
         for (StockedProduct price : product.getPrices()) {
             session.save(price);
@@ -94,14 +102,14 @@ public class ProductDao {
     }
 
     public static void deepSave(Collection<Product> products) {
-        Transaction transaction
-                = SessionHolder
+        SessionProvider
                 .getInstance()
-                .getSession()
-                .beginTransaction();
+                .withSession(session -> deepSave(products, session));
+    }
+
+    public static void deepSave(Collection<Product> products, Session session) {
         for (Product product : products) {
-            deepSave(product);
+            deepSave(product, session);
         }
-        transaction.commit();
     }
 }

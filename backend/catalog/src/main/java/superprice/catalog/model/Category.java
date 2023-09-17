@@ -10,7 +10,7 @@ public interface Category {
     public String getName ();
     @JsonIgnoreProperties ("category")
     public Collection <Product> getProducts ();
-    public Image getImage ();
+    //public Image getImage ();
 
     public void addProduct (Product product);
 }

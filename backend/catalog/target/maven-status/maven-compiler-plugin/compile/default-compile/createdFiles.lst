@@ -1,0 +1,11 @@
+superprice/catalog/model/dao/DatabaseProvider.class
+superprice/catalog/model/dao/CategoryDao.class
+superprice/catalog/model/BasicImage.class
+superprice/catalog/view/JsonView.class
+superprice/catalog/model/dao/SessionProvider$TransactionLambda.class
+superprice/catalog/model/dao/SessionProvider.class
+superprice/catalog/Application.class
+superprice/catalog/model/dao/SessionProvider$TransactionLambdaRx.class
+superprice/catalog/controller/CategoryController.class
+superprice/catalog/model/dao/SessionProvider$TransactionLambdaR.class
+superprice/catalog/WebConfig.class

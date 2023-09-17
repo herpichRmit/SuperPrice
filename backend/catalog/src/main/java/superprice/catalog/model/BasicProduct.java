@@ -30,10 +30,14 @@ public class BasicProduct implements Product{
 //    @OneToMany (targetEntity = BasicStockedProduct.class)
 //    private Collection<StockedProduct> prices;
 
-    @ManyToOne (targetEntity = BasicCategory.class)
+    @ManyToOne (targetEntity = BasicCategory.class, fetch = FetchType.EAGER)
     private Category category;
 
-    @OneToMany (targetEntity = BasicStockedProduct.class)
+    @OneToMany (
+            mappedBy = "product",
+            targetEntity = BasicStockedProduct.class,
+            fetch = FetchType.EAGER
+    )
     @MapKey (name = "store")
     private Map<Store, StockedProduct> prices;
 
