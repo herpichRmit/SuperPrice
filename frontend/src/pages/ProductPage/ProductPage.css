@@ -40,8 +40,8 @@ main {
 }
 
 .pp_container-product_box-img{
-    width: 256px;
-    height: 256px;
+    width: 300px;
+    height: 300px;
     background-color: grey;
 }
 
@@ -50,6 +50,7 @@ main {
     flex-direction: column;
     gap: 20px;
     flex-grow: 2;
+    width: 400px;
 }
 
 .pp_container-product_box-comparison h2 {
@@ -58,11 +59,11 @@ main {
 }
 
 .pp_container-product_details{
-    padding: 0 0 50px 300px;
+    padding: 0 0 50px 350px;
 }
 
 .alternativeProductMenu{
-    width: 600px;
+    width: 300px;
     height: 450px;
     background-color: grey;
 }

@@ -8,10 +8,22 @@ import './ProductPage.css'
 <AlternateProductMenu/>
 */
 
+interface Product {
+  id: number;
+  title: string;
+  store: string;
+  brand: string;
+  category: string;
+  price: number;
+  description: string;
+}
 
+interface ProductPageProps {
+  inputProducts: Product[];
+}
 
+export default function ProductPage({ inputProducts }: ProductPageProps) {
 
-export default function ProductPage() {
   return (
     <div className="product-page">
         <NavBar shouldShowSearchBar={false}/>
@@ -26,22 +38,21 @@ export default function ProductPage() {
               <div className="pp_container-product">
 
                 <div className="pp_container-product_box">
-                  <div className="pp_container-product_box-img"> <p>image</p> </div>
+                  <div className="pp_container-product_box-img"> <p>Image</p> </div>
                   <div className="pp_container-product_box-comparison">
-                    <h2>Product data</h2>
-                    <PriceComparison />
+                    <h2>{inputProducts[0].title}</h2>
+                    <PriceComparison comparisonProducts={inputProducts} />
                   </div>
                 </div>
 
                 <div className="pp_container-product_details">
                   <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo totam quia voluptas repellendus possimus et, 
-                    voluptate libero at vel incidunt nemo illum delectus, aspernatur ea nesciunt tempore perferendis neque quis?
+                    {inputProducts[0].description}
                   </p>
                 </div>
 
               </div>
-              <div className="alternativeProductMenu"><p>other</p></div>
+              <div className="alternativeProductMenu"><p>Alternative Product Menu</p></div>
             </div>
 
 
