@@ -23,6 +23,9 @@ https://rmiteduau-my.sharepoint.com/:v:/g/personal/s3935413_student_rmit_edu_au/
 * Vincent Daniele (s3780417)
 https://rmiteduau-my.sharepoint.com/:v:/r/personal/s3780417_student_rmit_edu_au/Documents/Recording-20230917_222342.webm?csf=1&web=1&e=iZN9f6&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZyIsInJlZmVycmFsQXBwUGxhdGZvcm0iOiJXZWIiLCJyZWZlcnJhbE1vZGUiOiJ2aWV3In19
 
+* Charles Earnshaw (s3943383)
+https://rmiteduau-my.sharepoint.com/:v:/g/personal/s3943382_student_rmit_edu_au/EYZbWPLhYx5JrYT_ZP_t6nwBVeeTojZuvfcO_P_xcq7rxQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZyIsInJlZmVycmFsQXBwUGxhdGZvcm0iOiJXZWIiLCJyZWZlcnJhbE1vZGUiOiJ2aWV3In19&e=S9KoFW 
+
 ## Records
 
 * Github repository: [https://github.com.cosc2999-sept-2023/team-project-group-po1-08](https://github.com/cosc2299-sept-2023/team-project-group-p01-08)
