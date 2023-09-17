@@ -55,11 +55,6 @@ public class ProductServiceImpl implements ProductService {
         return productRepository.findByCategory(category);
     }
 
-    @Override
-    public List<Product> getProductByKeywordTestSQL(String keyword) {
-        return productRepository.testSQL(keyword);
-    }
-
      @Override
     public List<Product> sortbyPrice(String keyword) 
     {
