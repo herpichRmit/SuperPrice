@@ -50,7 +50,7 @@ public class CategoryRepository {
             Connection conn = dataSource.getConnection();
             String sql
                     = "SELECT DISTINCT title, brand, item_description "
-                    + "FROM products "
+                    + "FROM product "
                     + "WHERE category = ?";
             PreparedStatement statement = conn.prepareStatement(sql);
             statement.setString(1, categoryName);
@@ -84,7 +84,7 @@ public class CategoryRepository {
             Connection conn = dataSource.getConnection();
             String sql
                     = "SELECT store, price "
-                    + "FROM products "
+                    + "FROM product "
                     + "WHERE title = ? "
                     + "AND brand = ? "
                     + "AND category = ? "
@@ -113,7 +113,7 @@ public class CategoryRepository {
         Collection<String> names = new LinkedList<>();
         try {
             Connection conn = dataSource.getConnection();
-            String sql = "SELECT DISTINCT category FROM products";
+            String sql = "SELECT DISTINCT category FROM product";
             PreparedStatement statement = conn.prepareStatement(sql);
 
             ResultSet rs = statement.executeQuery();

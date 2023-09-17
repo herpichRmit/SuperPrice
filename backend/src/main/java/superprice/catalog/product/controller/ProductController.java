@@ -42,4 +42,23 @@ public class ProductController {
 	public List<Product> get(@PathVariable String title) {
 		return productService.getProductsByTitle(title);
     }
+
+    @GetMapping("/search/{title}")
+	public List<Product> getByKeyword(@PathVariable String title) {
+		return productService.getProductsByKeyword(title);
+    }
+
+
+    @GetMapping("/category/{category}")
+	public List<Product> getByCategory(@PathVariable String category) {
+		return productService.getProductsByCategory(category);
+    }
+
+    @GetMapping("/sql/{keyword}")
+	public List<Product> getTestSQL(@PathVariable String keyword) {
+		return productService.getProductByKeywordTestSQL(keyword);
+    }
+
+    
 }
+

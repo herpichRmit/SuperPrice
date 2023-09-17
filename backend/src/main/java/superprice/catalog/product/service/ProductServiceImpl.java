@@ -45,6 +45,18 @@ public class ProductServiceImpl implements ProductService {
         throw new UnsupportedOperationException();
     }
 
+    public List<Product> getProductsByKeyword(String keyword) {
+        return productRepository.findByTitleContainingIgnoreCase(keyword);
+    }
 
+    @Override
+    public List<Product> getProductsByCategory(String category) {
+        return productRepository.findByCategory(category);
+    }
+
+    @Override
+    public List<Product> getProductByKeywordTestSQL(String keyword) {
+        return productRepository.testSQL(keyword);
+    }
 }
 

@@ -13,5 +13,8 @@ public interface ProductService {
     public List<Product> getProductsByTitle(String title);
 
     Collection<Category> categories ();
+    public List<Product> getProductsByKeyword(String keyword);
+    public List<Product> getProductsByCategory(String category);
+    public List<Product> getProductByKeywordTestSQL(String keyword);
 }
 

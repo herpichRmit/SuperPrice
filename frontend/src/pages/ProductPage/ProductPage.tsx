@@ -26,7 +26,6 @@ export default function ProductPage({ inputProducts }: ProductPageProps) {
 
   return (
     <div className="product-page">
-        <NavBar shouldShowSearchBar={false}/>
         <main>
             <div className="header_row">
               <button>Back</button>
@@ -41,7 +40,7 @@ export default function ProductPage({ inputProducts }: ProductPageProps) {
                   <div className="pp_container-product_box-img"> <p>Image</p> </div>
                   <div className="pp_container-product_box-comparison">
                     <h2>{inputProducts[0].title}</h2>
-                    <PriceComparison comparisonProducts={inputProducts} />
+                    <PriceComparison comparisonProducts={inputProducts} showAdd={true} />
                   </div>
                 </div>
 
