@@ -1,10 +1,12 @@
 package superprice.catalog.product.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import superprice.catalog.product.exception.ProductNotFoundException;
 import superprice.catalog.product.model.Product;
 import superprice.catalog.product.repository.ProductRepository;
 
@@ -19,17 +21,15 @@ public class ProductServiceImpl implements ProductService {
         this.productRepository = productRepository;
     }
 
-    public List<Product> getProduct() {
-
-		return List.of(
-			new Product(
-				1L,
-				"Ajax spray and wipe",
-				"COLE",
-				15.43,
-				"Kills 99.9% of germs"
-			)
-            
-		);
+    @Override
+    public List<Product> getProducts() {
+        return productRepository.findAll();
 	}
+
+    @Override
+    public Optional<Product> getProduct(Long id) {
+        return Optional.ofNullable(productRepository.findById(id).orElseThrow(
+                () -> new ProductNotFoundException(id)));
+    }
 }
+
