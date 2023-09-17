@@ -1,7 +1,7 @@
 import { describe, test, expect } from 'vitest'
 import { render, screen } from '@testing-library/react'
 
-import SearchBar from "./SearchBar.tsx";
+import SearchBar from "./SearchBar";
 
 describe ("SearchBar",  () => {
     test ('Should contain form', () => {

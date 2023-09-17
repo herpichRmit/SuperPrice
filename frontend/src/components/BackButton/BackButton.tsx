@@ -1,6 +1,6 @@
-import { switchPage } from '../../app/page.tsx'
+import { switchPage } from '../../app/page'
 
-import HomePage from '../../pages/HomePage/HomePage.tsx'
+import HomePage from '../../pages/HomePage/HomePage'
 
 export default function BackButton () {
     let className = "back-button btn btn-light"

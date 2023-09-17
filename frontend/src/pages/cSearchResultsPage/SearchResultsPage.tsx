@@ -1,8 +1,8 @@
 import './SearchResultsPage.css'
 
-import NavBar from '../../components/NavBar/NavBar.tsx'
-import BackButton from '../../components/BackButton/BackButton.tsx'
-import SearchResult from '../../components/SearchResult/SearchResult.tsx'
+import NavBar from '../../components/NavBar/NavBar'
+import BackButton from '../../components/BackButton/BackButton'
+import SearchResult from '../../components/SearchResult/SearchResult'
 
 export default function SearchResultsPage({
     products,

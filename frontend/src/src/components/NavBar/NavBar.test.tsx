@@ -1,7 +1,7 @@
 import { describe, test, expect } from 'vitest'
 import { render, screen } from '@testing-library/react'
 
-import NavBar from './NavBar.tsx';
+import NavBar from './NavBar';
 
 describe ("NavBar",  () => {
     test ('Should contain logo', () => {

@@ -4,7 +4,7 @@ import React from 'react'
 
 import './CategoriesMenu.css'
 
-import CategoryCard from '../../components/CategoryCard/CategoryCard.tsx'
+import CategoryCard from '../../components/CategoryCard/CategoryCard'
 
 export default function CategoriesMenu() {
   let [categories, setCategories] = React.useState ([]);

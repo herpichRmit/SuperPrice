@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import SearchResultsPage from '../../pages/SearchResultsPage/search_results_page.tsx';
+import SearchResultsPage from '../../pages/SearchResultsPage/search_results_page';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 

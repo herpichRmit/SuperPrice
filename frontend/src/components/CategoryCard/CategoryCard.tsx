@@ -2,8 +2,8 @@
 
 import './CategoryCard.css'
 
-import { switchPage } from '../../app/page.tsx'
-import SearchResultsPage from '../../pages/cSearchResultsPage/SearchResultsPage.tsx'
+import { switchPage } from '../../app/page'
+import SearchResultsPage from '../../pages/cSearchResultsPage/SearchResultsPage'
 
 export default function CategoryCard ({ category }) {
     let click = function (cat) {
