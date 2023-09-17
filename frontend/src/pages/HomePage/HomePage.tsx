@@ -6,7 +6,7 @@ import Link from 'next/link'
 export default function HomePage() {
   return (
     <div className="home-page">
-        <NavBar shouldShowSearchBar={false}/>
+        {/* <NavBar shouldShowSearchBar={false}/> */}
         <main>
             <SearchBar />
             <CategoriesMenu />
