@@ -15,7 +15,7 @@ export default function NavBar({shouldShowSearchBar = true}) {
         {shouldShowSearchBar ? <SearchBar /> : ""}
         <ul className="nav-links">
             <li><Link href="/signup" className="nav-link"><p>Sign Up</p></Link></li>
-            <li><Link href="/signup" className="nav-link"><p>Log In</p></Link></li>
+            <li><Link href="/login" className="nav-link"><p>Log In</p></Link></li>
         </ul>
     </nav>
   )
