@@ -78,7 +78,6 @@ export default function SearchResultsPage({ inputProducts }: SearchResultsPagePr
 
   return (
     <div className="product-page">
-        <NavBar shouldShowSearchBar={false}/>
         <main>
             <div className="header_row">
               <Link href='/' >Back</Link>

@@ -26,7 +26,6 @@ export default function ProductPage({ inputProducts }: ProductPageProps) {
 
   return (
     <div className="product-page">
-        <NavBar shouldShowSearchBar={false}/>
         <main>
             <div className="header_row">
               <button>Back</button>
