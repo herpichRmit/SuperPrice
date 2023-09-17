@@ -1,7 +1,5 @@
-package superprice.catalog.repository;
-import superprice.catalog.model.Product;
-import superprice.catalog.model.Result;
-
+/* 
+package superprice.catalog.to_impl.repository;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -21,6 +19,9 @@ import java.util.Optional;
 import org.antlr.v4.runtime.misc.Triple;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+
+import superprice.catalog.to_impl.model.Product;
+import superprice.catalog.to_impl.model.Result;
 
 
 @Repository
@@ -328,3 +329,4 @@ public class ProductRepositoryImpl implements ProductRepository
     
     
 }
+*/

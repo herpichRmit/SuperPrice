@@ -1,10 +1,11 @@
-package superprice.catalog.repository;
+/* 
+package superprice.catalog.to_impl.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import superprice.catalog.model.Product;
-import superprice.catalog.model.Result;
+import superprice.catalog.to_impl.model.Product;
+import superprice.catalog.to_impl.model.Result;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -29,4 +30,4 @@ public interface ProductRepository
 	List<Product> filterByCategory(String sterm);
 	ArrayList<Result> searchShowPrice(String sterm);
 }
-
+*/

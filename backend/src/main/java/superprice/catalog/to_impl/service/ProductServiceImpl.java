@@ -1,3 +1,5 @@
+package superprice.catalog.to_impl.service;
+/* 
 package superprice.catalog.service;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -91,3 +93,4 @@ public class ProductServiceImpl implements ProductService {
 	    	return my_products;
 	    }
 }
+*/

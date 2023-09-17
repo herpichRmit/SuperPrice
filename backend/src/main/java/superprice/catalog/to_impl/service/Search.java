@@ -1,4 +1,5 @@
-
+package superprice.catalog.to_impl.service;
+/* 
 package superprice.catalog.service;
 
 import java.time.LocalDate;
@@ -19,7 +20,7 @@ import java.util.ArrayList;
 @RestController
 @RequestMapping(path = "api/v1/search")
 public class Search {
-	private ProductController controller;
+	private ProductController controller;*/
 	/*
 	 * 
 	 * public ArrayList<String> getResults() { //import properly ProductController
@@ -33,5 +34,6 @@ public class Search {
 	 * a[i].getPrice()); System.out.println("-"); } } //output to frontend return
 	 * res; }
 	 */
-
+/* 
 }
+*/
