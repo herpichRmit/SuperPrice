@@ -1,3 +1,4 @@
+package superprice.catalog.to_impl.service;
 /*package superprice.catalog.service;
 
 import java.util.ArrayList;

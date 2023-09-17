@@ -9,5 +9,6 @@ public interface ProductService {
     public List<Product> getProducts();
     public Optional<Product> getProduct(Long id);
     public List<Product> getProductsByTitle(String title);
+    public List<Product> getProductsByKeyword(String keyword);
 }
 
