@@ -28,7 +28,15 @@
 
 # Run Instructions
 
-Up to date instructions on how to run your project.
+To run, activate both front-end and back-end
+
+Front-end:
+    cd frontend
+    npm run dev
+
+Back-end
+    cd backend
+    mvn exec:java
 
 
 # Initial Setup
