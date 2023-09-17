@@ -6,9 +6,13 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import superprice.catalog.product.exception.ProductNotFoundException;
 import superprice.catalog.product.model.Product;
 import superprice.catalog.product.service.ProductService;
 
@@ -25,7 +29,17 @@ public class ProductController {
     
     @GetMapping
 	public List<Product> getProduct() {
-		return productService.getProduct();
+		return productService.getProducts();
 	}
 
+    @GetMapping("/{id}")
+	public Product get(@PathVariable Long id) {
+		return productService.getProduct(id).orElseThrow(
+                () -> new ProductNotFoundException(id));
+	}
+
+    @GetMapping("/compare/{title}")
+	public List<Product> get(@PathVariable String title) {
+		return productService.getProductsByTitle(title);
+    }
 }

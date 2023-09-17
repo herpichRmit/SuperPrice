@@ -51,6 +51,9 @@ public class Product {
         this.description = description;
     }
 
+    public Product() {
+    }
+
     public Long getId() {
         return id;
     }

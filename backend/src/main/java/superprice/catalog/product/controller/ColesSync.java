@@ -1,8 +1,4 @@
-<<<<<<< HEAD:backend/src/main/java/superprice/catalog/controller/ColesSync.java
-=======
-// package superprice.catalog.product.controller;
 /* 
->>>>>>> user-database:backend/src/main/java/superprice/catalog/product/controller/ColesSync.java
 package superprice.catalog.controller;
 
 import ch.vorburger.exec.ManagedProcessException;
@@ -126,3 +122,4 @@ public class ColesSync {
     }
 
 }
+*/
