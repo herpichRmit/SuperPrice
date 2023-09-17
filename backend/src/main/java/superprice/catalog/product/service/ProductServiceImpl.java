@@ -6,7 +6,8 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
+import java.util.Collections;
+import java.util.Comparator;
 import superprice.catalog.product.exception.ProductNotFoundException;
 import superprice.catalog.product.model.Category;
 import superprice.catalog.product.model.Product;
@@ -57,6 +58,20 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public List<Product> getProductByKeywordTestSQL(String keyword) {
         return productRepository.testSQL(keyword);
+    }
+
+     @Override
+    public List<Product> sortbyPrice(String keyword) 
+    {
+        List<Product> products = productRepository.testSQL(keyword);
+	    Collections.sort(products, new Comparator<Product>()
+	    {
+	    	public int compare(Product o1, Product o2)
+	    	{
+	    		return o1.getPrice().compareTo(o2.getPrice());
+	    	}
+	    });
+	    return products;
     }
 }
 
