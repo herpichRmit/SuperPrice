@@ -8,5 +8,6 @@ import superprice.catalog.product.model.Product;
 public interface ProductService {
     public List<Product> getProducts();
     public Optional<Product> getProduct(Long id);
+    public List<Product> getProductsByTitle(String title);
 }
 

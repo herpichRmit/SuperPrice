@@ -38,4 +38,8 @@ public class ProductController {
                 () -> new ProductNotFoundException(id));
 	}
 
+    @GetMapping("/compare/{title}")
+	public List<Product> get(@PathVariable String title) {
+		return productService.getProductsByTitle(title);
+    }
 }

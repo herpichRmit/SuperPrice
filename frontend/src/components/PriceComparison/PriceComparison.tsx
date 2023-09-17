@@ -1,41 +1,43 @@
 import React from 'react'
 import './PriceComparison.css'
 
-export default function PriceComparison({fullSize = true}) {
+
+interface Product {
+  id: number;
+  title: string;
+  store: string;
+  brand: string;
+  category: string;
+  price: number;
+  description: string;
+}
+
+interface ProductPageProps {
+  comparisonProducts: Product[];
+}
+
+//<img src="" alt="" />
+
+export default function PriceComparison({ comparisonProducts }: ProductPageProps) {
   return (
     <div className="price-comparison">
 
-        <div className="pc_entry">
-            <img src="" alt="" />
-            <div className="pc_entry-priceandbutton">
-              <p>Price 1</p>
-              <button>Add to cart</button>
-            </div>
-        </div>
-
-        <hr />
-        
-        <div className="pc_entry">
-            <img src="" alt="" />
-            <div className="pc_entry-priceandbutton">
-              <p>Price 2</p>
-              <button>Add to cart</button>
-            </div>
-        </div>
-
-        <hr />
-
-        <div className="pc_entry">
-            <img src="" alt="" />
-            <div className="pc_entry-priceandbutton">
-              <p>Price 3</p>
-              <button>Add to cart</button>
-            </div>
-        </div>
+      {comparisonProducts.map((product) => (
+        <>
+          <div className="pc_entry">
+              <div className="img-box">
+                <p>{product.store}</p>
+              </div>
+              <div className="pc_entry-priceandbutton">
+                <p>${product.price}</p>
+                <button>Add to cart</button>
+              </div>
+          </div>
+          <hr />
+        </>
+      ))}
 
     </div>
-
-
       
   )
 }

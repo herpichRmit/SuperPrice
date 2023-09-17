@@ -31,5 +31,10 @@ public class ProductServiceImpl implements ProductService {
         return Optional.ofNullable(productRepository.findById(id).orElseThrow(
                 () -> new ProductNotFoundException(id)));
     }
+
+    @Override
+    public List<Product> getProductsByTitle(String title) {
+        return productRepository.findByTitle(title);
+    }
 }
 

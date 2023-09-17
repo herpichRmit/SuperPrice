@@ -1,1 +1,2 @@
-INSERT INTO product (title, store, brand, category, price, item_description) VALUES ('Ajax spray and wipe', 'COLES', 'Ajax', 'Cleaning', 15.43, 'Kills 99.9% of germs');
+INSERT INTO product (title, store, brand, category, price, item_description) VALUES ('Ajax', 'COLES', 'Ajax', 'Cleaning', 15.43, 'Kills 99.9% of germs');
+INSERT INTO product (title, store, brand, category, price, item_description) VALUES ('Ajax', 'WOOLWORTHS', 'Ajax', 'Cleaning', 17.99, 'Kills 99.9% of germs');
