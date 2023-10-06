@@ -1,6 +1,6 @@
 package superprice.catalog.product.repository;
 
-import jdk.javadoc.internal.doclets.toolkit.taglets.snippet.Style;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import superprice.catalog.product.model.Category;
