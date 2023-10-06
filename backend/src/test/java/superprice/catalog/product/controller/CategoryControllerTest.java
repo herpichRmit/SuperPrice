@@ -41,7 +41,7 @@ public class CategoryControllerTest {
     }
 
     @Test
-    void all_should_returnAllCategories_when_thereAreCategories(){;
+    void all_should_returnAllCategories_when_thereAreCategories(){
         Price b = new Price(Store.COLES,500);
         ArrayList<Price> priceCollection = new ArrayList<Price>();
         priceCollection.add(b);
@@ -53,7 +53,7 @@ public class CategoryControllerTest {
     }
 
     @Test
-    void all_should_returnnothing_when_noCategories(){;
+    void all_should_returnnothing_when_noCategories(){
         when(repo.categories()).
             thenReturn(new ArrayList<>());
 
