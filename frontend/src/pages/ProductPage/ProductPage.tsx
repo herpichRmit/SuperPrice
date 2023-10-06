@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import NavBar from '../../components/NavBar/NavBar';
 import PriceComparison from '../../components/PriceComparison/PriceComparison';
 import './ProductPage.css'
@@ -28,7 +29,7 @@ export default function ProductPage({ inputProducts }: ProductPageProps) {
     <div className="product-page">
         <main>
             <div className="header_row">
-              <button>Back</button>
+              <Link href='/' >Back</Link>
               <h1>Product details</h1>
               <div></div>
             </div>
@@ -37,7 +38,6 @@ export default function ProductPage({ inputProducts }: ProductPageProps) {
               <div className="pp_container-product">
 
                 <div className="pp_container-product_box">
-                  <div className="pp_container-product_box-img"> <p>Image</p> </div>
                   <div className="pp_container-product_box-comparison">
                     <h2>{inputProducts[0].title}</h2>
                     <PriceComparison comparisonProducts={inputProducts} showAdd={true} />
@@ -51,7 +51,6 @@ export default function ProductPage({ inputProducts }: ProductPageProps) {
                 </div>
 
               </div>
-              <div className="alternativeProductMenu"><p>Alternative Product Menu</p></div>
             </div>
 
 

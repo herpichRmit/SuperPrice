@@ -27,9 +27,14 @@ export default function CategoriesMenu() {
   }
 
   return (
-    <div className="categories-menu">
-      {categoryCards}
-    </div>
+    <>
+      <div className='categories-menu'>
+        <h3>Browse by category</h3>
+        <div className="categories-menu_row">
+          {categoryCards}
+        </div>
+      </div>
+    </>
   )
 
   }

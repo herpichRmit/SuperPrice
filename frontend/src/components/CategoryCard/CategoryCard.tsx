@@ -43,7 +43,7 @@ export default function CategoryCard ({ category } : CategoryCardProps) {
 
         <div className="category-card" onClick={handleClick.bind(category)} >
             <div className="category-label">
-                <h3>{category.name}</h3>
+                <h5>{category.name}</h5>
             </div>
         </div>
 

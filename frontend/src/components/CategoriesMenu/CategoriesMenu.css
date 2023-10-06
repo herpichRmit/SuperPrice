@@ -1,11 +1,24 @@
 
+.categories-menu h3 {
+        color: #3a474e;
+}
 
 .categories-menu {
+        height: max-content;
+        width: 100%;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        justify-content: center;
+        align-items: center;
+        padding-top: 30px;
+}
+
+.categories-menu_row {
         display: flex;
         flex-direction: row;
-        justify-content: space-evenly;
+        justify-content: center;
         flex-wrap: wrap;
-        padding-left: 25px;
-        padding-right: 25px;
 }
 

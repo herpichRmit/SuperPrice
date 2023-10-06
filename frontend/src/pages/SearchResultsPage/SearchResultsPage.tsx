@@ -53,7 +53,7 @@ function createCards(products: Product[][]) {
                     <div className="sr_container-card_row">
     
                         <div className="sr_container-card_row-details">
-                            <h2>{products[i][0].title}</h2>
+                            <h3>{products[i][0].title}</h3>
     
                             <p>{products[i][0].brand}</p>
                             <p>{products[i][0].description}</p>
@@ -77,16 +77,14 @@ export default function SearchResultsPage({ inputProducts, title }: SearchResult
     const cards = createCards(groupObjectsByTitle(inputProducts))
 
   return (
-    <div className="product-page">
-        <main>
-            <div className="header_row">
+    <div className="sr_product-page">
+            <div className="sr_header_row">
               <Link href='/' >Back</Link>
               <h1>{title === "" ? "Search results" : title}</h1>
               <div></div>
             </div>
 
             <div className="sr_container">{cards}</div>
-        </main>
     </div>
   )
 }
