@@ -111,7 +111,7 @@ const SignUpLayout = () => {
 
     return (
         <div>
-            <h1 className='signUpHeader'>Grocery Title</h1>
+            <h1 className='signUpHeader'>Lets get started</h1>
             <p className='blurbText'>Sign up below and become a Rewards Member</p>
 
             <TextField

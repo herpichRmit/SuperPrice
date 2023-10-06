@@ -10,21 +10,22 @@ import { useRouter } from 'next/navigation';
 import React, { useState, useEffect } from 'react';
 import { redirect } from 'next/navigation';
 
-interface Price {
+interface PriceProps {
     store : String
     priceCents : number
 }
 
-interface Products {
+interface ProductProps {
     name: string;
     brand: string;
     size: string;
-    prices: Price[];
+    prices: PriceProps[];
 }
+
 
 interface CategoryProps {
     name : String,
-    products : Products[]
+    products : ProductProps[]
 }
 
 interface CategoryCardProps {

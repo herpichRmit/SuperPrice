@@ -1,6 +1,16 @@
+/*
 import './PriceCompare.css'
 
-export default function PriceCompare ({ prices }) {
+interface PriceProps {
+    store : String
+    priceCents : number
+}
+
+interface PricesProps {
+    prices: PriceProps[]
+}
+
+export default function PriceCompare ({ prices } : PricesProps) {
     let priceComponents = pricesToComponents (prices);
 
     ["coles", "woolworths", "aldi"].forEach (store => {
@@ -24,18 +34,18 @@ let storeIcons = {
     "ALDI"       : "/resources/store-icons/aldi.png"
 }
 
-function Price ({ price }) {
+function Price ({ store, priceCents } : PriceProps) {
     return (
         <div className="price">
-            <img className="store-icon" src={storeIcons [price.store]} />
+            <img className="store-icon" src={storeIcons [store]} />
             <div className="price-price">
-                {formatPrice (price.priceCents)}
+                {formatPrice (priceCents)}
             </div>
         </div>
     )
 }
 
-function formatPrice (priceCents) {
+function formatPrice (priceCents : number)  {
     let dollars = Math.floor (priceCents / 100)
     let cents = priceCents % 100;
 
@@ -58,3 +68,4 @@ function pricesToComponents (prices) {
     return map
 }
 
+*/

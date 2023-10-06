@@ -1,13 +1,7 @@
 import Link from 'next/link';
-import NavBar from '../../components/NavBar/NavBar';
 import PriceComparison from '../../components/PriceComparison/PriceComparison';
 import './ProductPage.css'
 
-/*
-<PriceComparison/>
-<PriceComparison/>
-<AlternateProductMenu/>
-*/
 
 interface Product {
   id: number;
@@ -24,10 +18,14 @@ interface ProductPageProps {
 }
 
 export default function ProductPage({ inputProducts }: ProductPageProps) {
-
+  // Check if inputProducts is an array and contains at least one element
+  if (!Array.isArray(inputProducts) || inputProducts.length === 0) {
+    // Handle the case where inputProducts is empty or not an array
+    return <div>No product data available.</div>;
+  }
   return (
     <div className="product-page">
-        <main>
+        <div>
             <div className="header_row">
               <Link href='/' >Back</Link>
               <h1>Product details</h1>
@@ -53,9 +51,7 @@ export default function ProductPage({ inputProducts }: ProductPageProps) {
               </div>
             </div>
 
-
-
-        </main>
+        </div>
     </div>
   )
 }

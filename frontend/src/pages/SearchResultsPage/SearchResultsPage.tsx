@@ -1,4 +1,3 @@
-import NavBar from '../../components/NavBar/NavBar';
 import PriceComparison from '../../components/PriceComparison/PriceComparison';
 import './SearchResultsPage.css'
 import Link from 'next/link';
@@ -74,7 +73,12 @@ function createCards(products: Product[][]) {
 
 //<PriceComparison comparisonProducts={inputProducts} />
 export default function SearchResultsPage({ inputProducts, title }: SearchResultsPageProps) {
-    const cards = createCards(groupObjectsByTitle(inputProducts))
+  // Check if inputProducts is an array and contains at least one element
+  if (!Array.isArray(inputProducts) || inputProducts.length === 0) {
+    // Handle the case where inputProducts is empty or not an array
+    return <div>No product data available.</div>;
+  }
+  const cards = createCards(groupObjectsByTitle(inputProducts))
 
   return (
     <div className="sr_product-page">

@@ -104,7 +104,7 @@ const SignIn = () => {
 
     return (
         <div className='signInContainer'>
-            <h1 className='signInHeader'>Grocery Title</h1>
+            <h1 className='signInHeader'>Welcome back</h1>
             <p className='blurbText'>Sign in below for access to your profile </p>
 
             <TextField

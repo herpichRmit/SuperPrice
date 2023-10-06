@@ -1,10 +1,11 @@
+
 import { describe, test, expect } from 'vitest'
 import { render, screen } from '@testing-library/react'
-import Home from './page';
+import HomePage from '../pages/HomePage/HomePage';
 
 describe('Home page', () => {
   test('Displays header', () => {
-    const wrapper = render(<Home />)
+    const wrapper = render(<HomePage />)
     expect(wrapper).toBeTruthy()
 
     // Should have nav bar
