@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="superprice.catalog.product.controller.CategoryControllerTest" time="1.894" tests="2" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="superprice.catalog.product.controller.CategoryControllerIntegrationTest" time="9.16" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="20"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -47,7 +47,7 @@
     <property name="localRepository" value="C:\Users\drhaa\.m2\repository"/>
     <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
     <property name="java.io.tmpdir" value="C:\Users\drhaa\AppData\Local\Temp\"/>
-    <property name="com.zaxxer.hikari.pool_number" value="2"/>
+    <property name="com.zaxxer.hikari.pool_number" value="1"/>
     <property name="java.version" value="20.0.1"/>
     <property name="user.dir" value="C:\Users\drhaa\OneDrive\Desktop\Software_Stuff\SEPT\team-project-group-p01-08\backend"/>
     <property name="os.arch" value="amd64"/>
@@ -64,10 +64,8 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="64.0"/>
   </properties>
-  <testcase name="all_should_returnAllCategories_when_thereAreCategories" classname="superprice.catalog.product.controller.CategoryControllerTest" time="0.133">
-    <system-out><![CDATA[2023-10-06T17:18:44.847+11:00  INFO 14556 --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [superprice.catalog.product.controller.CategoryControllerTest]: CategoryControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2023-10-06T17:18:44.884+11:00  INFO 14556 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration superprice.catalog.Application for test class superprice.catalog.product.controller.CategoryControllerTest
-
+  <testcase name="all" classname="superprice.catalog.product.controller.CategoryControllerIntegrationTest" time="1.02">
+    <system-out><![CDATA[
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
 ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
@@ -76,27 +74,55 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.1.2)
 
-2023-10-06T17:18:44.925+11:00  INFO 14556 --- [           main] s.c.p.controller.CategoryControllerTest  : Starting CategoryControllerTest using Java 20.0.1 with PID 14556 (started by drhaa in C:\Users\drhaa\OneDrive\Desktop\Software_Stuff\SEPT\team-project-group-p01-08\backend)
-2023-10-06T17:18:44.925+11:00  INFO 14556 --- [           main] s.c.p.controller.CategoryControllerTest  : No active profile set, falling back to 1 default profile: "default"
-2023-10-06T17:18:45.157+11:00  INFO 14556 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-10-06T17:18:45.179+11:00  INFO 14556 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22 ms. Found 2 JPA repository interfaces.
-2023-10-06T17:18:45.662+11:00  INFO 14556 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
-2023-10-06T17:18:45.664+11:00  INFO 14556 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:testdb/superprice_db user=SPRINGUSER
-2023-10-06T17:18:45.664+11:00  INFO 14556 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
-2023-10-06T17:18:45.686+11:00  INFO 14556 --- [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:h2:mem:testdb/superprice_db (H2 2.2)
-2023-10-06T17:18:45.698+11:00  INFO 14556 --- [           main] o.f.core.internal.command.DbValidate     : Successfully validated 4 migrations (execution time 00:00.009s)
-2023-10-06T17:18:45.703+11:00  INFO 14556 --- [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": 4
-2023-10-06T17:18:45.704+11:00  INFO 14556 --- [           main] o.f.core.internal.command.DbMigrate      : Schema "PUBLIC" is up to date. No migration necessary.
-2023-10-06T17:18:45.796+11:00  INFO 14556 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-10-06T17:18:45.824+11:00  INFO 14556 --- [           main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
-2023-10-06T17:18:45.824+11:00  INFO 14556 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2023-10-06T17:18:45.858+11:00  INFO 14556 --- [           main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
-2023-10-06T17:18:45.964+11:00  INFO 14556 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-10-06T17:18:45.970+11:00  INFO 14556 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-10-06T17:18:46.231+11:00  WARN 14556 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-10-06T17:18:46.544+11:00  INFO 14556 --- [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb/superprice_db'
-2023-10-06T17:18:46.579+11:00  INFO 14556 --- [           main] s.c.p.controller.CategoryControllerTest  : Started CategoryControllerTest in 1.689 seconds (process running for 11.928)
+2023-10-06T17:18:36.861+11:00  INFO 14556 --- [           main] .c.p.c.CategoryControllerIntegrationTest : Starting CategoryControllerIntegrationTest using Java 20.0.1 with PID 14556 (started by drhaa in C:\Users\drhaa\OneDrive\Desktop\Software_Stuff\SEPT\team-project-group-p01-08\backend)
+2023-10-06T17:18:36.866+11:00  INFO 14556 --- [           main] .c.p.c.CategoryControllerIntegrationTest : No active profile set, falling back to 1 default profile: "default"
+2023-10-06T17:18:37.983+11:00  INFO 14556 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-06T17:18:38.142+11:00  INFO 14556 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 135 ms. Found 2 JPA repository interfaces.
+2023-10-06T17:18:39.013+11:00  INFO 14556 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-10-06T17:18:39.357+11:00  INFO 14556 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb/superprice_db user=SPRINGUSER
+2023-10-06T17:18:39.360+11:00  INFO 14556 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-10-06T17:18:39.519+11:00  INFO 14556 --- [           main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.22.1 by Redgate
+2023-10-06T17:18:39.519+11:00  INFO 14556 --- [           main] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
+2023-10-06T17:18:39.519+11:00  INFO 14556 --- [           main] o.f.c.internal.license.VersionPrinter    : 
+2023-10-06T17:18:39.585+11:00  INFO 14556 --- [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:h2:mem:testdb/superprice_db (H2 2.2)
+2023-10-06T17:18:39.653+11:00  INFO 14556 --- [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
+2023-10-06T17:18:39.657+11:00  INFO 14556 --- [           main] o.f.core.internal.command.DbValidate     : Successfully validated 4 migrations (execution time 00:00.026s)
+2023-10-06T17:18:39.664+11:00  INFO 14556 --- [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2023-10-06T17:18:39.699+11:00  INFO 14556 --- [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2023-10-06T17:18:39.707+11:00  INFO 14556 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1 - create books"
+2023-10-06T17:18:39.740+11:00  INFO 14556 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "2 - insert books"
+2023-10-06T17:18:39.751+11:00  INFO 14556 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "3 - create users"
+2023-10-06T17:18:39.765+11:00  INFO 14556 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "4 - insert users"
+2023-10-06T17:18:39.774+11:00  INFO 14556 --- [           main] o.f.core.internal.command.DbMigrate      : Successfully applied 4 migrations to schema "PUBLIC", now at version v4 (execution time 00:00.025s)
+2023-10-06T17:18:39.936+11:00  INFO 14556 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-06T17:18:40.019+11:00  INFO 14556 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.7.Final
+2023-10-06T17:18:40.022+11:00  INFO 14556 --- [           main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-10-06T17:18:40.346+11:00  INFO 14556 --- [           main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-06T17:18:40.676+11:00  INFO 14556 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-10-06T17:18:41.109+11:00  INFO 14556 --- [           main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-06T17:18:42.104+11:00  INFO 14556 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+Hibernate: create table customer (id bigint not null, email varchar(255), first_name varchar(255), last_name varchar(255), password varchar(255), primary key (id))
+Hibernate: alter table if exists product alter column id set data type bigint
+Hibernate: alter table if exists product alter column brand set data type varchar(255)
+Hibernate: alter table if exists product alter column category set data type varchar(255)
+Hibernate: alter table if exists product alter column item_description set data type varchar(255)
+Hibernate: alter table if exists product alter column store set data type varchar(255)
+Hibernate: alter table if exists product alter column title set data type varchar(255)
+Hibernate: create sequence customer_seq start with 1 increment by 50
+Hibernate: create sequence product_seq start with 1 increment by 50
+2023-10-06T17:18:42.169+11:00  INFO 14556 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-06T17:18:42.637+11:00  WARN 14556 --- [           main] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: superprice.catalog.product.repository.ProductRepository
+2023-10-06T17:18:42.771+11:00  INFO 14556 --- [           main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-10-06T17:18:42.845+11:00  WARN 14556 --- [           main] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: superprice.catalog.user.repository.CustomerRepository
+2023-10-06T17:18:42.866+11:00  WARN 14556 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-06T17:18:43.658+11:00  INFO 14556 --- [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb/superprice_db'
+2023-10-06T17:18:43.718+11:00  INFO 14556 --- [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-10-06T17:18:43.718+11:00  INFO 14556 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-10-06T17:18:43.724+11:00  INFO 14556 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2023-10-06T17:18:43.765+11:00  INFO 14556 --- [           main] .c.p.c.CategoryControllerIntegrationTest : Started CategoryControllerIntegrationTest in 7.446 seconds (process running for 9.114)
+2023-10-06T17:18:44.556+11:00  INFO 14556 --- [           main] o.f.core.internal.command.DbValidate     : Successfully validated 4 migrations (execution time 00:00.004s)
+2023-10-06T17:18:44.557+11:00  INFO 14556 --- [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": 4
+2023-10-06T17:18:44.558+11:00  INFO 14556 --- [           main] o.f.core.internal.command.DbMigrate      : Schema "PUBLIC" is up to date. No migration necessary.
 ]]></system-out>
   </testcase>
-  <testcase name="all_should_returnnothing_when_noCategories" classname="superprice.catalog.product.controller.CategoryControllerTest" time="0.005"/>
 </testsuite>
