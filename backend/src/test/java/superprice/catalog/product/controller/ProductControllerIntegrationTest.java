@@ -41,18 +41,50 @@ public class ProductControllerIntegrationTest {
     }
 
     //get product
-    
+    @Test
+    void getProduct() throws Exception {
+        mvc.perform(get("/api/v1/product").contentType(MediaType.APPLICATION_JSON))
+        .andExpect(status().isOk())
+        .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON))
+        .andExpect(jsonPath("$[1].title", is("Spray and Wipe")));
+    }
 
     //get id
-
+    @Test
+    void getId_2() throws Exception{
+        mvc.perform(get("/api/v1/product/1").contentType(MediaType.APPLICATION_JSON))
+        .andExpect(status().isOk())
+        .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON))
+        .andExpect(jsonPath("$.title", is("Spray and Wipe")));
+    }
 
     //get title
-
+    @Test
+    void getTitle() throws Exception{
+        mvc.perform(get("/api/v1/product/compare/Spray and Wipe").contentType(MediaType.APPLICATION_JSON))
+        .andExpect(status().isOk())
+        .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON))
+        .andExpect(jsonPath("$[1].title", is("Spray and Wipe")));
+    }
 
     //get productsbykeyword
+    @Test
+    void getByKeyword() throws Exception{
+        mvc.perform(get("/api/v1/product/search/Spray and Wipe").contentType(MediaType.APPLICATION_JSON))
+        .andExpect(status().isOk())
+        .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON))
+        .andExpect(jsonPath("$[1].title", is("Spray and Wipe")));
+    }
 
 
     //get by category
+    // @Test
+    // void getByCategory() throws Exception{
+    //     mvc.perform(get("/api/v1/product/category/Spray and Wipe").contentType(MediaType.APPLICATION_JSON))
+    //     .andExpect(status().isOk())
+    //     .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON))
+    //     .andExpect(jsonPath("$[1].title", is("Spray and Wipe")));
+    // }
 
 
     //get by price 
