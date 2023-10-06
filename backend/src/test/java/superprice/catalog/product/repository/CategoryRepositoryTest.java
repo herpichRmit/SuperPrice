@@ -36,19 +36,8 @@ public class CategoryRepositoryTest {
     //     flyway.clean();
     // }
 
-    //return categories by name should return category 
-    //return categories by name shouldn't return anything if invalid category
-
-    //return products by category should return products by category
-    //return products by category shouldn't return products if invalid category
-
-    //prices by item details should return price of item given title
-    //prices by item details should return nothing given invalid title 
-
-    //categoryNames should return all categories as collection<string>
     @Test
     void categories_shouldReturn_AllCategories(){
-        
         assertEquals(3, repo.categories().size());
     }
 
