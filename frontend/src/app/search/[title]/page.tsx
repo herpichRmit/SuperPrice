@@ -12,7 +12,7 @@ async function getProduct(title: String) {
 export default async function ProductDetails({ params }: { params: any }) {
   const arrProducts = await getProduct(params.title)
 
-return (
-  <SearchResultsPage inputProducts={arrProducts} />
-)
+  return (
+    <SearchResultsPage inputProducts={arrProducts} title={""} />
+  )
 }

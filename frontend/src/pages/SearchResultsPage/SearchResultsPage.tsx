@@ -16,8 +16,8 @@ interface Product {
 
 interface SearchResultsPageProps {
   inputProducts: Product[];
+  title: String;
 }
-
 
 
 // group objects appropriately
@@ -73,7 +73,7 @@ function createCards(products: Product[][]) {
 
 
 //<PriceComparison comparisonProducts={inputProducts} />
-export default function SearchResultsPage({ inputProducts }: SearchResultsPageProps) {
+export default function SearchResultsPage({ inputProducts, title }: SearchResultsPageProps) {
     const cards = createCards(groupObjectsByTitle(inputProducts))
 
   return (
@@ -81,7 +81,7 @@ export default function SearchResultsPage({ inputProducts }: SearchResultsPagePr
         <main>
             <div className="header_row">
               <Link href='/' >Back</Link>
-              <h1>Search results</h1>
+              <h1>{title === "" ? "Search results" : title}</h1>
               <div></div>
             </div>
 

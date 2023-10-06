@@ -1,3 +1,4 @@
+/*
 import './SearchResultsPage.css'
 
 import NavBar from '../../components/NavBar/NavBar'
@@ -10,7 +11,7 @@ export default function SearchResultsPage({
 }) {
   return (
     <div className="search-results-page">
-        {/*<NavBar shouldShowSearchBar={true}/>*/}
+        {*//*<NavBar shouldShowSearchBar={true}/>*//*}
         <div className="back-button-and-heading">
             <BackButton />
             <h1 className="search-results-heading">
@@ -26,3 +27,4 @@ export default function SearchResultsPage({
   )
 }
 
+*/

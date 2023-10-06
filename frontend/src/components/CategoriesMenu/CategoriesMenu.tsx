@@ -10,7 +10,7 @@ export default function CategoriesMenu() {
   let [categories, setCategories] = React.useState ([]);
   let [isLoaded, setIsLoaded] = React.useState (false);
 
-  let categoryCards = [];
+  let categoryCards : any[] = [];
 
   if (isLoaded) {
     categories.forEach (category => {

@@ -3,7 +3,9 @@
 .categories-menu {
         display: flex;
         flex-direction: row;
-        justify-content: left;
+        justify-content: space-evenly;
         flex-wrap: wrap;
+        padding-left: 25px;
+        padding-right: 25px;
 }
 
