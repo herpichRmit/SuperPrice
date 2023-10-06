@@ -1,3 +1,4 @@
+"use client"
 import NavBar from '../../components/NavBar/NavBar';
 import SearchBar from '../../components/SearchBar/SearchBar';
 import CategoriesMenu from '../../components/CategoriesMenu/CategoriesMenu';
