@@ -29,5 +29,7 @@ public class ProductRepositoryTest {
         flyway.clean();
     }
 
+    //nothing to test since it extends JpaRepo
+
     
 }

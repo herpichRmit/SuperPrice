@@ -31,4 +31,6 @@ public class CustomerRepositoryTest {
         flyway.clean();
     }
 
+    //nothing to test since it extends JpaRepo
+
 }
