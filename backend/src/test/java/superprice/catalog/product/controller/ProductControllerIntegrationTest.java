@@ -78,21 +78,26 @@ public class ProductControllerIntegrationTest {
 
 
     //get by category
-    // @Test
-    // void getByCategory() throws Exception{
-    //     mvc.perform(get("/api/v1/product/category/Spray and Wipe").contentType(MediaType.APPLICATION_JSON))
-    //     .andExpect(status().isOk())
-    //     .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON))
-    //     .andExpect(jsonPath("$[1].title", is("Spray and Wipe")));
-    // }
+    @Test
+    void getByCategory() throws Exception{
+        mvc.perform(get("/api/v1/product/category/Dairy").contentType(MediaType.APPLICATION_JSON))
+        .andExpect(status().isOk())
+        .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON))
+        .andExpect(jsonPath("$.length()", is(5)));
+    }
 
 
-    //get by price 
+    //get by price
+    @Test
+    void getByPrice() throws Exception{
+        mvc.perform(get("/api/v1/product/price/Spray and Wipe").contentType(MediaType.APPLICATION_JSON))
+        .andExpect(status().isOk())
+        .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON))
+        .andExpect(jsonPath("$.length()", is(3)));
+    }
 
 
     //AsjsonString
-
-
     public static String asJsonString(final Object obj) {
         try {
           return new ObjectMapper().writeValueAsString(obj);

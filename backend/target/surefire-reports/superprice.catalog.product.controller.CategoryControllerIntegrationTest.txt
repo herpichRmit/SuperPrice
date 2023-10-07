@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: superprice.catalog.product.controller.CategoryControllerIntegrationTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.215 s -- in superprice.catalog.product.controller.CategoryControllerIntegrationTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.230 s -- in superprice.catalog.product.controller.CategoryControllerIntegrationTest
