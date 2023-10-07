@@ -10,7 +10,7 @@ export default function CategoriesMenu() {
   let [categories, setCategories] = React.useState ([]);
   let [isLoaded, setIsLoaded] = React.useState (false);
 
-  let categoryCards = [];
+  let categoryCards : any[] = [];
 
   if (isLoaded) {
     categories.forEach (category => {
@@ -27,9 +27,14 @@ export default function CategoriesMenu() {
   }
 
   return (
-    <div className="categories-menu">
-      {categoryCards}
-    </div>
+    <>
+      <div className='categories-menu'>
+        <h3>Browse by category</h3>
+        <div className="categories-menu_row">
+          {categoryCards}
+        </div>
+      </div>
+    </>
   )
 
   }

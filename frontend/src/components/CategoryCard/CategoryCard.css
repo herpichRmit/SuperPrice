@@ -1,11 +1,19 @@
 
+.categories-menu h5 {
+    color: #3a474e;
+}
+
 .category-card {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: var(--bs-border-width) solid var(--bs-border-color);
     border-radius: var(--bs-border-radius);
     width: 200px;
-    height: 200px;
+    height: 100px;
     margin: 20px;
     background-color: white;
+    border: 1px solid #D3D3D3;
+    box-shadow: 0px 3px 5px #D3D3D3;
 }
 

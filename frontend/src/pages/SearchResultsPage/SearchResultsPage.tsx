@@ -1,4 +1,3 @@
-import NavBar from '../../components/NavBar/NavBar';
 import PriceComparison from '../../components/PriceComparison/PriceComparison';
 import './SearchResultsPage.css'
 import Link from 'next/link';
@@ -16,8 +15,8 @@ interface Product {
 
 interface SearchResultsPageProps {
   inputProducts: Product[];
+  title: String;
 }
-
 
 
 // group objects appropriately
@@ -53,7 +52,7 @@ function createCards(products: Product[][]) {
                     <div className="sr_container-card_row">
     
                         <div className="sr_container-card_row-details">
-                            <h2>{products[i][0].title}</h2>
+                            <h3>{products[i][0].title}</h3>
     
                             <p>{products[i][0].brand}</p>
                             <p>{products[i][0].description}</p>
@@ -73,20 +72,23 @@ function createCards(products: Product[][]) {
 
 
 //<PriceComparison comparisonProducts={inputProducts} />
-export default function SearchResultsPage({ inputProducts }: SearchResultsPageProps) {
-    const cards = createCards(groupObjectsByTitle(inputProducts))
+export default function SearchResultsPage({ inputProducts, title }: SearchResultsPageProps) {
+  // Check if inputProducts is an array and contains at least one element
+  if (!Array.isArray(inputProducts) || inputProducts.length === 0) {
+    // Handle the case where inputProducts is empty or not an array
+    return <div>No product data available.</div>;
+  }
+  const cards = createCards(groupObjectsByTitle(inputProducts))
 
   return (
-    <div className="product-page">
-        <main>
-            <div className="header_row">
+    <div className="sr_product-page">
+            <div className="sr_header_row">
               <Link href='/' >Back</Link>
-              <h1>Search results</h1>
+              <h1>{title === "" ? "Search results" : title}</h1>
               <div></div>
             </div>
 
             <div className="sr_container">{cards}</div>
-        </main>
     </div>
   )
 }

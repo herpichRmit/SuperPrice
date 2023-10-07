@@ -20,10 +20,20 @@
 html {
     min-height: 100%;
 }
+
+h1, h2, h3, h5 {
+  color: #3a474e;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 18.72px;
+}
+
 body {
-  /*color: rgb(var(--foreground-rgb));*/
-  background-image: url("/background.png");
-  background-size: cover;
   min-height: 100%;
 }
 

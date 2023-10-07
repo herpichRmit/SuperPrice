@@ -6,11 +6,11 @@ public enum Store {
     ALDI;
 
     public static Store fromString(String str) {
-        if (str.equals("COLES")) {
+        if (str.equals("Coles")) {
             return COLES;
-        } else if (str.equals("WOOLWORTHS")) {
+        } else if (str.equals("Woolworths")) {
             return WOOLWORTHS;
-        } else if (str.equals("ALDI")) {
+        } else if (str.equals("Aldi")) {
             return ALDI;
         } else {
             throw new IllegalArgumentException();

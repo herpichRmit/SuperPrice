@@ -1,12 +1,7 @@
-import NavBar from '../../components/NavBar/NavBar';
+import Link from 'next/link';
 import PriceComparison from '../../components/PriceComparison/PriceComparison';
 import './ProductPage.css'
 
-/*
-<PriceComparison/>
-<PriceComparison/>
-<AlternateProductMenu/>
-*/
 
 interface Product {
   id: number;
@@ -23,12 +18,16 @@ interface ProductPageProps {
 }
 
 export default function ProductPage({ inputProducts }: ProductPageProps) {
-
+  // Check if inputProducts is an array and contains at least one element
+  if (!Array.isArray(inputProducts) || inputProducts.length === 0) {
+    // Handle the case where inputProducts is empty or not an array
+    return <div>No product data available.</div>;
+  }
   return (
     <div className="product-page">
-        <main>
+        <div>
             <div className="header_row">
-              <button>Back</button>
+              <Link href='/' >Back</Link>
               <h1>Product details</h1>
               <div></div>
             </div>
@@ -37,7 +36,6 @@ export default function ProductPage({ inputProducts }: ProductPageProps) {
               <div className="pp_container-product">
 
                 <div className="pp_container-product_box">
-                  <div className="pp_container-product_box-img"> <p>Image</p> </div>
                   <div className="pp_container-product_box-comparison">
                     <h2>{inputProducts[0].title}</h2>
                     <PriceComparison comparisonProducts={inputProducts} showAdd={true} />
@@ -51,12 +49,9 @@ export default function ProductPage({ inputProducts }: ProductPageProps) {
                 </div>
 
               </div>
-              <div className="alternativeProductMenu"><p>Alternative Product Menu</p></div>
             </div>
 
-
-
-        </main>
+        </div>
     </div>
   )
 }

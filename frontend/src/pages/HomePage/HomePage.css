@@ -1,0 +1,27 @@
+
+.home-page_hero{
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    background-image: url("/background.png");
+    background-size: cover;
+}
+
+.home-page_title-and-search{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: left;
+    height: 350px;
+    flex-grow: 2;
+    max-width: 1000px;
+    min-width: 400px;
+    padding: 5px;
+    margin-bottom: 100px;
+    gap: 10px
+}
+
+.home-page_title-and-search h1 {
+    color: gold;
+}

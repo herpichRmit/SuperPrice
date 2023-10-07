@@ -1,11 +1,8 @@
 .product-page {
-    background-color: #F5F5F5;
     height: 100vh;
-}
-
-main {
     padding: 48px 50px;
 }
+
 
 .header_row{
     display: flex;
@@ -37,6 +34,7 @@ main {
     display: flex;
     flex-direction: row;
     gap: 50px;
+    justify-content: center;
 }
 
 .pp_container-product_box-img{
@@ -49,8 +47,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    flex-grow: 2;
-    width: 400px;
+    width: 700px;
 }
 
 .pp_container-product_box-comparison h2 {
@@ -67,4 +64,5 @@ main {
     height: 450px;
     background-color: grey;
 }
+
 
