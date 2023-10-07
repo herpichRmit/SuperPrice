@@ -46,7 +46,7 @@ public class CategoryControllerIntegrationTest {
         mvc.perform(get("/api/catalog/category")).andExpect(status().isOk())
         .andExpect(
             content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON))
-        .andExpect(jsonPath("$.length()").value(3)); //Should be no customers at the star
+        .andExpect(jsonPath("$.length()").value(6)); //Should be no customers at the star
     }
 
     //AsjsonString
