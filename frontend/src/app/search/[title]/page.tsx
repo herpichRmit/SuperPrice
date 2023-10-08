@@ -1,10 +1,16 @@
 import React from 'react'
 import SearchResultsPage from '../../../pages/SearchResultsPage/SearchResultsPage';
+export const dynamic = 'force-dynamic'
 
 async function getProduct(title: String) {
-  const res = await fetch('http://localhost:8080/api/v1/product/search/' + title)
+  const res = await fetch(process.env.API_URL + '/api/v1/product/search/' + title, { next: { revalidate: 0 } })
 
-  return res.json()
+  if (!res.ok) {
+    // This will activate the closest `error.js` Error Boundary
+    throw new Error('Failed to fetch data')
+  } else {
+    return res.json()
+  }
 }
 
 

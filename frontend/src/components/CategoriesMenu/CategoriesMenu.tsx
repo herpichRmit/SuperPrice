@@ -6,25 +6,54 @@ import './CategoriesMenu.css'
 
 import CategoryCard from '../../components/CategoryCard/CategoryCard'
 
-export default function CategoriesMenu() {
-  let [categories, setCategories] = React.useState ([]);
+export const dynamic = 'force-dynamic'
+
+
+interface PriceProps {
+  store : String
+  priceCents : number
+}
+
+interface ProductProps {
+  name: string;
+  brand: string;
+  size: string;
+  prices: PriceProps[];
+}
+
+
+interface CategoryProps {
+  name : String,
+  products : ProductProps[]
+}
+
+interface CategoryCardProps {
+  category : CategoryProps
+}
+
+interface HomePageProps {
+  inputCategories : CategoryProps[]
+}
+
+
+export default function CategoriesMenu({ inputCategories }: HomePageProps) {
+  let [categories, setCategories] = React.useState<CategoryProps[]>([]);
   let [isLoaded, setIsLoaded] = React.useState (false);
 
   let categoryCards : any[] = [];
+
 
   if (isLoaded) {
     categories.forEach (category => {
       categoryCards.push (<CategoryCard category={category} />)
     })
   } else {
-    fetch ("http://localhost:8080/api/catalog/category")
-      .then (response => {
-        response.json ().then (json => {
-          setCategories (json)
-          setIsLoaded (true)
-        })
-      })
+    
+    if (inputCategories !== undefined) {
+      setCategories(inputCategories)
+      setIsLoaded (true)
   }
+}
 
   return (
     <>
@@ -37,4 +66,4 @@ export default function CategoriesMenu() {
     </>
   )
 
-  }
+}

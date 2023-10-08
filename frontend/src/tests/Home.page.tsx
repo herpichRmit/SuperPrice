@@ -3,9 +3,21 @@ import { describe, test, expect } from 'vitest'
 import { render, screen } from '@testing-library/react'
 import HomePage from '../pages/HomePage/HomePage';
 
+async function getCategory() {
+  const res = await fetch(process.env.API_URL + '/api/catalog/category', { next: { revalidate: 0 } })
+
+  if (!res.ok) {
+    // This will activate the closest `error.js` Error Boundary
+    throw new Error('Failed to fetch data')
+  } else {
+    return res.json()
+  }
+}
+
 describe('Home page', () => {
-  test('Displays header', () => {
-    const wrapper = render(<HomePage />)
+  test('Displays header', async () => {
+    const arrCategory = await getCategory()
+    const wrapper = render(<HomePage inputCategories={arrCategory} />)
     expect(wrapper).toBeTruthy()
 
     // Should have nav bar

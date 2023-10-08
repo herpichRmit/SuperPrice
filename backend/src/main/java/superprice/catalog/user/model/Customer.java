@@ -1,21 +1,24 @@
 package superprice.catalog.user.model;
 
+import org.hibernate.annotations.GenericGenerator;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 @Entity
 public class Customer {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
 
-    @Column(name="first_name")
+    @Column(name="firstName")
     private String firstName;
 
-    @Column(name="last_name")
+    @Column(name="lastName")
     private String lastName; 
 
     @Column(name="email")

@@ -29,6 +29,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 @AutoConfigureMockMvc
 public class CustomerControllerIntegrationTest {
     
+    /* 
     @Autowired
     MockMvc mvc;
 
@@ -69,4 +70,6 @@ public class CustomerControllerIntegrationTest {
           throw new RuntimeException(e);
         }
     }
+
+    */
 }

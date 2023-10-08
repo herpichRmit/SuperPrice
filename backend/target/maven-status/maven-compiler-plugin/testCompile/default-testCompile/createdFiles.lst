@@ -1,0 +1,9 @@
+superprice/catalog/user/repository/CustomerRepositoryTest.class
+superprice/catalog/product/repository/CategoryRepositoryTest.class
+superprice/catalog/product/controller/ProductControllerIntegrationTest.class
+superprice/catalog/product/controller/ProductControllerTest.class
+superprice/catalog/product/controller/CategoryControllerTest.class
+superprice/catalog/product/repository/ProductRepositoryTest.class
+superprice/catalog/user/controller/CustomerControllerTest.class
+superprice/catalog/product/controller/CategoryControllerIntegrationTest.class
+superprice/catalog/user/controller/CustomerControllerIntegrationTest.class

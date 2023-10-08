@@ -5,7 +5,33 @@ import CategoriesMenu from '../../components/CategoriesMenu/CategoriesMenu';
 import Link from 'next/link'
 import './HomePage.css'
 
-export default function HomePage() {
+interface PriceProps {
+  store : String
+  priceCents : number
+}
+
+interface ProductProps {
+  name: string;
+  brand: string;
+  size: string;
+  prices: PriceProps[];
+}
+
+
+interface CategoryProps {
+  name : String,
+  products : ProductProps[]
+}
+
+interface CategoryCardProps {
+  category : CategoryProps
+}
+
+interface HomePageProps {
+  inputCategories : CategoryProps[]
+}
+
+export default function HomePage({ inputCategories }: HomePageProps) {
   return (
     <div className="home-page">
         {/* <NavBar shouldShowSearchBar={false}/> */}
@@ -18,7 +44,7 @@ export default function HomePage() {
               </div>
             </div>
             
-            <CategoriesMenu />
+            <CategoriesMenu inputCategories={inputCategories} />
             
         </main>
     </div>

@@ -3,6 +3,9 @@ import React from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
 import Link from 'next/link';
 import Button from '@mui/material/Button';
+import Image from 'next/image'
+import logo from '../../../public/logo.png'
+
 
 import SearchBar from '../SearchBar/SearchBar';
 
@@ -10,7 +13,7 @@ export default function NavBar({shouldShowSearchBar = true}) {
   return (
     <nav className="nav-bar" >
         <Link href="/">
-        <img className="logo" src="/logo.png" />
+        <Image className="logo" src={logo} alt={''} />
         </Link>
         {shouldShowSearchBar ? <SearchBar /> : ""}
         <ul className="nav-links">

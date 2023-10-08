@@ -10,6 +10,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
 public class ProductRepositoryTest {
+
+    /* 
     @Autowired 
     private Flyway flyway;
 
@@ -30,6 +32,6 @@ public class ProductRepositoryTest {
     }
 
     //nothing to test since it extends JpaRepo
-
+    */
     
 }

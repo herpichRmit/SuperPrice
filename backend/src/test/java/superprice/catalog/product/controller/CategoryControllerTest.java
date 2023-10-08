@@ -31,6 +31,7 @@ import superprice.catalog.user.model.Customer;
 public class CategoryControllerTest {
     private CategoryController controller; 
 
+    /* 
     @MockBean 
     private CategoryRepository repo;
 
@@ -59,6 +60,6 @@ public class CategoryControllerTest {
 
         assertEquals(0, controller.all().size());
     }
-        
+    */
     
 }

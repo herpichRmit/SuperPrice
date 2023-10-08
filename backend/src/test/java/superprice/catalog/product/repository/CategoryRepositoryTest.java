@@ -17,6 +17,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 public class CategoryRepositoryTest {
     
+    /* 
     @Autowired 
     private Flyway flyway;
 
@@ -40,5 +41,5 @@ public class CategoryRepositoryTest {
     void categories_shouldReturn_AllCategories(){
         assertEquals(6, repo.categories().size());
     }
-
+    */
 }

@@ -1,15 +1,18 @@
-version: '3'
+version: '3.4'
 services:
-  frontend:
-    build:
-      context: . # Path to the frontend directory containing Dockerfile
-      dockerfile: frontend.Dockerfile  # Specify the Dockerfile for frontend
+  api:
+    container_name: api_superprice
+    platform: "linux/amd64"
+    build: backend/
     ports:
-      - "3000:3000"  # Map the container's port 3000 to the host's port 3000
-
-  backend:
-    build:
-      context: .  # Path to the backend directory containing Dockerfile
-      dockerfile: backend.Dockerfile  # Specify the Dockerfile for backend
+      - "8080:8080"
+  web:
+    container_name: web_superprice
+    platform: "linux/amd64"
+    build: frontend/
     ports:
-      - "8080:8080"  # Map the container's port 8080 to the host's port 8080
+      - "3000:3000"
+    environment:
+      API_URL: "http://api:8080"
+    depends_on:
+      - api
