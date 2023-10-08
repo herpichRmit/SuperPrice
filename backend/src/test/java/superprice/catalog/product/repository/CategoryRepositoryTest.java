@@ -38,7 +38,7 @@ public class CategoryRepositoryTest {
 
     @Test
     void categories_shouldReturn_AllCategories(){
-        assertEquals(3, repo.categories().size());
+        assertEquals(6, repo.categories().size());
     }
 
 }

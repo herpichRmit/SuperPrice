@@ -44,7 +44,7 @@ public class CustomerController {
     }
 
     @PostMapping("/login")
-    public ResponseEntity<?> signIn(@RequestBody Customer customer) {
+    public ResponseEntity<?> signIn(@RequestBody Customer customer) { //Sign in with the customer and if details are correct then it's a success
         String existingCustomer = customerService.signIn(customer);
         if (existingCustomer == "Success") {
             return new ResponseEntity<>(true, HttpStatus.OK);

@@ -43,7 +43,7 @@ public class ProductController {
 		return productService.getProductsByTitle(title);
     }
 
-    @GetMapping("/search/{title}")
+    @GetMapping("/search/{title}") 
 	public List<Product> getByKeyword(@PathVariable String title) {
 		return productService.getProductsByKeyword(title);
     }
