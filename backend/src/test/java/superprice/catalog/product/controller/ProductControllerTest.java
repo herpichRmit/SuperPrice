@@ -26,7 +26,6 @@ import superprice.catalog.product.service.ProductService;
 public class ProductControllerTest {
     private ProductController controller; 
 
-    /* 
     @MockBean 
     private ProductService service;
 
@@ -104,6 +103,5 @@ public class ProductControllerTest {
         assertNotNull(product);
         assertEquals("Cheese", product.get(0).getTitle());
     } 
-    */
 
 }

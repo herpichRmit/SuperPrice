@@ -13,7 +13,6 @@ import superprice.catalog.product.repository.CategoryRepository;
 @SpringBootTest
 public class CustomerRepositoryTest {
 
-    /* 
     @Autowired 
     private Flyway flyway;
 
@@ -32,7 +31,6 @@ public class CustomerRepositoryTest {
     private void tearDown(){
         flyway.clean();
     }
-    */
     //nothing to test since it extends JpaRepo
 
 }
