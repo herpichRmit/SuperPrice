@@ -1,6 +1,3 @@
-# Web Application Code
-
-
 # RMIT COSC2299 SEPT Major Project
 
 # Group Information
@@ -15,13 +12,10 @@ Contribution Statements: https://docs.google.com/document/d/1e6imcJZ3dAayqqkhcz1
 * Vladislava Simakov (s3910159)
 * Vincent Daniele (s3780417)
 
-
-
 ## Records
 
 * Github repository: [https://github.com.cosc2999-sept-2023/team-project-group-po1-08](https://github.com/cosc2299-sept-2023/team-project-group-p01-08)
 * Github Project Board : [https://github.com/orgs/cosc2299-sept-2023/projects/100](https://github.com/orgs/cosc2299-sept-2023/projects/100)
-
 	
 # Run Instructions
 
