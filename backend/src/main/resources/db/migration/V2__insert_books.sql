@@ -23,5 +23,5 @@ INSERT INTO product (title, store, brand, category, price, item_description) VAL
 ('Hass avocado', 'Aldi', 'Aldi', 'Fresh produce' ,1.00, 'Famous for their smooth, buttery flesh Hass avocados are a delightful addition to any meal.'),
 ('Mission Wraps Spinach & Herb', 'Coles', 'Mission', 'Bakery' ,5.00, 'Mission Spinach and Herb Super Soft Wraps are super soft and super versatile!'),
 ('Mission Wraps Spinach & Herb', 'Woolworths', 'Mission', 'Bakery' ,5.50, 'Mission Spinach and Herb Super Soft Wraps are super soft and super versatile!'),
-('Wonder White Bread', 'Coles', 'Wonder White', 'Bakery' ,4.40, 'Unbleached wheat flour, water, wheat fibre, yeast, modified tapioca starch (1413), wheat gluten, vinegar, canola oil, iodised salt, soy flour.'),
-('Wonder White Bread', 'Woolworths', 'Wonder White', 'Bakery' ,4.40,' Unbleached wheat flour, water, wheat fibre, yeast, modified tapioca starch (1413), wheat gluten, vinegar, canola oil, iodised salt, soy flour.');
+('Wonder White Bread', 'Coles', 'Wonder White', 'Bakery' ,4.40, 'Make the ultimate sandwich with Wonder High Fibre, Vitamins & Minerals White Sliced Bread Sandwich. Its super soft, full of goodness and tastes great with your favourite fillings or spreads.'),
+('Wonder White Bread', 'Woolworths', 'Wonder White', 'Bakery' ,4.40,' Make the ultimate sandwich with Wonder High Fibre, Vitamins & Minerals White Sliced Bread Sandwich. Its super soft, full of goodness and tastes great with your favourite fillings or spreads.');
