@@ -1,4 +1,4 @@
-# Web Application Boilerplate Code
+# Web Application Code
 
 
 # RMIT COSC2299 SEPT Major Project
@@ -41,18 +41,6 @@ https://rmiteduau-my.sharepoint.com/personal/s3910159_student_rmit_edu_au/_layou
 	
 # Run Instructions
 
-To run, activate both front-end and back-end
-
-Front-end:
-    cd frontend
-    npm run dev
-
-Back-end
-    cd backend
-    mvn exec:java
-
-# Initial Setup
-
 ## Setup your environment 
 You will need to have in your system
 
@@ -61,17 +49,6 @@ You will need to have in your system
 - Apache Maven
 - IDE or Editor
 - Docker
-
-## Backend
-
-- Delete any unused services (i.e. backend/movies). They are there only for an initial reference.
-- Place any new backend service in its own directory (i.e., backend/<service-name>)
-- Confirm you can run your applicaiton (./mvnw package && java -jar target/[microservice]-0.0.1-SNAPSHOT.jar)
-
-## Frontend
-- cd into frontend/
-- Install dependencies "npm install"
-- Run the app with "npm run dev"
 
 ## Full Application 
 -cd into main folder where the frontend and backend directories are. 
