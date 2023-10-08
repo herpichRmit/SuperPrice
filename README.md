@@ -31,7 +31,7 @@ You will need to have in your system
 ## Full Application 
 -cd into main folder where the frontend and backend directories are. 
 run:
-docker-compose build 	
+docker-compose build <br>
 docker-compose up 
 
 Browse the application from localhost:3000. 
