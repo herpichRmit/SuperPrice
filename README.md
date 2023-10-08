@@ -37,4 +37,9 @@ docker-compose up
 Browse the application from localhost:3000. 
     
 
+## Note
+
+Please run docker-compose build to use api and web frontend together.
+Please run docker-compose-mysql to see work completed torwards intergration. Database is integrated and can verify using adminer. Running into technical hibernate error.
+
 
