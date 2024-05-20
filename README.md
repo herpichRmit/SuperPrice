@@ -2,9 +2,6 @@
 
 # Group Information
 
-## Group-P01-08
-Contribution Statements: https://docs.google.com/document/d/1e6imcJZ3dAayqqkhcz1Do22gpvr2Y-zZS7OZPpo99D4/edit?usp=sharing
-
 ## Members
 * Ethan Herpich (s3935413)
 * Issa Chanzi (s3783615)
